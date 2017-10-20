@@ -1,0 +1,27 @@
+{
+  "name": "michael-kallgren-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio of Michael K. Kallgren",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkallgren08/portfolio-full-stack.git"
+  },
+  "author": "Michael Kallgren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkallgren08/portfolio-full-stack/issues"
+  },
+  "homepage": "https://github.com/mkallgren08/portfolio-full-stack#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.12.3",
+    "morgan": "^1.9.0"
+  }
+}
