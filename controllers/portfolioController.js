@@ -25,6 +25,12 @@ let project = [
         thbnail: "darth-vader-disco.gif",
         altText: "Find Your Gif - Here's a freebie of Darth Vader dancing disco",
     },
+    {
+        name: "Test",
+        link: "#",
+        thbnail: "darth-vader-disco.gif",
+        altText: "Test",
+    },
 ];
 
 module.exports = project;

@@ -1,0 +1,35 @@
+{{>navPanel}}
+
+<div class="container mainbody">
+  <div class="row">
+    <div class="col-sm-6 col-md-6 maincontent">
+      <div class="row">
+        <div class="col-md-12">
+          <h3> Contact Me </h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class = "col-xs-12 col-sm-12 col-md-12">
+          <form action="#">
+              <h4>Your Name:</h4><br>
+                <input class = "contactee" type="text" name="name" placeholder = "First Name, Last Name"><br>
+              <h4>Your E-Mail:</h4><br>
+                <input class = "contactee" type="text" name="email" placeholder = "example@email.com"><br>
+              <h4>Callback Number:</h4><br>
+                <input class = "contactee" type="text" name="phone" placeholder = "Please include area code and/or country code"><br>
+            <h4>Your Message:</h4><br>
+              <textarea class = "messagetxt" rows = "6" columns = "50"></textarea><br>
+            <h4>Preferred Method of Contact?</h4><br>
+              <input type="radio" name="contacttype" value="email" checked> E-mail<br>
+                <input type="radio" name="contacttype" value="phone"> Phone<br>
+                <input type="radio" name="contacttype" value="either"> Either<br>
+              <br>
+              <input class = "submit" type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+    {{>connect}}
+  </div>
+</div>

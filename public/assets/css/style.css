@@ -1,6 +1,9 @@
 body{
-	background-image: url("./../images/br_nickel.png");
-	width: 100%;
+    background: #808080; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#808080, #8f8f8f); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#808080, #8f8f8f); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#808080, #8f8f8f); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#808080, #8f8f8f); /* Standard syntax */
 }
 
 /*div{
@@ -35,7 +38,9 @@ li.active{
 	/*margin: 1% 25% 1% 1%;*/
 }
 
-
+.content-wrapper{
+    border: 1px #222222 solid;
+}
 
 .desc{
 	text-align: center;
@@ -104,7 +109,8 @@ li.active{
 }
 
 .mainbody{
-	
+    background-image: url("./../images/oeschinenzee.jpg");
+    background-size: cover;
 }
 
 .namelogo{

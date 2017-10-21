@@ -50,7 +50,7 @@ app.listen(port, function () {
 app.get('/', function (req, res) {
     let hbsObject = {
         title: "Homepage - Michael Kallgren",
-        mainActive: 'active',
+        active: 'homepage',
         results: res
     }
     // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
@@ -61,9 +61,19 @@ app.get('/', function (req, res) {
 app.get('/portfolio', function (req, res) {
     let hbsObject = {
         title: "Portfolio - Michael Kallgren",
-        mainActive: 'active',
+        active: 'portfolio',
         projects: projectList
     }
     // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
     res.render("portfolio.handlebars", hbsObject);
+});
+
+//Contact-Me Route
+app.get('/contact', function (req, res) {
+    let hbsObject = {
+        title: "Contact - Michael Kallgren",
+        active: 'contact',
+    }
+    // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
+    res.render("contact.handlebars", hbsObject);
 });
