@@ -8,6 +8,9 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
 
+// Controller Dependencies
+const projectList = require("./controllers/portfolioController.js")
+
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
 
@@ -52,4 +55,15 @@ app.get('/', function (req, res) {
     }
     // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
     res.render("homepage.handlebars", hbsObject);
+});
+
+//Portfolio Route
+app.get('/portfolio', function (req, res) {
+    let hbsObject = {
+        title: "Portfolio - Michael Kallgren",
+        mainActive: 'active',
+        projects: projectList
+    }
+    // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
+    res.render("portfolio.handlebars", hbsObject);
 });

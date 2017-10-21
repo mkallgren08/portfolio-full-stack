@@ -1,0 +1,23 @@
+{{>navPanel}}
+
+<div class="container mainbody">
+    <div class="row">
+        <div class="col-sm-6 col-md-6 maincontent">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3> Portfolio </h3>
+                </div>
+            </div>
+            <div class="row">
+                {{#each projects}}
+                <div class="col-xs-6 col-sm-12 col-med-6 col-lg-6">
+                    <a class="thumbnail portfolio-link portfolio-link" target="_blank" href="{{link}}">
+								<img src="./assets/images/{{thbnail}}" alt="{{altText}}" style = "width:300px; height:200px;" >
+							</a>
+                    <div class="desc">{{name}}</div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
