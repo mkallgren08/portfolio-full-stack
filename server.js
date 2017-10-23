@@ -7,6 +7,7 @@ const logger = require("morgan")
 const express = require("express");
 const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
+const nodemailer = require('nodemailer');
 
 // Controller Dependencies
 const projectList = require("./controllers/portfolioController.js")
@@ -33,13 +34,49 @@ app.use(express.static("public"));
 //Use body-parser and morgan with the app
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
-    extended: false
+  extended: false
 }));
 app.use(logger("dev"));
 
+
 // set the app to listen for a server connection
 app.listen(port, function () {
-    console.log('App listening on port ' + port)
+  console.log('App listening on port ' + port)
+});
+
+//==========================================================
+//        Nodemailer Variables
+//==========================================================
+
+
+
+// POST sending the message
+app.post('/contact', function (req, res) {
+  let data = req.body;
+  console.log("req.body: " + JSON.stringify(req.body, null, 2))
+
+  // var transporter = nodemailer.createTransport({
+  //   service: 'gmail',
+  //   auth: {
+  //     user: 'mkallgren08@gmail.com',
+  //     pass: process.env.G_Pass
+  //   }
+  // });
+
+  // var mailOptions = {
+  //   from: 'mk962@cornell.edu',
+  //   to: 'mkallgren08@gmail.com',
+  //   subject: 'Sending Email using Node.js',
+  //   text: 'Testing in Node.js!'
+  // };
+
+  // transporter.sendMail(mailOptions, function (error, info) {
+  //   if (error) {
+  //     console.log("Error: " + error);
+  //   } else {
+  //     console.log('Email sent: ' + info.response);
+  //   }
+  // });
 })
 
 // ====================================
@@ -48,32 +85,57 @@ app.listen(port, function () {
 
 // Homepage Route
 app.get('/', function (req, res) {
-    let hbsObject = {
-        title: "Homepage - Michael Kallgren",
-        active: 'homepage',
-        results: res
-    }
-    // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
-    res.render("homepage.handlebars", hbsObject);
+  let hbsObject = {
+    title: "Homepage - Michael Kallgren",
+    active: 'homepage',
+    results: res
+  }
+  // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
+  res.render("homepage.handlebars", hbsObject);
 });
 
 //Portfolio Route
 app.get('/portfolio', function (req, res) {
-    let hbsObject = {
-        title: "Portfolio - Michael Kallgren",
-        active: 'portfolio',
-        projects: projectList
-    }
-    // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
-    res.render("portfolio.handlebars", hbsObject);
+  let hbsObject = {
+    title: "Portfolio - Michael Kallgren",
+    active: 'portfolio',
+    projects: projectList
+  }
+  // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
+  res.render("portfolio.handlebars", hbsObject);
 });
 
 //Contact-Me Route
 app.get('/contact', function (req, res) {
-    let hbsObject = {
-        title: "Contact - Michael Kallgren",
-        active: 'contact',
-    }
-    // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
-    res.render("contact.handlebars", hbsObject);
+  let hbsObject = {
+    title: "Contact - Michael Kallgren",
+    active: 'contact',
+  }
+  // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
+  res.render("contact.handlebars", hbsObject);
+});
+
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'contact.mkallgren08@gmail.com',
+    pass: '2366F43256dckm'
+  }
+});
+
+var mailOptions = {
+  from: 'contact.mkallgren08@gmail.com',
+  to: 'contact.mkallgren08@gmail.com',
+  subject: 'Sending Email using Node.js',
+  text: 'Testing in Node.js!'
+};
+
+transporter.sendMail(mailOptions, function (error, info) {
+  if (error) {
+    console.log("Error: " + error);
+  } else {
+    console.log(mailOptions)
+    console.log('Email sent: ' + info.response);
+  }
 });
