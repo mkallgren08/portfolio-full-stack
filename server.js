@@ -8,6 +8,7 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
 const nodemailer = require('nodemailer');
+const validator = require('email-validator')
 
 // Controller Dependencies
 const projectList = require("./controllers/portfolioController.js")
@@ -70,7 +71,6 @@ app.get('/portfolio', function (req, res) {
     active: 'portfolio',
     projects: projectList
   }
-  // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
   res.render("portfolio.handlebars", hbsObject);
 });
 
@@ -81,7 +81,6 @@ app.get('/contact', function (req, res) {
     title: "Contact - Michael Kallgren",
     active: 'contact',
   }
-  // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
   res.render("contact.handlebars", hbsObject);
 });
 
@@ -89,14 +88,38 @@ app.get('/contact', function (req, res) {
 app.post('/contact', function (req, res) {
   console.log('req.body: ' + JSON.stringify(req.body, null, 2))
 
-  sendMessage(req.body);
-
   let hbsObject = {
     title: "Contact - Michael Kallgren",
     active: 'contact',
   }
-  // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
-  res.render("contact.handlebars", hbsObject);
+
+  let hbsHomeObject = {
+    title: "Homepage - Michael Kallgren",
+    active: 'homepage',
+  }
+
+  let email_check = validator.validate(req.body.email);
+
+  if (email_check == false) {
+    hbsObject.name = req.body.name
+    if (req.body.phone !== "Not provided"){
+      hbsObject.phone = req.body.phone
+    }
+    hbsObject.email = req.body.email
+    hbsObject.message = req.body.message
+    hbsObject.prefMethod = req.body.prefMethod
+    hbsObject.alert = 'We were unable to validate your email. Please check your spelling. ' +
+    'If problem persists, please email contact.mkallgren08@gmail.com'
+    res.send(hbsObject);
+
+  } else {
+    sendMessage(req.body);
+
+    hbsObject.sent = true;
+    res.send(hbsObject)
+  }
+
+
 });
 
 // ====================================
@@ -122,8 +145,8 @@ var sendMessage = (msgObj) => {
     text: 'Name: ' + msgObj.name
     + '\nE-mail: ' + msgObj.email
     + '\nPhone: ' + msgObj.phone
-    +'\nPreferred method of contact: ' + msgObj.prefMethod
-    +'\n\nMessage:\n\n ' + msgObj.message
+    + '\nPreferred method of contact: ' + msgObj.prefMethod
+    + '\n\nMessage:\n\n ' + msgObj.message
   };
 
   transporter.sendMail(mailOptions, function (error, info) {

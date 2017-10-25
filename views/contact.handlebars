@@ -10,26 +10,48 @@
       </div>
 
       <div class="row">
-        <div class = "col-xs-12 col-sm-12 col-md-12">
-          <form id = "contactForm" action="#">
-              <h4>Your Name:</h4><br>
-                <input class = "contactee" id = "contactName" type="text" placeholder = "Name"><br>
-              <h4>Your E-Mail:</h4><br>
-                <input class = "contactee" id = "contactEmail" type="text" placeholder = "Example@email.com"><br>
-              <h4>Callback Number:</h4><br>
-                <input class = "contactee" id = "contactPhone" type="text" placeholder = "Please include area code and/or country code"><br>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <form id="contactForm" action="#">
+            <h4>Your Name:</h4><br>
+            <input class="contactee" id="contactName" type="text" placeholder="Name" value="{{name}}"><br>
+            <h4>Your E-Mail:</h4><br>
+            <input class="contactee" id="contactEmail" type="text" placeholder="Example@email.com" value="{{email}}"><br>
+            <h4>Callback Number:</h4><br>
+            <input class="contactee" id="contactPhone" type="text" placeholder="Please include area code and/or country code" value="{{phone}}"><br>
             <h4>Your Message:</h4><br>
-              <textarea class = "messagetxt" id = "contactMessage" rows = "6" columns = "50"></textarea><br>
+            <textarea class="messagetxt" id="contactMessage" rows="6" columns="50"></textarea><br>
             <h4>Preferred Method of Contact?</h4><br>
-              <input type="radio" name="contact-type" value="email" > E-mail<br>
-                <input type="radio" name="contact-type" value="phone"> Phone<br>
-                <input type="radio" name="contact-type" value="either"> Either<br>
-              <br>
-              <input class = "submit contact-submit" type="submit" value="Submit">
+            <input type="radio" name="contact-type" value="email"> E-mail<br>
+            <input type="radio" name="contact-type" value="phone"> Phone<br>
+            <input type="radio" name="contact-type" value="either"> Either<br>
+            <br>
+            <input class="submit contact-submit" type="submit" value="Submit">
           </form>
         </div>
       </div>
     </div>
-    {{>connect}}
+    {{>connect}} 
+    {{#if alert}}
+      <div class="modal fade">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/if}}
+
   </div>
 </div>
