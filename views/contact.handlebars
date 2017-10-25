@@ -11,17 +11,17 @@
 
       <div class="row">
         <div class = "col-xs-12 col-sm-12 col-md-12">
-          <form action="/contact" method = "post">
+          <form id = "contactForm" action="#">
               <h4>Your Name:</h4><br>
-                <input class = "contactee" type="text" name="name" placeholder = "First Name, Last Name"><br>
+                <input class = "contactee" id = "contactName" type="text" placeholder = "Name"><br>
               <h4>Your E-Mail:</h4><br>
-                <input class = "contactee" type="text" name="email" placeholder = "example@email.com"><br>
+                <input class = "contactee" id = "contactEmail" type="text" placeholder = "Example@email.com"><br>
               <h4>Callback Number:</h4><br>
-                <input class = "contactee" type="text" name="phone" placeholder = "Please include area code and/or country code"><br>
+                <input class = "contactee" id = "contactPhone" type="text" placeholder = "Please include area code and/or country code"><br>
             <h4>Your Message:</h4><br>
-              <textarea class = "messagetxt" rows = "6" columns = "50"></textarea><br>
+              <textarea class = "messagetxt" id = "contactMessage" rows = "6" columns = "50"></textarea><br>
             <h4>Preferred Method of Contact?</h4><br>
-              <input type="radio" name="contact-type" value="email" checked> E-mail<br>
+              <input type="radio" name="contact-type" value="email" > E-mail<br>
                 <input type="radio" name="contact-type" value="phone"> Phone<br>
                 <input type="radio" name="contact-type" value="either"> Either<br>
               <br>

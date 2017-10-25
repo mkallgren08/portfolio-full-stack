@@ -48,37 +48,6 @@ app.listen(port, function () {
 //        Nodemailer Variables
 //==========================================================
 
-
-
-// POST sending the message
-app.post('/contact', function (req, res) {
-  let data = req.body;
-  console.log("req.body: " + JSON.stringify(req.body, null, 2))
-
-  // var transporter = nodemailer.createTransport({
-  //   service: 'gmail',
-  //   auth: {
-  //     user: 'mkallgren08@gmail.com',
-  //     pass: process.env.G_Pass
-  //   }
-  // });
-
-  // var mailOptions = {
-  //   from: 'mk962@cornell.edu',
-  //   to: 'mkallgren08@gmail.com',
-  //   subject: 'Sending Email using Node.js',
-  //   text: 'Testing in Node.js!'
-  // };
-
-  // transporter.sendMail(mailOptions, function (error, info) {
-  //   if (error) {
-  //     console.log("Error: " + error);
-  //   } else {
-  //     console.log('Email sent: ' + info.response);
-  //   }
-  // });
-})
-
 // ====================================
 //      Routing
 // ====================================
@@ -105,8 +74,9 @@ app.get('/portfolio', function (req, res) {
   res.render("portfolio.handlebars", hbsObject);
 });
 
-//Contact-Me Route
+//Contact-Page Route
 app.get('/contact', function (req, res) {
+
   let hbsObject = {
     title: "Contact - Michael Kallgren",
     active: 'contact',
@@ -115,27 +85,58 @@ app.get('/contact', function (req, res) {
   res.render("contact.handlebars", hbsObject);
 });
 
+// POST Message Route
+app.post('/contact', function (req, res) {
+  console.log('req.body: ' + JSON.stringify(req.body, null, 2))
 
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'contact.mkallgren08@gmail.com',
-    pass: '2366F43256dckm'
+  sendMessage(req.body);
+
+  let hbsObject = {
+    title: "Contact - Michael Kallgren",
+    active: 'contact',
   }
+  // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
+  res.render("contact.handlebars", hbsObject);
 });
 
-var mailOptions = {
-  from: 'contact.mkallgren08@gmail.com',
-  to: 'contact.mkallgren08@gmail.com',
-  subject: 'Sending Email using Node.js',
-  text: 'Testing in Node.js!'
-};
+// ====================================
+//      Functions
+// ====================================
 
-transporter.sendMail(mailOptions, function (error, info) {
-  if (error) {
-    console.log("Error: " + error);
-  } else {
-    console.log(mailOptions)
-    console.log('Email sent: ' + info.response);
-  }
-});
+
+// Sends the email
+//+++++++++++++++++++++++++++++++++++++++++++++++++
+var sendMessage = (msgObj) => {
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'contact.mkallgren08@gmail.com',
+      pass: process.env.GPASS
+    }
+  });
+
+  var mailOptions = {
+    from: msgObj.email,
+    to: 'contact.mkallgren08@gmail.com',
+    subject: 'New Message From ' + msgObj.name,
+    text: 'Name: ' + msgObj.name
+    + '\nE-mail: ' + msgObj.email
+    + '\nPhone: ' + msgObj.phone
+    +'\nPreferred method of contact: ' + msgObj.prefMethod
+    +'\n\nMessage:\n\n ' + msgObj.message
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log("Error: " + error);
+    } else {
+      console.log('Mail contents: ' + JSON.stringify(mailOptions, null, 2))
+      console.log('Email sent: ' + info.response);
+    }
+  });
+}
+//+++++++++++++++++++++++++++++++++++++++++++++++++
+
+// ====================================
+//      Misc
+// ====================================
