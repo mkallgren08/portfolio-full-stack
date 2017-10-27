@@ -134,7 +134,7 @@ var sendMessage = (msgObj) => {
     service: 'gmail',
     auth: {
       user: 'contact.mkallgren08@gmail.com',
-      pass: process.env.GPASS
+      pass: process.env.GPASS || process.env.P_PASS
     }
   });
 
