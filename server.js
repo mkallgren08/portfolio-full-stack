@@ -17,6 +17,7 @@ const projectList = require("./controllers/portfolioController.js")
 mongoose.Promise = Promise;
 
 // Required Models
+const Code = require("./models/Code.js");
 
 // Initialize Express
 const app = express();
@@ -38,6 +39,26 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(logger("dev"));
+
+// ====================================
+//      Database Setup with Mongoose
+// ====================================
+
+// Database configuration with mongoose
+//mongoose.connect("mongodb://heroku_086slhkf:t96inaqlc3krouapt7t4uvf6rd@ds139984.mlab.com:39984/heroku_086slhkf")
+//mongoose.connect('mongodb://localhost/scraper');
+mongoose.connect('mongodb://localhost/countrycodesdb');
+const db = mongoose.connection;
+
+// Show any mongoose errors
+db.on("error", function(error) {
+    console.log("Mongoose Error: ", error);
+});
+  
+// Once logged in to the db through mongoose, log a success message
+db.once("open", function() {
+    console.log("Mongoose connection successful.");
+});
 
 
 // set the app to listen for a server connection
@@ -120,6 +141,31 @@ app.post('/contact', function (req, res) {
   }
 
 
+});
+
+// A test GET route to make sure I can get the country codes!
+// A GET request for the saved articles
+app.get('/codes', function (req, res) {
+  // Grab every doc in the Article collection
+  Code.find({})
+  // Now, execute the rest of the query
+  .exec( function(error, result) {
+      // Log any errors
+      if (error) {
+        console.log(error);
+      }
+      // Or send the doc to the browser as a json object
+      else {
+        var hbsObject= {
+            title : "BBC Scraped News",
+            savedActive: 'active',
+            results : result
+        }
+        console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
+      //   res.send(result);
+        res.send(result);
+      }
+    });
 });
 
 // ====================================
