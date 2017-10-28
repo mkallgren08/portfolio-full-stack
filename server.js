@@ -10,8 +10,10 @@ const mongoose = require("mongoose");
 const nodemailer = require('nodemailer');
 const validator = require('email-validator')
 
+
 // Controller Dependencies
 const projectList = require("./controllers/portfolioController.js")
+const phoneValidator = require("./controllers/phoneValidator.js")
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
@@ -65,6 +67,8 @@ db.once("open", function () {
 app.listen(port, function () {
   console.log('App listening on port ' + port)
 });
+
+
 
 //==========================================================
 //        Nodemailer Variables
@@ -134,6 +138,13 @@ app.post('/contact', function (req, res) {
 
   let email_check = validator.validate(req.body.email);
 
+  let phone_check = true;
+
+  if (req.body.phone !== "Not provided") {
+    phone_check = phoneValidator.phoneValidation(req.body.phone)
+  }
+
+
   if (email_check == false) {
     hbsObject.name = req.body.name
     if (req.body.phone !== "Not provided") {
@@ -147,10 +158,18 @@ app.post('/contact', function (req, res) {
     res.send(hbsObject);
 
   } else {
-    sendMessage(req.body);
+    if (phone_check == false) {
+      hbsObject.alert = "Please check the format of your phone number. Try " +
+        "writing the number with no spaces or characters (i.e. '( )', '-', etc.)."
+      res.send(hbsObject);
+    } else {
+      sendMessage(req.body);
 
-    hbsObject.sent = true;
-    res.send(hbsObject)
+      hbsObject.sent = true;
+      res.send(hbsObject)
+    }
+
+
   }
 
 
