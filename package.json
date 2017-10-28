@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "mongoimport -d countrycodesdb -c codes --type csv --file ./data/CountryCodes.csv --headerline"
   },
   "repository": {
     "type": "git",
