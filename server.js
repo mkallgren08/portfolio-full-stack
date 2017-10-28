@@ -49,7 +49,7 @@ app.use(logger("dev"));
 // Database configuration with mongoose
 //mongoose.connect("mongodb://heroku_086slhkf:t96inaqlc3krouapt7t4uvf6rd@ds139984.mlab.com:39984/heroku_086slhkf")
 //mongoose.connect('mongodb://localhost/scraper');
-mongoose.connect('mongodb://localhost/countrycodesdb');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/countrycodesdb');
 const db = mongoose.connection;
 
 // Show any mongoose errors
