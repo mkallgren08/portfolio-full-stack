@@ -9,7 +9,7 @@ const Schema = mongoose.Schema;
 // Make the Article Schema here:
 var CodeSchema = new Schema({
     // The link is another required string
-    text: {
+    name: {
         type: String,
         required: true
     },

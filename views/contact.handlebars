@@ -27,10 +27,9 @@
                 <select class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action
                   <span class="caret"></span>
                   <ul class="dropdown-menu"></ul>
-                  <option value="volvo">Volvo</option>
-                  <option value="saab">Saab</option>
-                  <option value="opel">Opel</option>
-                  <option value="audi">Audi</option>
+                  {{#each results}}
+                  <option value="{{this.code}}">{{this.name}} (+{{this.code}})</option>
+                  {{/each}}
                   </ul>
                 </select>
 

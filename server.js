@@ -51,13 +51,13 @@ mongoose.connect('mongodb://localhost/countrycodesdb');
 const db = mongoose.connection;
 
 // Show any mongoose errors
-db.on("error", function(error) {
-    console.log("Mongoose Error: ", error);
+db.on("error", function (error) {
+  console.log("Mongoose Error: ", error);
 });
-  
+
 // Once logged in to the db through mongoose, log a success message
-db.once("open", function() {
-    console.log("Mongoose connection successful.");
+db.once("open", function () {
+  console.log("Mongoose connection successful.");
 });
 
 
@@ -97,12 +97,25 @@ app.get('/portfolio', function (req, res) {
 
 //Contact-Page Route
 app.get('/contact', function (req, res) {
+  Code.find({})
+    // Now, execute the rest of the query
+    .exec(function (error, result) {
+      // Log any errors
+      if (error) {
+        console.log(error);
+      }
+      // Or send the doc to the browser as a json object
+      else {
+        let hbsObject = {
+          title: "Contact - Michael Kallgren",
+          active: 'contact',
+          results: result
+        }
+        console.log("hbsObj for rendering: " + JSON.stringify(hbsObject, null, 2));
+        res.render("contact.handlebars", hbsObject);
+      }
+    });
 
-  let hbsObject = {
-    title: "Contact - Michael Kallgren",
-    active: 'contact',
-  }
-  res.render("contact.handlebars", hbsObject);
 });
 
 // POST Message Route
@@ -123,14 +136,14 @@ app.post('/contact', function (req, res) {
 
   if (email_check == false) {
     hbsObject.name = req.body.name
-    if (req.body.phone !== "Not provided"){
+    if (req.body.phone !== "Not provided") {
       hbsObject.phone = req.body.phone
     }
     hbsObject.email = req.body.email
     hbsObject.message = req.body.message
     hbsObject.prefMethod = req.body.prefMethod
     hbsObject.alert = 'We were unable to validate your email. Please check your spelling. ' +
-    'If problem persists, please email contact.mkallgren08@gmail.com'
+      'If problem persists, please email contact.mkallgren08@gmail.com'
     res.send(hbsObject);
 
   } else {
@@ -148,21 +161,21 @@ app.post('/contact', function (req, res) {
 app.get('/codes', function (req, res) {
   // Grab every doc in the Article collection
   Code.find({})
-  // Now, execute the rest of the query
-  .exec( function(error, result) {
+    // Now, execute the rest of the query
+    .exec(function (error, result) {
       // Log any errors
       if (error) {
         console.log(error);
       }
       // Or send the doc to the browser as a json object
       else {
-        var hbsObject= {
-            title : "BBC Scraped News",
-            savedActive: 'active',
-            results : result
+        var hbsObject = {
+          title: "BBC Scraped News",
+          savedActive: 'active',
+          results: result
         }
         console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
-      //   res.send(result);
+        //   res.send(result);
         res.send(result);
       }
     });
