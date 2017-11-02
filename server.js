@@ -222,7 +222,7 @@ var sendMessage = (msgObj) => {
     subject: 'New Message From ' + msgObj.name,
     text: 'Name: ' + msgObj.name
     + '\nE-mail: ' + msgObj.email
-    + '\nPhone: ' + msgObj.phone
+    + '\nPhone: (' +msgObj.countryCode + ')'+  msgObj.phone
     + '\nPreferred method of contact: ' + msgObj.prefMethod
     + '\n\nMessage:\n\n ' + msgObj.message
   };

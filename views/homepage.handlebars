@@ -1,21 +1,33 @@
-{{>navPanel}}
-
-{{!-- {{>scrapertitle}} --}}
+{{>navPanel}} {{!-- {{>scrapertitle}} --}}
 <div class="row">
   <div class="container mainbody">
-    <h3 id = 'newestHeader'>Recently Scraped Articles</h3>
-    {{!-- {{#each results}}
-      <div class="panel panel-default ">
-        <div class="panel-heading">
-            <button class="btn btn-info saveArticle" data-id = "{{id}}">Save Article</button>
+    <div class="row">
+      <div class="col-sm-6 col-md-6 maincontent">
+        <!-- ABOUT ME -->
+        <div class="row">
+          <div class="col-md-12">
+            <h3> About Me </h3>
+          </div>
         </div>
-        <div class="panel-body">
-            <h2 ><a id = "{{id}}" href = "https://www.bbc.com{{this.link}}" class = "articleDisplay" target = "_blank">{{this.title}}</a></h2>
+
+        <div class="row">
+          <div class="col-xs-6 col-sm-12 col-md-6">
+            <img id="headshot" src="./assets/images/Headshot.jpg" alt="Headshot: Michael K. Kallgren">
+          </div>
+
+          <div class="col-xs-6 col-sm-12 col-md-6">
+            <p>
+              My entire life I’ve made things to help others using music, carpentry, hard sciences, and robotics. This background means
+              I think outside the box - seeing solutions others don’t. My approach combined with my passion for learning
+              new skills and passions for learning and finding creative solutions is what makes web development a professionally
+              good fit.
+            </p>
+          </div>
         </div>
       </div>
-    {{/each}} --}}
+
+      {{>connect}}
+    </div>
+
   </div>
 </div>
-
-
-

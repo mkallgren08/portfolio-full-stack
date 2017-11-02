@@ -22,10 +22,11 @@ let parseContact = () => {
   sentData.name = $("#contactName").val();
 
   // Checking for phone number
+  sentData.countryCode = $('#basic-addon1').text();
   let phoneNum = $("#contactPhone").val()
 
   if (phoneNum !== '' || phoneNum !== "") {
-    sentData.phone = phoneNum
+    sentData.phone = phoneNum 
   } else {
     sentData.phone = "Not provided"
   }
@@ -64,4 +65,11 @@ let parseContact = () => {
   } else {
     alert("Please make sure you have included your Name, E-mail address, and a brief message.")
   }
+}
+
+let displayedCode = () => {
+  let newCode = $("#countryCodes").find(":selected").val();
+  $('#basic-addon1').text("+"+newCode)
+  $('#basic-addon1').val(newCode)
+  // alert("New code is: " + newCode)
 }

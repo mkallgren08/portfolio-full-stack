@@ -12,46 +12,52 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
           <form id="contactForm" action="#">
-            <h4>Your Name:*</h4>
-            <br>
-            <input class="contactee" id="contactName" type="text" placeholder="Name">
-            <br>
-            <h4>Your E-Mail:*</h4>
-            <br>
-            <input class="contactee" id="contactEmail" type="text" placeholder="Example@email.com">
-            <br>
-            <h4>Callback Number:</h4>
-            <br>
-            <div class="input-group">
-              <div class="input-group-btn">
-                <select class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action
-                  <span class="caret"></span>
-                  <ul class="dropdown-menu"></ul>
-                  {{#each results}}
-                  <option value="{{this.code}}">{{this.name}} (+{{this.code}})</option>
-                  {{/each}}
-                  </ul>
-                </select>
-
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <h4>Your Name:*</h4>
+                <input class="contactee" id="contactName" type="text" placeholder="Name">
               </div>
-              <!-- /btn-group -->
-              <input class="contactee" id="contactPhone" type="text" placeholder="xxx xxx xxxx">
+              <div class="col-sm-12 col-md-6">
+                <h4>Your E-Mail:*</h4>
+                <input class="contactee" id="contactEmail" type="text" placeholder="Example@email.com">
+              </div>
             </div>
-            <br>
-            <h4>Your Message:*</h4>
-            <br>
-            <textarea class="messagetxt" id="contactMessage" rows="6" columns="50"></textarea>
-            <br>
-            <h4>Preferred Method of Contact?*</h4>
-            <br>
-            <input type="radio" name="contact-type" value="email"> E-mail
-            <br>
-            <input type="radio" name="contact-type" value="phone"> Phone
-            <br>
-            <input type="radio" name="contact-type" value="either"> Either
-            <br>
-            <br>
-            <input class="submit contact-submit" type="submit" value="Submit">
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <h4>Callback Number:</h4>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1" value="1">+1</span>
+                  <input class="contactee" id="contactPhone" type="text" placeholder="xxx xxx xxxx">
+                </div>
+                <div class="input-group">
+                  <div class="input-group-btn">
+                    <select class="btn btn-default dropdown-toggle" id="countryCodes" onchange="displayedCode()">
+                      <span class="caret"></span>
+                      {{#each results}}
+                      <option value="{{this.code}}">{{this.name}} (+{{this.code}})</option>
+                      {{/each}}
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h4>Preferred Method of Contact?*</h4>
+                <input type="radio" name="contact-type" value="email"> E-mail
+                <br>
+                <input type="radio" name="contact-type" value="phone"> Phone
+                <br>
+                <input type="radio" name="contact-type" value="either"> Either
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-9">
+                <h4>Your Message:*</h4>
+                <textarea class="messagetxt" id="contactMessage" rows="6" columns="50"></textarea>
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <input class="submit contact-submit btn-lg" type="submit" value="Submit">
+              </div>
+            </div>
           </form>
         </div>
       </div>

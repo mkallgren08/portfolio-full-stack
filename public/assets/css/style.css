@@ -1,9 +1,15 @@
+body, html{
+	height: 100%;
+	width: 100%;
+}
+
 body{
     background: #808080; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#808080, #8f8f8f); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#808080, #8f8f8f); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#808080, #8f8f8f); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#808080, #8f8f8f); /* Standard syntax */
+    /* background: -webkit-linear-gradient(#808080, #d3d3d3); For Safari 5.1 to 6.0
+    background: -o-linear-gradient(#808080, #d3d3d3); For Opera 11.1 to 12.0
+    background: -moz-linear-gradient(#808080, #d3d3d3); For Firefox 3.6 to 15
+	background: linear-gradient(#808080, #d3d3d3); Standard syntax */
+	background-size: cover; 
 }
 
 /*div{
@@ -15,31 +21,54 @@ h1{
 
 }
 
-li.active{
-	background-image: url("./../images/br_brass.jpg");
-	background-color: transparent;
+.banner{
+	background-color: #ebebeb;
+	margin-bottom: 0px;
 }
 
 .connectPanel{
 	margin-bottom: 70px;
 }
 
-.contactFormWrapper{
-	margin-bottom: 50px;
+#contactForm{
+	overflow-y: hidden;
+	overflow-x: hidden;
+	max-height: 100%;
 }
 
-#contactSubmit{
-	position: relative;
-	left: 45%;
+.contact-submit{
+	margin-top: 45%;
 }
 
 .contactee{
-	width: 99%;
-	/*margin: 1% 25% 1% 1%;*/
+	width: 80%;
+	padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: left;
+    background-color: white;
+    border: 1px solid rgb(136, 136, 136);
+    border-radius: 4px;
+}
+
+.container-fluid{
+	padding-right:0px;
+	padding-left:0px;
 }
 
 .content-wrapper{
     border: 1px #222222 solid;
+}
+
+.copyright{
+	text-align: center;
+}
+
+#countryCodes{
+	max-width: 43%;
+	margin: 1% 10.75% 0% 10.75%;
 }
 
 .desc{
@@ -55,31 +84,6 @@ li.active{
 	border-bottom-right-radius: 3px;
 	bottom: 50px;
 	z-index: 1;
-}
-
-#messagetxt{
-	width: 99%;
-	height: 150px;
-}
-
-.nav-tabs>li.active>a, 
-.nav-tabs>li.active>a:focus, 
-.nav-tabs>li.active>a:hover {
-	color: beige;
-	background-color: transparent;
-	border: 2px solid #9eaeb5;
-	border-bottom: transparent;
-	margin-right: 0px;
-	font-weight: bold;
-}
-
-.container-fluid{
-	padding-right:0px;
-	padding-left:0px;
-}
-
-.copyright{
-	text-align: center;
 }
 
 .footer{
@@ -108,25 +112,45 @@ li.active{
 	width:33%;
 }
 
+li.active{
+	background-image: url("./../images/br_brass.jpg");
+	background-color: transparent;
+}
+
+.messagetxt{
+	width: 95%;
+	max-width: 100%;
+	min-width: 50%;
+	min-height: 4.5em;
+	height: 125px;
+}
+
+.nav-tabs>li.active>a, 
+.nav-tabs>li.active>a:focus, 
+.nav-tabs>li.active>a:hover {
+	color: beige;
+	background-color: transparent;
+	border: 2px solid #9eaeb5;
+	border-bottom: transparent;
+	margin-right: 0px;
+	font-weight: bold;
+}
+
 .mainbody{
     background-image: url("./../images/oeschinenzee.jpg");
     background-size: cover;
 }
 
 .namelogo{
-	margin: 1% 1% 1% 2%;
+	margin: 1% 7.5vw;
 	padding: 0.5% 5%;
 	/* padding-left: 30px; */
 	background-image: url("./../images/br_brass.jpg");
 	background-size: 100%;
-	min-width: 266px;
 	text-shadow: -1px 1px #504D4D;
 }
 
-.banner{
-	background-color: #ebebeb;
-	margin-bottom: 0px;
-}
+
 
 .maincontent{
 	margin: 10px 0px;
@@ -139,6 +163,11 @@ li.active{
 	margin-bottom: 0px;
 	background-color: #ebebeb;
 }
+
+/* .navRow.row{
+	margin-left: 0vw;
+	margin-right: 0vw;
+} */
 
 .navtabs{
 	margin-left: 16%;
@@ -174,6 +203,11 @@ li.active{
 @media screen and (max-width: 1003px){
 	.navtabs{
 		margin-left: 3%;
+	}
+
+	.contact-submit{
+		margin-top: 2%;
+		margin-bottom:5%;
 	}
 }
 
