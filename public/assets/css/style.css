@@ -5,10 +5,10 @@ body, html{
 
 body{
     background: #808080; /* For browsers that do not support gradients */
-    /* background: -webkit-linear-gradient(#808080, #d3d3d3); For Safari 5.1 to 6.0
-    background: -o-linear-gradient(#808080, #d3d3d3); For Opera 11.1 to 12.0
-    background: -moz-linear-gradient(#808080, #d3d3d3); For Firefox 3.6 to 15
-	background: linear-gradient(#808080, #d3d3d3); Standard syntax */
+    /* background: -webkit-linear-gradient(#808080, #d3d3d3); 
+    background: -o-linear-gradient(#808080, #d3d3d3); 
+    background: -moz-linear-gradient(#808080, #d3d3d3); 
+	background: linear-gradient(#808080, #d3d3d3);  */
 	background-size: cover; 
 }
 
@@ -117,28 +117,24 @@ li.active{
 	background-color: transparent;
 }
 
+.mainbody{
+    background-image: url("./../images/oeschinenzee.jpg");
+    background-size: 100% 100%;
+}
+
+.maincontent{
+	margin: 10px 0px;
+	background-color: #ebebeb;
+	border-radius: 5px;
+	margin-bottom: 50px;
+}
+
 .messagetxt{
 	width: 95%;
 	max-width: 100%;
 	min-width: 50%;
 	min-height: 4.5em;
 	height: 125px;
-}
-
-.nav-tabs>li.active>a, 
-.nav-tabs>li.active>a:focus, 
-.nav-tabs>li.active>a:hover {
-	color: beige;
-	background-color: transparent;
-	border: 2px solid #9eaeb5;
-	border-bottom: transparent;
-	margin-right: 0px;
-	font-weight: bold;
-}
-
-.mainbody{
-    background-image: url("./../images/oeschinenzee.jpg");
-    background-size: cover;
 }
 
 .namelogo{
@@ -150,13 +146,23 @@ li.active{
 	text-shadow: -1px 1px #504D4D;
 }
 
+.nav-tabs{
+	min-width: 251px;
+	max-width: 500px;
+	/*position: absolute;
+	right: 5%;
+	bottom: 0%;*/
+}
 
-
-.maincontent{
-	margin: 10px 0px;
-	background-color: #ebebeb;
-	border-radius: 5px;
-	margin-bottom: 50px;
+.nav-tabs>li.active>a, 
+.nav-tabs>li.active>a:focus, 
+.nav-tabs>li.active>a:hover {
+	color: beige;
+	background-color: transparent;
+	border: 2px solid #9eaeb5;
+	border-bottom: transparent;
+	margin-right: 0px;
+	font-weight: bold;
 }
 
 .navbar{
@@ -174,13 +180,6 @@ li.active{
 	max-width: 500px;
 }
 
-.nav-tabs{
-	min-width: 251px;
-	max-width: 500px;
-	/*position: absolute;
-	right: 5%;
-	bottom: 0%;*/
-}
 
 #page-nav{
 	max-width: 500px;
