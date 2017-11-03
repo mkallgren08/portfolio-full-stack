@@ -87,11 +87,10 @@ h1{
 }
 
 .footer{
-	border-top: 3px solid #9c501a;
+	border: 3px solid #9c501a;
 	background-image: url("./../images/br_copper2.jpg");
 	background-size: 100%;
-	/*position: absolute*/;
-	/*bottom: 0px;*/
+	height: auto;
 
 }
 
@@ -149,9 +148,6 @@ li.active{
 .nav-tabs{
 	min-width: 251px;
 	max-width: 500px;
-	/*position: absolute;
-	right: 5%;
-	bottom: 0%;*/
 }
 
 .nav-tabs>li.active>a, 
@@ -177,7 +173,12 @@ li.active{
 
 .navtabs{
 	margin-left: 16%;
-	max-width: 500px;
+	max-width: 50%;
+}
+
+.nav-wrap{
+	margin-right: 0px;
+	padding-right: 0px;
 }
 
 
@@ -195,19 +196,26 @@ li.active{
 	padding-bottom: 10px;
 }
 
+.row{
+	margin-right: 0px;
+}
+
 .topfill{
 	height: 50px;
+	width: 98%
 }
 
 @media screen and (max-width: 1003px){
-	.navtabs{
-		margin-left: 3%;
-	}
-
 	.contact-submit{
 		margin-top: 2%;
 		margin-bottom:5%;
 	}
+
+	.navtabs{
+		margin-left: 3%;
+	}
+
+
 }
 
 @media screen and (max-width: 768px){
@@ -229,14 +237,27 @@ li.active{
 }
 
 @media screen and (max-width: 388px){
+	.desc{
+		width: 70%;
+		font-size: 11px;
+		position: absolute;
+		bottom:30px;
+	}
+	
 	.navtabs{
 		margin-left: 0%;
 		margin-right: 5%;
 	}
 
-	.desc{
-		font-size: 11px;
-		position: absolute;
-		bottom:30px;
+	.portfolio-link, .portfolio-thbnail{
+		max-height: 100px
 	}
+
+
+}
+
+@media screen and (min-width: 1003px){
+	/* .footer{
+		height: 20vh;
+	} */
 }

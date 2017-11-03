@@ -11,8 +11,8 @@
       <div class="row">
         {{#each projects}}
         <div class="col-xs-6 col-sm-12 col-med-6 col-lg-6">
-          <a class="thumbnail portfolio-link portfolio-link" target="_blank" href="{{link}}">
-								<img src="./assets/images/{{thbnail}}" alt="{{altText}}" style = "width:300px; height:200px;" >
+          <a class="thumbnail portfolio-link" target="_blank" href="{{link}}">
+								<img class = "portfolio-thbnail" src="./assets/images/{{thbnail}}" alt="{{altText}}" style = "width:300px; height:200px;" >
 							</a>
           <div class="desc">{{name}}</div>
         </div>
@@ -22,3 +22,5 @@
     {{>connect}}
   </div>
 </div>
+
+ {{>footer}}
