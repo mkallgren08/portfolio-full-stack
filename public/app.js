@@ -16,7 +16,7 @@ $(document).ready(function () {
 //=========================================
 
 let parseContact = () => {
-  var sentData = {};
+  let sentData = {};
   sentData.message = $("#contactMessage").val();
   sentData.email = $("#contactEmail").val();
   sentData.name = $("#contactName").val();

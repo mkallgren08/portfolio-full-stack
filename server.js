@@ -13,7 +13,7 @@ const validator = require('email-validator')
 
 // Controller Dependencies
 const projectList = require("./controllers/portfolioController.js")
-const phoneValidator = require("./controllers/phoneValidator.js")
+// const phoneValidator = require("./controllers/phoneValidator.js")
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
@@ -82,7 +82,7 @@ app.listen(port, function () {
 app.get('/', function (req, res) {
   let hbsObject = {
     title: "Homepage - Michael Kallgren",
-    active: 'homepage',
+    active: 'active',
     results: res
   }
   // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
@@ -93,7 +93,7 @@ app.get('/', function (req, res) {
 app.get('/portfolio', function (req, res) {
   let hbsObject = {
     title: "Portfolio - Michael Kallgren",
-    active: 'portfolio',
+    active: 'active',
     projects: projectList
   }
   res.render("portfolio.handlebars", hbsObject);
@@ -112,7 +112,7 @@ app.get('/contact', function (req, res) {
       else {
         let hbsObject = {
           title: "Contact - Michael Kallgren",
-          active: 'contact',
+          active: 'active',
           results: result
         }
         console.log("hbsObj for rendering: " + JSON.stringify(hbsObject, null, 2));
@@ -141,11 +141,20 @@ app.post('/contact', function (req, res) {
   let phone_check = true;
 
   if (req.body.phone !== "Not provided") {
-    phone_check = phoneValidator.phoneValidation(req.body.phone)
+    let phoneValidationNoChar = /[a-zA-Z]|[!@$%^&*;\\/|<>"']/g
+    let phoneValidationNumNumbers = /\d/g
+
+
+    if (req.body.phone.match(phoneValidationNoChar) ||
+      req.body.phone.match(phoneValidationNumNumbers).length < 8) {
+      phone_check = false;
+    } else {
+      console.log("valid phone number found!")
+    }
   }
 
 
-  if (email_check == false) {
+  if (email_check == false || phone_check == false) {
     hbsObject.name = req.body.name
     if (req.body.phone !== "Not provided") {
       hbsObject.phone = req.body.phone
@@ -153,26 +162,24 @@ app.post('/contact', function (req, res) {
     hbsObject.email = req.body.email
     hbsObject.message = req.body.message
     hbsObject.prefMethod = req.body.prefMethod
-    hbsObject.alert = 'We were unable to validate your email. Please check your spelling. ' +
-      'If problem persists, please email contact.mkallgren08@gmail.com'
+    if (email_check == false) {
+      hbsObject.alert = "We were unable to validate your email. Please check your address' spelling. " +
+        'If the problem persists, please email "contact.mkallgren08@gmail.com" directly using your mail ' +
+        'service of choice.'
+    } else if (phone_check == false) {
+      hbsObject.alert = "Please check the format of your phone number. Try " +
+        "writing the number with no spaces or characters (i.e. '( )', '-', etc.) and " +
+        "be sure to use the dropdown menu to find your country code."
+    }
+
     res.send(hbsObject);
 
   } else {
-    if (phone_check == false) {
-      hbsObject.alert = "Please check the format of your phone number. Try " +
-        "writing the number with no spaces or characters (i.e. '( )', '-', etc.)."
-      res.send(hbsObject);
-    } else {
-      sendMessage(req.body);
+    sendMessage(req.body);
 
-      hbsObject.sent = true;
-      res.send(hbsObject)
-    }
-
-
+    hbsObject.sent = true;
+    res.send(hbsObject)
   }
-
-
 });
 
 // A test GET route to make sure I can get the country codes!
@@ -222,7 +229,7 @@ var sendMessage = (msgObj) => {
     subject: 'New Message From ' + msgObj.name,
     text: 'Name: ' + msgObj.name
     + '\nE-mail: ' + msgObj.email
-    + '\nPhone: (' +msgObj.countryCode + ')'+  msgObj.phone
+    + '\nPhone: (' + msgObj.countryCode + ')' + msgObj.phone
     + '\nPreferred method of contact: ' + msgObj.prefMethod
     + '\n\nMessage:\n\n ' + msgObj.message
   };
