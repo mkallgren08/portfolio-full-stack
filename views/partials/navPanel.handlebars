@@ -18,9 +18,9 @@
                 <div class="nav-wrap">
                   <div class="container navtabs">
                     <ul class="nav nav-tabs">
-                      <li role="presentation" class = ""><a href="/">About</a></li>
-                      <li role="presentation" class = ""><a href="/contact">Contact</a></li>
-                      <li role="presentation" class="active"><a href="/portfolio">Portfolio</a></li>
+                      <li role="presentation" class = "{{#if homepage}}{{homepage}}{{/if}}"><a href="/">About</a></li>
+                      <li role="presentation" class = "{{#if contact}}{{contact}}{{/if}}"><a href="/contact">Contact</a></li>
+                      <li role="presentation" class="{{#if portfolio}}{{portfolio}}{{/if}}"><a href="/portfolio">Portfolio</a></li>
                     </ul>
                   </div>
                 </div>

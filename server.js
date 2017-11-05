@@ -82,7 +82,7 @@ app.listen(port, function () {
 app.get('/', function (req, res) {
   let hbsObject = {
     title: "Homepage - Michael Kallgren",
-    active: 'active',
+    homepage: 'active',
     results: res
   }
   // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
@@ -93,7 +93,7 @@ app.get('/', function (req, res) {
 app.get('/portfolio', function (req, res) {
   let hbsObject = {
     title: "Portfolio - Michael Kallgren",
-    active: 'active',
+    portfolio: 'active',
     projects: projectList
   }
   res.render("portfolio.handlebars", hbsObject);
@@ -112,7 +112,7 @@ app.get('/contact', function (req, res) {
       else {
         let hbsObject = {
           title: "Contact - Michael Kallgren",
-          active: 'active',
+          contact: 'active',
           results: result
         }
         console.log("hbsObj for rendering: " + JSON.stringify(hbsObject, null, 2));
