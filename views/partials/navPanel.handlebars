@@ -1,7 +1,8 @@
 <div class="container-fluid banner">
-  {{!-- <div class="container"> --}}
-    <div class="row navRow">
-      <div class="col-md-12 nav-wrap">
+  {{!--
+  <div class="container"> --}}
+    <div class="row">
+      <div class="nav-wrap">
         <!-- Navbar -->
         <nav class="navbar navbar-default navbar-static-top">
           <div class="row">
@@ -10,19 +11,23 @@
                 <h1>Michael K. Kallgren</h1>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6">
               <div class="row topfill">
                 <div class="col-sm-12"></div>
               </div>
               <div class="row">
-                <div class="nav-wrap">
-                  <div class="container navtabs">
-                    <ul class="nav nav-tabs">
-                      <li role="presentation" class = "{{#if homepage}}{{homepage}}{{/if}}"><a href="/">About</a></li>
-                      <li role="presentation" class = "{{#if contact}}{{contact}}{{/if}}"><a href="/contact">Contact</a></li>
-                      <li role="presentation" class="{{#if portfolio}}{{portfolio}}{{/if}}"><a href="/portfolio">Portfolio</a></li>
-                    </ul>
-                  </div>
+                <div class="col-sm-12">
+                  <ul class="nav nav-tabs">
+                    <li role="presentation" class="{{#if homepage}}{{homepage}}{{/if}}">
+                      <a href="/">About</a>
+                    </li>
+                    <li role="presentation" class="{{#if contact}}{{contact}}{{/if}}">
+                      <a href="/contact">Contact</a>
+                    </li>
+                    <li role="presentation" class="{{#if portfolio}}{{portfolio}}{{/if}}">
+                      <a href="/portfolio">Portfolio</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -31,5 +36,5 @@
         <!--  End navbar -->
       </div>
     </div>
-  {{!-- </div> --}}
+    {{!-- </div> --}}
 </div>
