@@ -132,14 +132,18 @@ background: #047dff
 	width:33%;
 }
 
-li.active{
-	/* background-image: url("./../images/br_brass.jpg"); */
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #333333;
 	background-color: #ffae4c;
 	background: #fa9420; /* For browsers that do not support gradients */
 	background: -webkit-linear-gradient(left top, #fa9420, #ffae4c); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient(bottom right, #fa9420, #ffae4c); /* For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient(bottom right, #fa9420, #ffae4c); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(to bottom right, #fa9420, #ffae4c); /* Standard syntax */
+    border: 2px solid #d46e00;
+    border-bottom: transparent;
+    margin-right: 0px;
+	font-weight: bold;
 }
 
 .mainbody{
@@ -184,11 +188,12 @@ li.active{
 	min-width: 251px;
 	max-width: 500px;
 	max-width: 50%;
-	margin: 0% 12.5vw;
+	margin: 0% 12vw;
 	border-bottom: none;
+	font-size:18px;
 }
 
-.nav-tabs>li.active>a, 
+/* .nav-tabs>li.active>a, 
 .nav-tabs>li.active>a:focus, 
 .nav-tabs>li.active>a:hover {
 	color: beige;
@@ -197,7 +202,7 @@ li.active{
 	border-bottom: transparent;
 	margin-right: 0px;
 	font-weight: bold;
-}
+} */
 
 .navbar{
 	margin-bottom: 0px;
