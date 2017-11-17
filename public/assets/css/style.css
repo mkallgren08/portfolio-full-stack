@@ -67,6 +67,10 @@ h1{
 
 .copyright{
 	text-align: center;
+	height: 44px;
+	line-height: 44px;
+	vertical-align: middle;
+	font-size: 18px;
 }
 
 #countryCodes{
@@ -89,13 +93,27 @@ h1{
 	z-index: 1;
 }
 
-.footer{
+/* .footer.navbar{
 	border: 3px solid #9c501a;
-	background-image: url("./../images/br_copper2.jpg");
-	background-size: 100%;
+	background: #ff6f1c;
 	height: auto;
 
+} */
+
+.footer{
+	border: 3px solid #9c501a;
+	background-image: url("../images/br_copper2.jpg");
+	height: auto;
+	background-size: 100%;
 }
+
+.gitlink{
+	color: rgb(29, 29, 29)
+}
+
+/* .header.navbar{
+background: #047dff
+} */
 
 #headshot{
 	width: 75%;
@@ -115,8 +133,13 @@ h1{
 }
 
 li.active{
-	background-image: url("./../images/br_brass.jpg");
-	background-color: transparent;
+	/* background-image: url("./../images/br_brass.jpg"); */
+	background-color: #ffae4c;
+	background: #fa9420; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #fa9420, #ffae4c); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #fa9420, #ffae4c); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #fa9420, #ffae4c); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #fa9420, #ffae4c); /* Standard syntax */
 }
 
 .mainbody{
@@ -150,6 +173,11 @@ li.active{
 	background-image: url("./../images/br_brass.jpg");
 	background-size: 100%;
 	text-shadow: -1px 1px #504D4D;
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 15px;
+	border-top-right-radius: 15px;
+
 }
 
 .nav-tabs{
@@ -157,6 +185,7 @@ li.active{
 	max-width: 500px;
 	max-width: 50%;
 	margin: 0% 12.5vw;
+	border-bottom: none;
 }
 
 .nav-tabs>li.active>a, 
@@ -208,6 +237,12 @@ li.active{
 	margin-right: 0px;
 }
 
+.thumbnail{
+	background-image:url("../images/br_brass.jpg");
+	background-size: cover;
+	border: 1px #333333 solid;
+}
+
 .topfill{
 	height: 50px;
 	width: 98%
@@ -231,13 +266,19 @@ li.active{
 		margin-bottom: 70px;
 		margin-right: 0%;
 		margin-left: 12vw;
-		min-width: 65vw;
+		min-width: 85%;
 	}
 
-	.maincontent{
+	/* .maincontent{
 		min-width: 65vw;
 		margin-left: 12vw;
+	} */
+
+	.maincontent{
+		min-width: 85%;
+		margin-left: 7.5%;
 	}
+
 	.mainbody{
 		padding-left: 9vw;
 	}
@@ -245,14 +286,20 @@ li.active{
 
 }
 
-@media screen and (max-width: 768px){
-	.connect-panel{
-		margin-left: 8vw;
+@media screen and (max-width: 989px){
+	.mainbody{
+		padding-left: 1vw;
 	}
+	.maincontent{
+		min-width: 85%;
+		margin-left: 7.5%;
+	}
+
+}
 
 @media screen and (max-width: 768px){
 	.connect-panel{
-		margin-left: 8vw;
+		margin-left: 6.5%;
 	}
 
 	.mainbody{
@@ -272,8 +319,8 @@ li.active{
 
 @media screen and (max-width: 500px){
 	.connect-panel{
-		margin-left: 8vw;
-		min-width: 75vw;
+		margin-left: 7.5%;
+		min-width: 85%;
 	}
 	
 	.nav-tabs, .namelogo{

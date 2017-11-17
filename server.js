@@ -18,13 +18,13 @@ const projectList = require("./controllers/portfolioController.js")
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
 
-// Required Models
+// Required Model
 const Code = require("./models/Code.js");
 
 // Initialize Express
 const app = express();
 // Set the port to use as a variable.
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 
 // Sets up the main handlebars page (main.hbs) to serve our web apps pages
@@ -49,7 +49,7 @@ app.use(logger("dev"));
 // Database configuration with mongoose
 //mongoose.connect("mongodb://heroku_086slhkf:t96inaqlc3krouapt7t4uvf6rd@ds139984.mlab.com:39984/heroku_086slhkf")
 //mongoose.connect('mongodb://localhost/scraper');
-let connection = process.env.MONGODB_URI || 'mongodb://localhost/countrycodesdb'
+let connectionURI = process.env.MONGODB_URI || 'mongodb://localhost/countrycodesdb'
 
 var option = {
   server: {
@@ -66,7 +66,7 @@ var option = {
   }
 };
 
-mongoose.connect(connection, option);
+mongoose.connect(connectionURI, option);
 const db = mongoose.connection;
 
 // Show any mongoose errors
