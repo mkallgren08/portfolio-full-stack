@@ -36,6 +36,13 @@ let project = [
         thbnail: "bbc-world-news-logo.png",
         altText: "BBC World News Logo",
     },
+    {
+        name: "Retail Site Recreation",
+        link: "https://retail-site-recreation.herokuapp.com/",
+        gitLink: "https://github.com/mkallgren08/retail_site_recreation",
+        thbnail: "shopping-cart.jpg",
+        altText: "Shopping Cart",
+    },
 
 ];
 
