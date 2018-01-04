@@ -21,7 +21,7 @@ var CodeSchema = new Schema({
     }
 });
 
-// Now we actually make the Article model using the ArticleSchema
+// Now we actually make the Code model using the CodeSchema
 const Code = mongoose.model("Code", CodeSchema);
 
 // Export the model
