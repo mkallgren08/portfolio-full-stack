@@ -4,7 +4,8 @@ body, html{
 }
 
 body{
-    background: #808080; /* For browsers that do not support gradients */
+	background: #808080; /* For browsers that do not support gradients */
+	background-image: url("../images/barnwood-background.jpg");
     /* background: -webkit-linear-gradient(#808080, #d3d3d3); 
     background: -o-linear-gradient(#808080, #d3d3d3); 
     background: -moz-linear-gradient(#808080, #d3d3d3); 
@@ -23,14 +24,22 @@ h1{
 }
 
 .banner{
-	background-color: #ebebeb;
+	/* background-color: #ebebeb; */
+	background: transparent;
 	margin-bottom: 0px;
 }
 
+.panel{
+	margin-top: 11px;
+	border: 1px solid black;
+	width: 90%;
+}
+
 .connect-panel{
-	margin: auto 12.5vw;
+	margin-left: 12.5%;
+	margin-right: 12.5%;
 	margin-bottom: 70px;
-	max-width: 50%;
+	max-width: 75%;
 }
 
 #contactForm{
@@ -67,10 +76,8 @@ h1{
 
 .copyright{
 	text-align: center;
-	height: 44px;
-	line-height: 44px;
 	vertical-align: middle;
-	font-size: 18px;
+	font-size: 12px;
 }
 
 #countryCodes{
@@ -101,9 +108,11 @@ h1{
 } */
 
 .footer{
-	border: 3px solid #9c501a;
+	border: 1px solid #9c501a;
 	background-image: url("../images/br_copper2.jpg");
-	height: auto;
+	line-height: 14px;
+	font-size: 12px;
+	height: 20px;
 	background-size: 100%;
 }
 
@@ -132,26 +141,16 @@ background: #047dff
 	width:33%;
 }
 
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-    color: #333333;
-	background-color: #ffae4c;
-	background: #fa9420; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(left top, #fa9420, #ffae4c); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(bottom right, #fa9420, #ffae4c); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(bottom right, #fa9420, #ffae4c); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to bottom right, #fa9420, #ffae4c); /* Standard syntax */
-    border: 2px solid #d46e00;
-    border-bottom: transparent;
-    margin-right: 0px;
-	font-weight: bold;
-}
+
 
 .mainbody{
     background-image: url("./../images/oeschinenzee.jpg");
 	background-size: 100% 100%;
 	border-left: 2px #444444 solid;
 	border-right: 2px #444444 solid;
+	border-top: 4px #444444 solid;
 	height: fit-content;
+	padding-right: 0px;
 }
 
 .maincontent{
@@ -171,7 +170,7 @@ background: #047dff
 }
 
 .namelogo{
-	margin: 1% 7.5vw;
+	margin: 2% 15px 10px 15px; 
 	padding: 0.5% 5%;
 	/* padding-left: 30px; */
 	background-image: url("./../images/br_brass.jpg");
@@ -184,13 +183,52 @@ background: #047dff
 
 }
 
+#nameplate{
+	text-align: center;
+	font-size: 30px;
+	margin: 0% 10%;
+}
+
+.nav-label{
+	display: inline-block;
+	width: 32%;
+	height: 35px;
+	background-image: url("./../images/br_nickel.png");
+	border: 1px solid #3f3c39;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 5px;
+}
+
+.nav-label>a{
+	color: #080808;
+    border-bottom: transparent;
+	margin-right: 1px;
+	margin-left: 2px;
+	font-weight: bold;
+}
+
+.nav-label-txt{
+	margin-top: 3px;
+}
+
 .nav-tabs{
-	min-width: 251px;
+	min-width: 310px;
 	max-width: 500px;
-	max-width: 50%;
-	margin: 0% 12vw;
+	/* max-width: 50%; */
+	margin: 0% 12.5%;
+	margin-top: 31.8px;
 	border-bottom: none;
 	font-size:18px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #999999;
+	background-image: url("./../images/br_copper2.jpg");
+    border: 1px solid #8f4a00;
+    border-bottom: transparent;
+    margin-right: 0px;
+	font-weight: bold;
 }
 
 /* .nav-tabs>li.active>a, 
@@ -206,7 +244,12 @@ background: #047dff
 
 .navbar{
 	margin-bottom: 0px;
-	background-color: #ebebeb;
+	/* background-color: #ebebeb; */
+}
+
+.navbar-static-top {
+    z-index: 1000;
+    border-width: 0 0 0px;
 }
 
 /* .navRow.row{
@@ -228,19 +271,14 @@ background: #047dff
 	max-width: 500px;
 }
 
-.panel{
-	margin-top: 4%;
-	width:90%;
-}
-
 .panel-title{
 	border-bottom: 2px solid #999;
 	padding-bottom: 10px;
 }
 
-.row{
+/* .row{
 	margin-right: 0px;
-}
+} */
 
 .thumbnail{
 	background-image:url("../images/br_brass.jpg");
@@ -265,6 +303,11 @@ background: #047dff
 
 
 } */
+@media screen and (max-width: 1003px){
+	.nav-tabs{
+		margin-top:0%;
+	}
+}
 
 @media screen and (max-width: 1003px){
 	.connect-panel{
@@ -279,8 +322,8 @@ background: #047dff
 		margin-left: 12vw;
 	} */
 
-	.maincontent{
-		min-width: 85%;
+	.maincontent, .namelogo{
+		/* min-width: 85%; */
 		margin-left: 7.5%;
 	}
 
@@ -294,6 +337,8 @@ background: #047dff
 @media screen and (max-width: 989px){
 	.mainbody{
 		padding-left: 1vw;
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 	.maincontent{
 		min-width: 85%;
@@ -335,6 +380,12 @@ background: #047dff
 	.maincontent{
 		min-width: 75vw;
 		margin-left: 12vw;
+	}
+}
+
+@media screen and (max-width:397px){
+	.nav-tabs{
+		min-width: 290px;
 	}
 }
 

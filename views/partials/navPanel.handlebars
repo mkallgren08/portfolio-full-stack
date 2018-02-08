@@ -1,34 +1,30 @@
-<div class="container-fluid banner">
+<div class="container">
   {{!--
   <div class="container"> --}}
     <div class="row">
       <div class="nav-wrap">
         <!-- Navbar -->
-        <nav class="navbar navbar-default header navbar-static-top">
+        <nav class="navbar banner navbar-default header navbar-static-top">
           <div class="row">
             <div class="col-md-6">
-              <div class="navbar-left namelogo">
-                <h1>Michael K. Kallgren</h1>
+              <div class=" namelogo">
+                <p id="nameplate">Michael K. Kallgren</p>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="row topfill">
+              {{!-- <div class="row topfill">
                 <div class="col-sm-12"></div>
-              </div>
-              <div class="row">
-                <div class="col-sm-12">
-                  <ul class="nav nav-tabs">
-                    <li role="presentation" class="{{#if homepage}}{{homepage}}{{/if}}">
-                      <a href="/">About</a>
-                    </li>
-                    <li role="presentation" class="{{#if contact}}{{contact}}{{/if}}">
-                      <a href="/contact">Contact</a>
-                    </li>
-                    <li role="presentation" class="{{#if portfolio}}{{portfolio}}{{/if}}">
-                      <a href="/portfolio">Portfolio</a>
-                    </li>
-                  </ul>
-                </div>
+              </div> --}}
+                  <div class="nav nav-tabs">
+                    <span class="{{#if homepage}}{{homepage}}{{/if}} nav-label">
+                      <a href="/" class = "nav-label-txt">About</a>
+                    </span>
+                    <span class="{{#if contact}}{{contact}}{{/if}} nav-label">
+                      <a href="/contact" class = "nav-label-txt">Contact</a>
+                    </span>
+                    <span class="{{#if portfolio}}{{portfolio}}{{/if}} nav-label">
+                      <a href="/portfolio" class = "nav-label-txt">Portfolio</a>
+                    </span>
               </div>
             </div>
           </div>
