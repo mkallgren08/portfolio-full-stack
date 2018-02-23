@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/mkallgren08/portfolio-full-stack#readme",
   "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
     "body-parser": "^1.18.2",
     "email-validator": "^1.1.1",
     "express": "^4.16.2",

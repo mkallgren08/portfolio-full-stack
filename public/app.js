@@ -63,7 +63,9 @@ let parseContact = () => {
       }     
     });
   } else {
-    alert("Please make sure you have included your Name, E-mail address, and a brief message.")
+    // alert("Please make sure you have included your Name, E-mail address, " + 
+    // "and a brief message.")
+    $("#contactErrorModal").modal('show')
   }
 }
 

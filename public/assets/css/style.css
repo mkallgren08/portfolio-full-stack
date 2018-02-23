@@ -1,15 +1,11 @@
 body, html{
 	height: 100vh;
-	width: 100%;
+	width: auto;
 }
 
 body{
 	background: #808080; /* For browsers that do not support gradients */
 	background-image: url("../images/barnwood-background.jpg");
-    /* background: -webkit-linear-gradient(#808080, #d3d3d3); 
-    background: -o-linear-gradient(#808080, #d3d3d3); 
-    background: -moz-linear-gradient(#808080, #d3d3d3); 
-	background: linear-gradient(#808080, #d3d3d3);  */
 	background-size: cover;
 	padding-bottom: 85px; 
 }
@@ -30,16 +26,37 @@ h1{
 }
 
 .panel{
-	margin-top: 11px;
+	/* margin-top: 11px; */
 	border: 1px solid black;
-	width: 90%;
+	/* width: 90%; */
+	grid-area: connect-panel;
 }
 
-.connect-panel{
+/* .connect-panel{
 	margin-left: 12.5%;
 	margin-right: 12.5%;
 	margin-bottom: 70px;
 	max-width: 75%;
+} */
+
+.connect-panel-body{
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	grid-template-areas: "icon-wrapper"; 
+}
+
+
+
+
+.connect-panel-wrapper{
+	display: grid;
+	grid-template-columns: 10% auto 10%;
+	grid-template-rows: 10px auto 10px;
+	grid-template-areas: 
+		". . ."
+		". connect-panel ."
+		". . .";
 }
 
 #contactForm{
@@ -133,13 +150,35 @@ background: #047dff
 .icon {
 	height: 45px;
 	width: 45px;
-	margin: 10px 10px 0px 10px;
+	/* margin: 10px 10px 0px 10px; */
 }
 
-.iconlnk{
+.icons{
+	display: grid;
+	grid-template-columns: auto 30% 30% 30% auto;
+	grid-template-rows: 5px auto 5px;
+	grid-template-areas: 
+		". . . . ."
+		". gitLink linkedInLink stackLink ."
+		". . . . .";
+	grid-area: icon-wrapper;
+	justify-items: center;
+}
+
+#gitLink{
+	grid-area: gitLink;
+}
+#linkedInLink{
+	grid-area: linkedInLink;
+}
+#stackLink{
+	grid-area: stackLink;
+}
+
+/* .iconlnk{
 	float:left;
 	width:33%;
-}
+} */
 
 
 
@@ -150,7 +189,9 @@ background: #047dff
 	border-right: 2px #444444 solid;
 	border-top: 4px #444444 solid;
 	height: fit-content;
-	padding-right: 0px;
+	display:grid;
+	grid-template-columns: 30px auto 30px;
+
 }
 
 .maincontent{
@@ -310,12 +351,12 @@ background: #047dff
 }
 
 @media screen and (max-width: 1003px){
-	.connect-panel{
+	/* .connect-panel{
 		margin-bottom: 70px;
 		margin-right: 0%;
 		margin-left: 12vw;
 		min-width: 85%;
-	}
+	} */
 
 	/* .maincontent{
 		min-width: 65vw;
@@ -348,9 +389,9 @@ background: #047dff
 }
 
 @media screen and (max-width: 768px){
-	.connect-panel{
+	/* .connect-panel{
 		margin-left: 6.5%;
-	}
+	} */
 
 	.mainbody{
 		border-left: 0px;
@@ -368,10 +409,10 @@ background: #047dff
 }
 
 @media screen and (max-width: 500px){
-	.connect-panel{
+	/* .connect-panel{
 		margin-left: 7.5%;
 		min-width: 85%;
-	}
+	} */
 	
 	.nav-tabs, .namelogo{
 		margin-left: 12.5vw;
@@ -409,8 +450,8 @@ background: #047dff
 
 }
 
-@media screen and (min-width: 1003px){
-	/* .footer{
+/* @media screen and (min-width: 1003px){
+	.footer{
 		height: 20vh;
-	} */
-}
+	}
+} */

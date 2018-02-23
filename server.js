@@ -8,7 +8,8 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
 const nodemailer = require('nodemailer');
-const validator = require('email-validator')
+const validator = require('email-validator');
+const sgMail = require('@sendgrid/mail');
 
 
 // Controller Dependencies
@@ -51,18 +52,20 @@ app.use(logger("dev"));
 //mongoose.connect('mongodb://localhost/scraper');
 let connectionURI = process.env.MONGODB_URI || 'mongodb://localhost/countrycodesdb'
 
+
+// sets timers to limit how long the server attempts to establish a connection to a db
 var option = {
   server: {
-      socketOptions: {
-          keepAlive: 300000,
-          connectTimeoutMS: 30000
-      }
+    socketOptions: {
+      keepAlive: 300000,
+      connectTimeoutMS: 30000
+    }
   },
   replset: {
-      socketOptions: {
-          keepAlive: 300000,
-          connectTimeoutMS: 30000
-      }
+    socketOptions: {
+      keepAlive: 300000,
+      connectTimeoutMS: 30000
+    }
   }
 };
 
@@ -192,7 +195,8 @@ app.post('/contact', function (req, res) {
     res.send(hbsObject);
 
   } else {
-    sendMessage(req.body);
+    //sendMessage(req.body);
+    sendMessageTwo(req.body);
 
     hbsObject.sent = true;
     res.send(hbsObject)
@@ -245,10 +249,10 @@ var sendMessage = (msgObj) => {
     to: 'contact.mkallgren08@gmail.com',
     subject: 'New Message From ' + msgObj.name,
     text: 'Name: ' + msgObj.name
-    + '\nE-mail: ' + msgObj.email
-    + '\nPhone: (' + msgObj.countryCode + ')' + msgObj.phone
-    + '\nPreferred method of contact: ' + msgObj.prefMethod
-    + '\n\nMessage:\n\n ' + msgObj.message
+      + '\nE-mail: ' + msgObj.email
+      + '\nPhone: (' + msgObj.countryCode + ')' + msgObj.phone
+      + '\nPreferred method of contact: ' + msgObj.prefMethod
+      + '\n\nMessage:\n\n ' + msgObj.message
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
@@ -260,8 +264,26 @@ var sendMessage = (msgObj) => {
     }
   });
 }
+
+var sendMessageTwo = (msgObj) => {
+  // using SendGrid's v3 Node.js Library
+  // https://github.com/sendgrid/sendgrid-nodejs
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  const msg = {
+    to: 'mkallgren08@gmail.com',
+    from: msgObj.email,
+    subject: 'Contact Page: New Message from ' + msgObj.name,
+    text: msgObj.message + "\nPreferred Method of Contact: " +
+    +msgObj.prefMethod + "\nPhone Number: (" + msgObj.countryCode + ')' + msgObj.phone
+    //html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+  };
+  sgMail.send(msg);
+  console.log(msg);
+}
 //+++++++++++++++++++++++++++++++++++++++++++++++++
 
 // ====================================
 //      Misc
 // ====================================
+
+console.log("SendGrid API Key: " + process.env.SENDGRID_API_KEY)
