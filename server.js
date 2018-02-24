@@ -7,7 +7,7 @@ const logger = require("morgan")
 const express = require("express");
 const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
-const nodemailer = require('nodemailer');
+// const nodemailer = require('nodemailer');
 const validator = require('email-validator');
 const sgMail = require('@sendgrid/mail');
 
@@ -233,38 +233,41 @@ app.get('/codes', function (req, res) {
 // ====================================
 
 
-// Sends the email
+// Sends the email using nodemailer (old version of portfolio)
 //+++++++++++++++++++++++++++++++++++++++++++++++++
-var sendMessage = (msgObj) => {
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'contact.mkallgren08@gmail.com',
-      pass: process.env.GPASS || process.env.P_PASS
-    }
-  });
+  // var sendMessage = (msgObj) => {
+  //   const transporter = nodemailer.createTransport({
+  //     service: 'gmail',
+  //     auth: {
+  //       user: 'contact.mkallgren08@gmail.com',
+  //       pass: process.env.GPASS || process.env.P_PASS
+  //     }
+  //   });
 
-  var mailOptions = {
-    from: msgObj.email,
-    to: 'contact.mkallgren08@gmail.com',
-    subject: 'New Message From ' + msgObj.name,
-    text: 'Name: ' + msgObj.name
-      + '\nE-mail: ' + msgObj.email
-      + '\nPhone: (' + msgObj.countryCode + ')' + msgObj.phone
-      + '\nPreferred method of contact: ' + msgObj.prefMethod
-      + '\n\nMessage:\n\n ' + msgObj.message
-  };
+  //   var mailOptions = {
+  //     from: msgObj.email,
+  //     to: 'contact.mkallgren08@gmail.com',
+  //     subject: 'New Message From ' + msgObj.name,
+  //     text: 'Name: ' + msgObj.name
+  //       + '\nE-mail: ' + msgObj.email
+  //       + '\nPhone: (' + msgObj.countryCode + ')' + msgObj.phone
+  //       + '\nPreferred method of contact: ' + msgObj.prefMethod
+  //       + '\n\nMessage:\n\n ' + msgObj.message
+  //   };
 
-  transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      console.log("Error: " + error);
-    } else {
-      console.log('Mail contents: ' + JSON.stringify(mailOptions, null, 2))
-      console.log('Email sent: ' + info.response);
-    }
-  });
-}
+  //   transporter.sendMail(mailOptions, function (error, info) {
+  //     if (error) {
+  //       console.log("Error: " + error);
+  //     } else {
+  //       console.log('Mail contents: ' + JSON.stringify(mailOptions, null, 2))
+  //       console.log('Email sent: ' + info.response);
+  //     }
+  //   });
+  // }
 
+
+// Sends the email using sendgrid
+//+++++++++++++++++++++++++++++++++++++++++++++++++
 var sendMessageTwo = (msgObj) => {
   // using SendGrid's v3 Node.js Library
   // https://github.com/sendgrid/sendgrid-nodejs
@@ -286,4 +289,5 @@ var sendMessageTwo = (msgObj) => {
 //      Misc
 // ====================================
 
-console.log("SendGrid API Key: " + process.env.SENDGRID_API_KEY)
+// Test console.log() to make sure the sendgrid_api_key is configured correctly
+// console.log("SendGrid API Key: " + process.env.SENDGRID_API_KEY)

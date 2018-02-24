@@ -53,10 +53,12 @@ h1{
 	display: grid;
 	grid-template-columns: 10% auto 10%;
 	grid-template-rows: 10px auto 10px;
+	max-height: 150px;
 	grid-template-areas: 
 		". . ."
 		". connect-panel ."
 		". . .";
+	grid-area: connectcontent;
 }
 
 #contactForm{
@@ -190,16 +192,21 @@ background: #047dff
 	border-top: 4px #444444 solid;
 	height: fit-content;
 	display:grid;
-	grid-template-columns: 30px auto 30px;
+	grid-template-columns: 30px 45% auto 45% 30px;
+	grid-template-rows: 5px auto 5px;
+	grid-template-areas: 
+		". . . . ."
+		". maincontent . connectcontent ."
+		". . . . .";
 
 }
 
 .maincontent{
-	margin: 10px 0px 50px 15px;
+	margin: 10px 15px 50px 15px;
 	background-color: #ebebeb;
 	border-radius: 5px;
 	border: solid 1px #5c5c5c;
-	width: 48%;
+	grid-area: maincontent;
 }
 
 .messagetxt{
@@ -344,9 +351,21 @@ background: #047dff
 
 
 } */
-@media screen and (max-width: 1003px){
+@media screen and (max-width: 1090px){
 	.nav-tabs{
 		margin-top:0%;
+	}
+
+	.mainbody{
+		display:grid;
+		grid-template-columns: auto 95% auto;
+		grid-template-rows: 5px auto auto 30px;
+		grid-template-areas: 
+			". . ."
+			". maincontent ."
+			". connectcontent ."
+			". . .";
+	
 	}
 }
 
