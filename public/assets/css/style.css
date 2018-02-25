@@ -1,11 +1,11 @@
 body, html{
-	height: 100vh;
+	height: auto;
 	width: auto;
 }
 
 body{
-	background: #808080; /* For browsers that do not support gradients */
-	background-image: url("../images/barnwood-background.jpg");
+	background: #723511; /* For browsers that do not support gradients */
+	/* background-image: url("../images/barnwood-background.jpg"); */
 	background-size: cover;
 	padding-bottom: 85px; 
 }
@@ -25,10 +25,11 @@ h1{
 	margin-bottom: 0px;
 }
 
-.panel{
-	/* margin-top: 11px; */
-	border: 1px solid black;
-	/* width: 90%; */
+#bio{
+	grid-area: bio;
+}
+
+#connect-panel{	
 	grid-area: connect-panel;
 }
 
@@ -143,10 +144,25 @@ h1{
 background: #047dff
 } */
 
+#headshot-and-bio-wrapper{
+	display: grid;
+	grid-template-columns: 33% 67%;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		"headshot bio"
+}
+
 #headshot{
-	width: 75%;
-	height: auto;
+	width: auto;
+	height: 200px;
 	padding-bottom: 10px;
+	grid-area: headshot;
+}
+
+#headshot-icon{
+	width: 75px;
+	height: auto;
+	border-radius: 37px;
 }
 
 .icon {
@@ -187,11 +203,13 @@ background: #047dff
 .mainbody{
     background-image: url("./../images/oeschinenzee.jpg");
 	background-size: 100% 100%;
+	background-attachment: fixed;
 	border-left: 2px #444444 solid;
 	border-right: 2px #444444 solid;
 	border-top: 4px #444444 solid;
 	height: fit-content;
-	display:grid;
+	margin: 0px 5%;
+	display: grid;
 	grid-template-columns: 30px 45% auto 45% 30px;
 	grid-template-rows: 5px auto 5px;
 	grid-template-areas: 
@@ -310,13 +328,18 @@ background: #047dff
 } */
 
 .nav-wrap{
-	width: 100%
+	width: 100%;
+	background-color: #888888;
 
 }
 
 
 #page-nav{
 	max-width: 500px;
+}
+
+.panel{
+	border: 1px solid black;
 }
 
 .panel-title{
@@ -369,54 +392,22 @@ background: #047dff
 	}
 }
 
-@media screen and (max-width: 1003px){
-	/* .connect-panel{
-		margin-bottom: 70px;
-		margin-right: 0%;
-		margin-left: 12vw;
-		min-width: 85%;
-	} */
-
-	/* .maincontent{
-		min-width: 65vw;
-		margin-left: 12vw;
-	} */
-
-	.maincontent, .namelogo{
-		/* min-width: 85%; */
-		margin-left: 7.5%;
-	}
-
-	.mainbody{
-		padding-left: 9vw;
-	}
-
-
-}
-
-@media screen and (max-width: 989px){
-	.mainbody{
-		padding-left: 1vw;
-		margin-left: 10px;
-		margin-right: 10px;
-	}
-	.maincontent{
-		min-width: 85%;
-		margin-left: 7.5%;
-	}
-
-}
 
 @media screen and (max-width: 768px){
-	/* .connect-panel{
-		margin-left: 6.5%;
-	} */
+	#headshot-and-bio-wrapper{
+		display: grid;
+		grid-template-columns: 5px auto 5px;
+		grid-template-rows: 33% 67%;
+		grid-template-areas: 
+			". headshot ."
+			". bio .";
+	}
 
-	.mainbody{
+	/* .mainbody{
 		border-left: 0px;
 		border-right: 0px;
 		padding-left: 4vw;
-	}
+	} */
 
 	.nav-tabs{
 		margin: auto 25vw;
@@ -436,17 +427,6 @@ background: #047dff
 	.nav-tabs, .namelogo{
 		margin-left: 12.5vw;
 	}
-
-	.maincontent{
-		min-width: 75vw;
-		margin-left: 12vw;
-	}
-}
-
-@media screen and (max-width:397px){
-	.nav-tabs{
-		min-width: 290px;
-	}
 }
 
 @media screen and (max-width: 388px){
@@ -465,12 +445,14 @@ background: #047dff
 	.portfolio-link, .portfolio-thbnail{
 		max-height: 100px
 	}
-
-
 }
 
-/* @media screen and (min-width: 1003px){
-	.footer{
-		height: 20vh;
+@media screen and (max-width:300px){
+	#headshot{
+		display: none;
 	}
-} */
+
+	#headshot-icon{
+		display: inline-block;
+	}
+}

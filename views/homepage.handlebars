@@ -1,33 +1,33 @@
-{{>navPanel}} {{!-- {{>scrapertitle}} --}}
-{{!-- <div class="row"> --}}
+{{>navPanel}} {{!-- {{>scrapertitle}} --}} {{!--
+<div class="row"> --}}
   <div class="mainbody">
-      <div class="maincontent">
-        <!-- ABOUT ME -->
-        <div class="row">
-          <div class="col-md-12">
-            <h3> About Me </h3>
-          </div>
+    <div class="maincontent">
+      <!-- ABOUT ME -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"> About Me </h3>
         </div>
 
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
+
+        <div class="panel-body">
+          <div id="headshot-and-bio-wrapper">
             <img id="headshot" src="./assets/images/Headshot.jpg" alt="Headshot: Michael K. Kallgren">
+
+            <div id = "bio">
+              <p>
+                My entire life I’ve made things to help others using music, carpentry, hard sciences, and robotics. This background means
+                I think outside the box - seeing solutions others don’t. My approach combined with my passion for learning
+                new skills and passions for learning and finding creative solutions is what makes web development a professionally
+                good fit.
+              </p>
+            </div>
           </div>
 
-          <div class="col-sm-12 col-md-6">
-            <p>
-              My entire life I’ve made things to help others using music, carpentry, hard sciences, and robotics. This background means
-              I think outside the box - seeing solutions others don’t. My approach combined with my passion for learning
-              new skills and passions for learning and finding creative solutions is what makes web development a professionally
-              good fit.
-            </p>
-          </div>
         </div>
       </div>
+    </div>
 
-      {{>connect}}
+    {{>connect}}
 
   </div>
-{{!-- </div> --}}
-
- {{>footer}}
+  {{!-- </div> --}} {{>footer}}
