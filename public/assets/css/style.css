@@ -19,6 +19,14 @@ h1{
 
 }
 
+hr {
+	border-top: 1px solid #777;
+}
+
+#about-me-name{
+	display: hidden;
+}
+
 .banner{
 	/* background-color: #ebebeb; */
 	background: transparent;
@@ -27,6 +35,10 @@ h1{
 
 #bio{
 	grid-area: bio;
+}
+
+#bio-rest{
+	display: none;
 }
 
 #connect-panel{	
@@ -140,29 +152,44 @@ h1{
 	color: rgb(29, 29, 29)
 }
 
-/* .header.navbar{
-background: #047dff
-} */
+.header{
+	padding: 0% 5%;
+	display:grid;
+	grid-template-columns: 30px 60% auto 30% 30px;
+	grid-template-rows: 10px auto 10px;
+	grid-template-areas: 
+		". . . . ."
+		". namelogo . nav-tabs ."
+		". . . . .";
+	background: linear-gradient(to right, rgba(110,110,110,0.85), rgba(125,125,125,1)); 
+}
 
 #headshot-and-bio-wrapper{
 	display: grid;
 	grid-template-columns: 33% 67%;
 	grid-template-rows: auto;
 	grid-template-areas: 
-		"headshot bio"
+		"headshot bio";
+	justify-items: center;
 }
 
 #headshot{
-	width: auto;
-	height: 200px;
+	width: 100%;
+	height: auto;
 	padding-bottom: 10px;
+	padding-right: 10px;
 	grid-area: headshot;
 }
 
 #headshot-icon{
 	width: 75px;
+	display: none;
 	height: auto;
 	border-radius: 37px;
+}
+
+.hide{
+	display: none;
 }
 
 .icon {
@@ -210,7 +237,7 @@ background: #047dff
 	height: fit-content;
 	margin: 0px 5%;
 	display: grid;
-	grid-template-columns: 30px 45% auto 45% 30px;
+	grid-template-columns: 30px 60% auto 30% 30px;
 	grid-template-rows: 5px auto 5px;
 	grid-template-areas: 
 		". . . . ."
@@ -236,16 +263,23 @@ background: #047dff
 }
 
 .namelogo{
-	margin: 2% 15px 10px 15px; 
+	grid-area: namelogo;
+	margin-bottom: 15px;
 	padding: 0.5% 5%;
 	/* padding-left: 30px; */
-	background-image: url("./../images/br_brass.jpg");
-	background-size: 100%;
+	/* background-image: url("./../images/br_brass.jpg");
+	background-size: contain;
+	background-repeat:none;
+	background-attachment: fixed; */
+	background-color: rgba(150, 102, 0, 0.835);
+	background: radial-gradient(rgba(150, 102, 0, 0.835), rgba(194, 126, 0, 0.644), rgba(145, 94, 0, 0.514));
 	text-shadow: -1px 1px #504D4D;
+	border: 2px solid #333333;
 	border-top-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 15px;
 	border-top-right-radius: 15px;
+	justify-items: center;
 
 }
 
@@ -253,6 +287,11 @@ background: #047dff
 	text-align: center;
 	font-size: 30px;
 	margin: 0% 10%;
+}
+
+#initialplate{
+	display: none;
+	font-size: 40px;
 }
 
 .nav-label{
@@ -279,12 +318,10 @@ background: #047dff
 }
 
 .nav-tabs{
-	min-width: 310px;
+	grid-area: nav-tabs;
+	/* min-width: 310px;
 	max-width: 500px;
-	/* max-width: 50%; */
-	margin: 0% 12.5%;
-	margin-top: 31.8px;
-	border-bottom: none;
+	max-width: 50%; */
 	font-size:18px;
 }
 
@@ -351,6 +388,18 @@ background: #047dff
 	margin-right: 0px;
 } */
 
+#readmore1{
+	display: none;
+}
+
+.show{
+	display: block;
+}
+
+.show-inline{
+	display: inline-block;
+}
+
 .thumbnail{
 	background-image:url("../images/br_brass.jpg");
 	background-size: cover;
@@ -375,10 +424,6 @@ background: #047dff
 
 } */
 @media screen and (max-width: 1090px){
-	.nav-tabs{
-		margin-top:0%;
-	}
-
 	.mainbody{
 		display:grid;
 		grid-template-columns: auto 95% auto;
@@ -390,10 +435,21 @@ background: #047dff
 			". . .";
 	
 	}
-}
+
+	.header{
+		grid-template-columns: 30px auto 30px;
+		grid-template-rows: 10px auto auto;
+		grid-template-areas: 
+			". . ."
+			". namelogo . "
+			". nav-tabs .";
+	}
 
 
-@media screen and (max-width: 768px){
+};
+
+
+@media screen and (max-width: 846px){
 	#headshot-and-bio-wrapper{
 		display: grid;
 		grid-template-columns: 5px auto 5px;
@@ -402,57 +458,59 @@ background: #047dff
 			". headshot ."
 			". bio .";
 	}
+}
 
-	/* .mainbody{
-		border-left: 0px;
-		border-right: 0px;
-		padding-left: 4vw;
-	} */
-
-	.nav-tabs{
-		margin: auto 25vw;
+@media screen and (max-width: 660px){
+	#bio-p2{
+		display: none;
 	}
 
-	.topfill{
-		height: 10px;
+	#readmore1{
+		display: inline-block;
+	}
+
+	#readmore2{
+		display: none
 	}
 }
 
-@media screen and (max-width: 500px){
-	/* .connect-panel{
-		margin-left: 7.5%;
-		min-width: 85%;
-	} */
-	
-	.nav-tabs, .namelogo{
-		margin-left: 12.5vw;
-	}
-}
-
-@media screen and (max-width: 388px){
-	.desc{
-		width: 70%;
-		font-size: 11px;
-		position: absolute;
-		bottom:30px;
+@media screen and (max-width:550px){
+	#about-me-name{
+		display: inline-block;
 	}
 	
-	.navtabs{
-		margin-left: 0%;
-		margin-right: 5%;
+	#headshot-and-bio-wrapper{
+		display: grid;
+		grid-template-columns: 5px auto 5px;
+		grid-template-rows:  auto;
+		grid-template-areas: 
+			". bio .";
 	}
 
-	.portfolio-link, .portfolio-thbnail{
-		max-height: 100px
+	.namelogo{
+		display:grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto;
+		grid-template-areas: "name icon-block";
+		justify-items: center;
 	}
-}
 
-@media screen and (max-width:300px){
 	#headshot{
 		display: none;
 	}
 
 	#headshot-icon{
+		grid-area: icon-block;
 		display: inline-block;
+	}
+
+	#initialplate{
+		grid-area: name;
+		align-self: center;
+		display: inline-block;
+	}
+
+	#nameplate{
+		display: none;
 	}
 }

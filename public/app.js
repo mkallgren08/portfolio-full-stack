@@ -3,6 +3,31 @@ $(document).ready(function () {
     window.location.href = "/"
   });
 
+  $(".read-amount").on('click', function() {
+    event.preventDefault();
+    console.log("I got a click!");
+    let id = $(this).attr("id");
+    console.log("My id is: " + id);
+    if (id === "readmore1"){
+      $("#readmore1").addClass("hide")
+      $("#bio-rest").switchClass("hide", "show");
+      $("#bio-p2").addClass("show")
+    } else if (id === "readmore2"){
+      $("#readmore2").addClass("hide")
+      $("#bio-rest").switchClass("hide", "show");
+    } else if (id === "readless1"){
+      if ($(window).width() < 660){
+        $("#readmore1").removeClass("hide");
+        $("#bio-rest").switchClass("show", "hide");
+        $("#bio-p2").removeClass("show");
+      } else{
+        $("#readmore2").removeClass("hide");
+        $("#bio-rest").switchClass("show", "hide");
+      }
+      
+    }
+  });
+
   $('.contact-submit').on("click", function () {
     event.preventDefault();
     console.log("Click heard!")
