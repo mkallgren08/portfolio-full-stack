@@ -1,4 +1,18 @@
 $(document).ready(function () {
+  if ($(window).width() < 550){
+    $('#about-me-name').switchClass('hide', 'show');
+  }
+
+  addEvent(window, "resize", function(event) {
+    if ($(window).width() < 550){
+      $('#about-me-name').switchClass('hide', 'show');
+    } else {
+      $('#about-me-name').switchClass('show', 'hide');
+    }
+  });
+
+  
+
   $('#myModal').on('hidden.bs.modal', function (e) {
     window.location.href = "/"
   });
@@ -100,3 +114,15 @@ let displayedCode = () => {
   $('#basic-addon1').val(newCode)
   // alert("New code is: " + newCode)
 }
+
+let addEvent = function(object, type, callback) {
+  if (object == null || typeof(object) == 'undefined') return;
+  if (object.addEventListener) {
+      object.addEventListener(type, callback, false);
+  } else if (object.attachEvent) {
+      object.attachEvent("on" + type, callback);
+  } else {
+      object["on"+type] = callback;
+  }
+}
+
