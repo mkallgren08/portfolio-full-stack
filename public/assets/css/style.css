@@ -1,6 +1,7 @@
 body, html{
 	height: auto;
 	width: auto;
+	min-width: 370px;
 }
 
 body{
@@ -80,6 +81,11 @@ hr {
 	max-height: 100%;
 }
 
+#contactPhone{
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
 .contact-submit{
 	margin-top: 45%;
 }
@@ -156,11 +162,10 @@ hr {
 	padding: 0% 5%;
 	display:grid;
 	grid-template-columns: 30px 60% auto 30% 30px;
-	grid-template-rows: 10px auto 10px;
+	grid-template-rows: 10px auto;
 	grid-template-areas: 
 		". . . . ."
-		". namelogo . nav-tabs ."
-		". . . . .";
+		". namelogo . nav-tabs .";
 	background: linear-gradient(to right, rgba(110,110,110,0.85), rgba(125,125,125,1)); 
 }
 
@@ -323,6 +328,7 @@ hr {
 	max-width: 500px;
 	max-width: 50%; */
 	font-size:18px;
+	align-self: end;
 }
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
@@ -381,8 +387,11 @@ hr {
 
 .panel-title{
 	border-bottom: 2px solid #999;
+	font-size: 20px;
+	line-height: 24px;
 	padding-bottom: 10px;
 }
+
 
 /* .row{
 	margin-right: 0px;
