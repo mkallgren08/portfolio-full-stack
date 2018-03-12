@@ -5,8 +5,12 @@ body, html{
 }
 
 body{
-	background: #723511; /* For browsers that do not support gradients */
-	/* background-image: url("../images/barnwood-background.jpg"); */
+	/* background: #723511; For browsers that do not support gradients */
+	background: #e2c2b0; /* Old browsers */
+	background: -moz-linear-gradient(top, #e2c2b0 0%, #613115 0%, #764326 50%, #ac7d62 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #e2c2b0 0%,#613115 0%,#764326 50%,#ac7d62 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #e2c2b0 0%,#613115 0%,#764326 50%,#ac7d62 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2c2b0', endColorstr='#ac7d62',GradientType=0 ); /* IE6-9 */
 	background-size: cover;
 	padding-bottom: 85px; 
 }
