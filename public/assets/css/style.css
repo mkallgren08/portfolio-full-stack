@@ -401,6 +401,10 @@ hr {
 	margin-right: 0px;
 } */
 
+.raised{
+	box-shadow: 5px 5px 5px #444444
+}
+
 #readmore1{
 	display: none;
 }
