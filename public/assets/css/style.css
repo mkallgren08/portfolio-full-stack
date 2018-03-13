@@ -257,6 +257,7 @@ hr {
 
 .maincontent{
 	margin: 10px 15px 50px 15px;
+	padding: 10px;
 	background-color: #ebebeb;
 	border-radius: 5px;
 	border: solid 1px #5c5c5c;
@@ -402,7 +403,7 @@ hr {
 } */
 
 .raised{
-	box-shadow: 5px 5px 5px #444444
+	box-shadow: 0px 4px 4px rgba(110,110,110,0.4), 4px 4px 4px #444444
 }
 
 #readmore1{
