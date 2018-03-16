@@ -6,13 +6,15 @@ body, html{
 
 body{
 	/* background: #723511; For browsers that do not support gradients */
-	background: #e2c2b0; /* Old browsers */
-	background: -moz-linear-gradient(top, #e2c2b0 0%, #613115 0%, #764326 50%, #ac7d62 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, #e2c2b0 0%,#613115 0%,#764326 50%,#ac7d62 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, #e2c2b0 0%,#613115 0%,#764326 50%,#ac7d62 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2c2b0', endColorstr='#ac7d62',GradientType=0 ); /* IE6-9 */
+	background: rgb(28,66,110); /* Old browsers */
+	background: -moz-linear-gradient(45deg, rgba(28,66,110,1) 0%, rgba(107,174,201,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, rgba(28,66,110,1) 0%,rgba(107,174,201,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, rgba(28,66,110,1) 0%,rgba(107,174,201,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c426e', endColorstr='#6baec9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	background-size: cover;
 	padding-bottom: 85px; 
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
 }
 
 /*div{
@@ -92,6 +94,7 @@ hr {
 
 .contact-submit{
 	margin-top: 45%;
+	align-self: end;
 }
 
 .contactee{
@@ -124,7 +127,8 @@ hr {
 
 #countryCodes{
 	max-width: 43%;
-	margin: 1% 10.75% 0% 10.75%;
+	min-width: 126px;
+	margin: 1% 10.75% 0% 0%;
 }
 
 .desc{
@@ -152,9 +156,10 @@ hr {
 .footer{
 	border: 1px solid #9c501a;
 	background-image: url("../images/br_copper2.jpg");
+	vertical-align: middle;
 	line-height: 14px;
 	font-size: 12px;
-	height: 20px;
+	height: 40px;
 	background-size: 100%;
 }
 
@@ -170,7 +175,13 @@ hr {
 	grid-template-areas: 
 		". . . . ."
 		". namelogo . nav-tabs .";
-	background: linear-gradient(to right, rgba(110,110,110,0.85), rgba(125,125,125,1)); 
+	background: rgb(24,5,151); /* Old browsers */
+	background: -moz-linear-gradient(45deg, rgba(24,5,151,1) 0%, rgba(75,61,181,1) 69%, rgba(94,87,193,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, rgba(24,5,151,1) 0%,rgba(75,61,181,1) 69%,rgba(94,87,193,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, rgba(24,5,151,1) 0%,rgba(75,61,181,1) 69%,rgba(94,87,193,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#180597', endColorstr='#5e57c1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	border-bottom: 2px groove navy;
 }
 
 #headshot-and-bio-wrapper{
@@ -205,6 +216,7 @@ hr {
 	height: 45px;
 	width: 45px;
 	/* margin: 10px 10px 0px 10px; */
+	/* box-shadow: 2px 2px 2px rgba(110,110,110,0.4); */
 }
 
 .icons{
@@ -237,12 +249,12 @@ hr {
 
 
 .mainbody{
-    background-image: url("./../images/oeschinenzee.jpg");
+    background-image: url("./../images/oeschinenzee.png");
 	background-size: 100% 100%;
 	background-attachment: fixed;
 	border-left: 2px #444444 solid;
 	border-right: 2px #444444 solid;
-	border-top: 4px #444444 solid;
+	/* border-top: 4px #444444 solid; */
 	height: fit-content;
 	margin: 0px 5%;
 	display: grid;
@@ -276,14 +288,13 @@ hr {
 	grid-area: namelogo;
 	margin-bottom: 15px;
 	padding: 0.5% 5%;
-	/* padding-left: 30px; */
-	/* background-image: url("./../images/br_brass.jpg");
-	background-size: contain;
-	background-repeat:none;
-	background-attachment: fixed; */
-	background-color: rgba(150, 102, 0, 0.835);
-	background: radial-gradient(rgba(150, 102, 0, 0.835), rgba(194, 126, 0, 0.644), rgba(145, 94, 0, 0.514));
-	text-shadow: -1px 1px #504D4D;
+	font-weight: bolder;
+	background: rgb(248,233,98); /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, rgba(248,233,98,1) 0%, rgba(195,173,13,1) 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(248,233,98,1) 0%,rgba(195,173,13,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, rgba(248,233,98,1) 0%,rgba(195,173,13,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8e962', endColorstr='#c3ad0d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	/* text-shadow: -1px 1px #504D4D; */
 	border: 2px solid #333333;
 	border-top-left-radius: 5px;
 	border-bottom-right-radius: 5px;
@@ -299,6 +310,10 @@ hr {
 	margin: 0% 10%;
 }
 
+#namplate, .namelogo, #initialplate, .panel-title, #about-me-name, .nav-label-txt{
+	font-family: 'Philosopher', sans-serif;
+}
+
 #initialplate{
 	display: none;
 	font-size: 40px;
@@ -308,8 +323,14 @@ hr {
 	display: inline-block;
 	width: 32%;
 	height: 35px;
-	background-image: url("./../images/br_nickel.png");
-	border: 1px solid #3f3c39;
+	/* background-image: url("./../images/br_nickel.png"); */
+	background: #e2e2e2; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #e2e2e2 0%, #c2c2c2 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #e2e2e2 0%,#c2c2c2 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #e2e2e2 0%,#c2c2c2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#c2c2c2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	border: 3px outset #666462;
+	border-bottom: none;
 	text-align: center;
 	vertical-align: middle;
 	padding-top: 5px;
@@ -325,15 +346,16 @@ hr {
 
 .nav-label-txt{
 	margin-top: 3px;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 24px;
 }
 
 .nav-tabs{
 	grid-area: nav-tabs;
-	/* min-width: 310px;
-	max-width: 500px;
-	max-width: 50%; */
 	font-size:18px;
 	align-self: end;
+	border-bottom: none;
 }
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
@@ -442,6 +464,10 @@ hr {
 
 } */
 @media screen and (max-width: 1090px){
+	.contact-submit{
+		margin-top: 2%;
+	}
+
 	.mainbody{
 		display:grid;
 		grid-template-columns: auto 95% auto;

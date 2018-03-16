@@ -23,20 +23,20 @@ $(document).ready(function () {
     let id = $(this).attr("id");
     console.log("My id is: " + id);
     if (id === "readmore1"){
-      $("#readmore1").addClass("hide")
-      $("#bio-rest").switchClass("hide", "show");
-      $("#bio-p2").addClass("show")
+      $("#readmore1").hide();
+      $("#bio-rest").show();
+      $("#bio-p2").show()
     } else if (id === "readmore2"){
-      $("#readmore2").addClass("hide")
-      $("#bio-rest").switchClass("hide", "show");
+      $("#readmore2").hide()
+      $("#bio-rest").show();
     } else if (id === "readless1"){
       if ($(window).width() < 660){
-        $("#readmore1").removeClass("hide");
-        $("#bio-rest").switchClass("show", "hide");
-        $("#bio-p2").removeClass("show");
+        $("#readmore1").show();
+        $("#bio-rest").hide();
+        $("#bio-p2").hide();
       } else{
-        $("#readmore2").removeClass("hide");
-        $("#bio-rest").switchClass("show", "hide");
+        $("#readmore2").show();
+        $("#bio-rest").hide();
       }
       
     }
