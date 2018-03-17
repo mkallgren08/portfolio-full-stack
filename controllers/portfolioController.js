@@ -16,6 +16,13 @@ let project = [
         altText: "Catch 'Em All! - Pokemon Team Builder",
     },
     {
+        name: "Hangman",
+        link: "https://mk-hangman.herokuapp.com/",
+        gitLink: "https://github.com/mkallgren08/mk-hangman",
+        thbnail: "hangman.jpg",
+        altText: "Hangman",
+    },
+    {
         name: "Arduino Projects",
         link: "https://github.com/mkallgren08/Arduino-Projects",
         gitLink: "https://github.com/mkallgren08/Arduino-Projects",
