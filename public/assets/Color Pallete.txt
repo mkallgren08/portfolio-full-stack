@@ -1,0 +1,21 @@
+BLUE/GOLD
+
+- golds
+e5b761
+f7d365
+e0b45b
+e1e99c
+
+blues
+0e334d
+056eb0
+173247
+2ba3ef
+8bc5ed
+7fdef0  --
+a7d9e4
+a7e5f4  --
+a1d6fe
+85a6d1
+e3feff  --
+

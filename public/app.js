@@ -1,6 +1,45 @@
 $(document).ready(function () {
+  if ($(window).width() < 550){
+    $('#about-me-name').switchClass('hide', 'show');
+  }
+
+  addEvent(window, "resize", function(event) {
+    if ($(window).width() < 550){
+      $('#about-me-name').switchClass('hide', 'show');
+    } else {
+      $('#about-me-name').switchClass('show', 'hide');
+    }
+  });
+
+  
+
   $('#myModal').on('hidden.bs.modal', function (e) {
     window.location.href = "/"
+  });
+
+  $(".read-amount").on('click', function() {
+    event.preventDefault();
+    console.log("I got a click!");
+    let id = $(this).attr("id");
+    console.log("My id is: " + id);
+    if (id === "readmore1"){
+      $("#readmore1").hide();
+      $("#bio-rest").show();
+      $("#bio-p2").show()
+    } else if (id === "readmore2"){
+      $("#readmore2").hide()
+      $("#bio-rest").show();
+    } else if (id === "readless1"){
+      if ($(window).width() < 660){
+        $("#readmore1").show();
+        $("#bio-rest").hide();
+        $("#bio-p2").hide();
+      } else{
+        $("#readmore2").show();
+        $("#bio-rest").hide();
+      }
+      
+    }
   });
 
   $('.contact-submit').on("click", function () {
@@ -63,7 +102,9 @@ let parseContact = () => {
       }     
     });
   } else {
-    alert("Please make sure you have included your Name, E-mail address, and a brief message.")
+    // alert("Please make sure you have included your Name, E-mail address, " + 
+    // "and a brief message.")
+    $("#contactErrorModal").modal('show')
   }
 }
 
@@ -73,3 +114,15 @@ let displayedCode = () => {
   $('#basic-addon1').val(newCode)
   // alert("New code is: " + newCode)
 }
+
+let addEvent = function(object, type, callback) {
+  if (object == null || typeof(object) == 'undefined') return;
+  if (object.addEventListener) {
+      object.addEventListener(type, callback, false);
+  } else if (object.attachEvent) {
+      object.attachEvent("on" + type, callback);
+  } else {
+      object["on"+type] = callback;
+  }
+}
+

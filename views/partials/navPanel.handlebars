@@ -1,36 +1,26 @@
-<div class="container">
+<div class="container-fluid">
   {{!--
-  <div class="container"> --}}
-    <div class="row">
-      <div class="nav-wrap">
-        <!-- Navbar -->
-        <nav class="navbar banner navbar-default header navbar-static-top">
-          <div class="row">
-            <div class="col-md-6">
-              <div class=" namelogo">
-                <p id="nameplate">Michael K. Kallgren</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              {{!-- <div class="row topfill">
-                <div class="col-sm-12"></div>
-              </div> --}}
-                  <div class="nav nav-tabs">
-                    <span class="{{#if homepage}}{{homepage}}{{/if}} nav-label">
-                      <a href="/" class = "nav-label-txt">About</a>
-                    </span>
-                    <span class="{{#if contact}}{{contact}}{{/if}} nav-label">
-                      <a href="/contact" class = "nav-label-txt">Contact</a>
-                    </span>
-                    <span class="{{#if portfolio}}{{portfolio}}{{/if}} nav-label">
-                      <a href="/portfolio" class = "nav-label-txt">Portfolio</a>
-                    </span>
-              </div>
-            </div>
-          </div>
-        </nav>
-        <!--  End navbar -->
+  <div class="nav-wrap"> --}}
+    <!-- Navbar -->
+    <nav class="background-darkblue navbar navbar-default header">
+      <div class=" namelogo background-gold2">
+        <p id="nameplate">Michael K. Kallgren</p>
+        <p id="initialplate">M.K.K.</p>
+        <img id="headshot-icon" src="./assets/images/Headshot-Icon.jpg" alt="Headshot: Michael K. Kallgren">
       </div>
-    </div>
-    {{!-- </div> --}}
+      <div class="nav nav-tabs">
+        <span class="{{#if homepage}}{{homepage}}{{/if}} nav-label">
+          <a href="/" class="nav-label-txt">About</a>
+        </span>
+        <span class="{{#if contact}}{{contact}}{{/if}} nav-label">
+          <a href="/contact" class="nav-label-txt">Contact</a>
+        </span>
+        <span class="{{#if portfolio}}{{portfolio}}{{/if}} nav-label">
+          <a href="/portfolio" class="nav-label-txt">Portfolio</a>
+        </span>
+      </div>
+    </nav>
+    <!--  End navbar -->
+    {{!-- </div>
+</div> --}}
 </div>

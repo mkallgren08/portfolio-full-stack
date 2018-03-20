@@ -7,8 +7,9 @@ const logger = require("morgan")
 const express = require("express");
 const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
-const nodemailer = require('nodemailer');
-const validator = require('email-validator')
+// const nodemailer = require('nodemailer');
+const validator = require('email-validator');
+const sgMail = require('@sendgrid/mail');
 
 
 // Controller Dependencies
@@ -49,20 +50,22 @@ app.use(logger("dev"));
 // Database configuration with mongoose
 //mongoose.connect("mongodb://heroku_086slhkf:t96inaqlc3krouapt7t4uvf6rd@ds139984.mlab.com:39984/heroku_086slhkf")
 //mongoose.connect('mongodb://localhost/scraper');
-let connectionURI = process.env.MONGODB_URI || 'mongodb://localhost/countrycodesdb'
+let connectionURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/countrycodes'
 
+
+// sets timers to limit how long the server attempts to establish a connection to a db
 var option = {
   server: {
-      socketOptions: {
-          keepAlive: 300000,
-          connectTimeoutMS: 30000
-      }
+    socketOptions: {
+      keepAlive: 300000,
+      connectTimeoutMS: 30000
+    }
   },
   replset: {
-      socketOptions: {
-          keepAlive: 300000,
-          connectTimeoutMS: 30000
-      }
+    socketOptions: {
+      keepAlive: 300000,
+      connectTimeoutMS: 30000
+    }
   }
 };
 
@@ -192,7 +195,8 @@ app.post('/contact', function (req, res) {
     res.send(hbsObject);
 
   } else {
-    sendMessage(req.body);
+    //sendMessage(req.body);
+    sendMessageTwo(req.body);
 
     hbsObject.sent = true;
     res.send(hbsObject)
@@ -213,7 +217,7 @@ app.get('/codes', function (req, res) {
       // Or send the doc to the browser as a json object
       else {
         var hbsObject = {
-          title: "BBC Scraped News",
+          title: "Michael Kallgren - Contact",
           savedActive: 'active',
           results: result
         }
@@ -229,39 +233,61 @@ app.get('/codes', function (req, res) {
 // ====================================
 
 
-// Sends the email
+// Sends the email using nodemailer (old version of portfolio)
 //+++++++++++++++++++++++++++++++++++++++++++++++++
-var sendMessage = (msgObj) => {
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'contact.mkallgren08@gmail.com',
-      pass: process.env.GPASS || process.env.P_PASS
-    }
-  });
+  // var sendMessage = (msgObj) => {
+  //   const transporter = nodemailer.createTransport({
+  //     service: 'gmail',
+  //     auth: {
+  //       user: 'contact.mkallgren08@gmail.com',
+  //       pass: process.env.GPASS || process.env.P_PASS
+  //     }
+  //   });
 
-  var mailOptions = {
+  //   var mailOptions = {
+  //     from: msgObj.email,
+  //     to: 'contact.mkallgren08@gmail.com',
+  //     subject: 'New Message From ' + msgObj.name,
+  //     text: 'Name: ' + msgObj.name
+  //       + '\nE-mail: ' + msgObj.email
+  //       + '\nPhone: (' + msgObj.countryCode + ')' + msgObj.phone
+  //       + '\nPreferred method of contact: ' + msgObj.prefMethod
+  //       + '\n\nMessage:\n\n ' + msgObj.message
+  //   };
+
+  //   transporter.sendMail(mailOptions, function (error, info) {
+  //     if (error) {
+  //       console.log("Error: " + error);
+  //     } else {
+  //       console.log('Mail contents: ' + JSON.stringify(mailOptions, null, 2))
+  //       console.log('Email sent: ' + info.response);
+  //     }
+  //   });
+  // }
+
+
+// Sends the email using sendgrid
+//+++++++++++++++++++++++++++++++++++++++++++++++++
+var sendMessageTwo = (msgObj) => {
+  // using SendGrid's v3 Node.js Library
+  // https://github.com/sendgrid/sendgrid-nodejs
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  const msg = {
+    to: 'mkallgren08@gmail.com',
     from: msgObj.email,
-    to: 'contact.mkallgren08@gmail.com',
-    subject: 'New Message From ' + msgObj.name,
-    text: 'Name: ' + msgObj.name
-    + '\nE-mail: ' + msgObj.email
-    + '\nPhone: (' + msgObj.countryCode + ')' + msgObj.phone
-    + '\nPreferred method of contact: ' + msgObj.prefMethod
-    + '\n\nMessage:\n\n ' + msgObj.message
+    subject: 'Contact Page: New Message from ' + msgObj.name,
+    text: msgObj.message + "\nPreferred Method of Contact: " +
+    +msgObj.prefMethod + "\nPhone Number: (" + msgObj.countryCode + ')' + msgObj.phone
+    //html: '<strong>and easy to do anywhere, even with Node.js</strong>',
   };
-
-  transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      console.log("Error: " + error);
-    } else {
-      console.log('Mail contents: ' + JSON.stringify(mailOptions, null, 2))
-      console.log('Email sent: ' + info.response);
-    }
-  });
+  sgMail.send(msg);
+  console.log(msg);
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++
 
 // ====================================
 //      Misc
 // ====================================
+
+// Test console.log() to make sure the sendgrid_api_key is configured correctly
+// console.log("SendGrid API Key: " + process.env.SENDGRID_API_KEY)
