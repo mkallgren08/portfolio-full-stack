@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<palette guid="91b61a0a-1fb3-4b4d-ae1f-ac4ece761280" name="Gold-and-Blue.xml">
+<colors>
+    <page>
+    <color cs="RGB" tints="0.898039,0.717647,0.380392"/>
+    <color cs="RGB" tints="0.968627,0.827451,0.396078"/>
+    <color cs="RGB" tints="0.878431,0.705882,0.356863"/>
+    <color cs="RGB" tints="0.996078,0.882353,0.411765"/>
+    <color cs="RGB" tints="0.882353,0.913725,0.611765"/>
+    <color cs="RGB" tints="0.054902,0.2,0.301961"/>
+    <color cs="RGB" tints="0.0196078,0.431373,0.690196"/>
+    <color cs="RGB" tints="0.0901961,0.196078,0.278431"/>
+    <color cs="RGB" tints="0.168627,0.639216,0.937255"/>
+    <color cs="RGB" tints="0.545098,0.772549,0.929412"/>
+    <color cs="RGB" tints="0.498039,0.870588,0.941176"/>
+    <color cs="RGB" tints="0.654902,0.85098,0.894118"/><color cs="RGB" tints="0.654902,0.898039,0.956863"/><color cs="RGB" tints="0.631373,0.839216,0.996078"/><color cs="RGB" tints="0.521569,0.65098,0.819608"/></page></colors></palette>
