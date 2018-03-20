@@ -74,6 +74,7 @@ let parseContact = () => {
   // is provided and "either" if both an email and phone is provided but no 
   // mehtod is explicitly declared.
   let contactMethod = $("input[name='contact-type']:checked").val()
+  console.log(contactMethod);
 
   if (contactMethod === "email" || sentData.phone === "Not provided") {
     sentData.prefMethod = "E-mail"

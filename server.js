@@ -276,8 +276,8 @@ var sendMessageTwo = (msgObj) => {
     to: 'mkallgren08@gmail.com',
     from: msgObj.email,
     subject: 'Contact Page: New Message from ' + msgObj.name,
-    text: msgObj.message + "\nPreferred Method of Contact: " +
-    +msgObj.prefMethod + "\nPhone Number: (" + msgObj.countryCode + ')' + msgObj.phone
+    text: msgObj.message + "\n *Preferred Method of Contact: " +
+    +msgObj.prefMethod + "\n *Phone Number: (" + msgObj.countryCode + ')' + msgObj.phone
     //html: '<strong>and easy to do anywhere, even with Node.js</strong>',
   };
   sgMail.send(msg);
