@@ -92,7 +92,7 @@ let parseContact = () => {
       url: "/contact",
       data: sentData,
       success: function () {
-        console.log("Sucess!")
+        console.log("Success!")
       },
     }).then(function(res){
       if (res.alert){
