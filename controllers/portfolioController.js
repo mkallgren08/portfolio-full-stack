@@ -2,6 +2,13 @@
 
 let project = [
     {
+        name: "Geovane (beta)",
+        link: "https://geovane-routes.herokuapp.com/",
+        gitLink: "https://github.com/mkallgren08/geovane-handlebars",
+        thbnail: "windvane.jpg",
+        altText: "Link to Geovane: image is a windvane",
+    },
+    {
         name: "Trivia Game",
         link: "https://mkallgren08.github.io/Trivia-Game/",
         gitLink: "https://github.com/mkallgren08/Trivia-Game",
@@ -50,6 +57,7 @@ let project = [
         thbnail: "shopping-cart.jpg",
         altText: "Shopping Cart",
     },
+
 
 ];
 
