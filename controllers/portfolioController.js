@@ -1,6 +1,6 @@
 // Here's where we control what is accessable from the portfolio page
 
-let project = [
+const project = [
     {
         name: "Geovane (beta)",
         link: "https://geovane-routes.herokuapp.com/",
