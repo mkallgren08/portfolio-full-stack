@@ -1,6 +1,7 @@
 var express = require("express");
 const validator = require('email-validator');
 const sgMail = require('@sendgrid/mail');
+let projectList = require("./portfolioController")
 
 var router = express.Router();
 
