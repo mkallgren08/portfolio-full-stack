@@ -23,6 +23,16 @@ router.get('/', function (req, res) {
     // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
     res.render("homepage.handlebars", hbsObject);
   });
+
+router.get('/aboutme', function (req, res) {
+    let hbsObject = {
+      title: "About Me - Michael Kallgren",
+      aboutme: 'active',
+      results: res
+    }
+    // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
+    res.render("aboutme.handlebars", hbsObject);
+  });
   
   //Portfolio Route
   router.get('/portfolio', function (req, res) {
