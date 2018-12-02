@@ -1,6 +1,6 @@
 body, html{
-	/* height: auto;
-	width: auto; */
+  height: 100%;
+  width: 100%;
 	min-width: 370px;
 }
 
@@ -457,7 +457,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 
 }
 
+.pageBackground{
+  height: 85vh;
+  background-image: url("../images/circuitsanimated.gif");
+  background-repeat: none;
+  background-size: 100%;
+  background-position: center;
+}
 
+.pageBckgrndOverlay{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.20)
+}
 #page-nav{
 	max-width: 500px;
 }
