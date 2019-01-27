@@ -2,7 +2,7 @@
 
 const project = [
   {
-    name: "Interactive Game Resource Map (beta)",
+    name: "Interactive Game Resource Map",
     link: "https://resourcemapping.herokuapp.com/",
     gitLink: "https://github.com/mkallgren08/resource_map",
     thbnail: "vault76_logo.jpg",
