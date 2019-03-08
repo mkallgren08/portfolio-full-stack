@@ -2,6 +2,13 @@
 
 const project = [
   {
+    name: "Factory Generator with Multi-User Support",
+    link: "https://new-node-tree-app.herokuapp.com/",
+    gitLink: "https://github.com/mkallgren08/new-node-tree-app",
+    thbnail: "factory.jpg",
+    altText: "Link to Factory Generator: image is of an old factory building",
+  },
+  {
     name: "Interactive Game Resource Map",
     link: "https://resourcemapping.herokuapp.com/",
     gitLink: "https://github.com/mkallgren08/resource_map",
