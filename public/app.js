@@ -47,6 +47,15 @@ $(document).ready(function () {
 
   });
 
+  $('#infoModal').on('hidden.bs.modal', function (e) {
+    console.log("switching all info modal content to be hidden");
+    $('.info-modal-content').children().each(function(){
+      if($(this).attr('class')==='show'){
+        $(this).switchClass('show','hide');
+      }
+    })
+  });
+
   $('.project-info').on('click',function(){
     let a = $(this).attr('value')
     console.log(a)
@@ -60,7 +69,8 @@ $(document).ready(function () {
         return false;
       } else {
         console.log("Defaulting to test modal")
-        $('#test').switchClass('hide','show')
+        $('#test').switchClass('hide','show');
+        $('#infoModal').modal('show');
       }
     })
   })
