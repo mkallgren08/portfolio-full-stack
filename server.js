@@ -9,10 +9,6 @@ const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
 // const nodemailer = require('nodemailer');
 
-
-
-
-
 // Require the portfolioController
 const projectList = require("./controllers/portfolioController.js")
 // const phoneValidator = require("./controllers/phoneValidator.js")

@@ -11,8 +11,6 @@ $(document).ready(function () {
     }
   });
 
-  
-
   $('#myModal').on('hidden.bs.modal', function (e) {
     window.location.href = "/"
   });
@@ -48,6 +46,24 @@ $(document).ready(function () {
     parseContact();
 
   });
+
+  $('.project-info').on('click',function(){
+    let a = $(this).attr('value')
+    console.log(a)
+    $('.info-modal-content').children().each(function(){
+      console.log("started looking through modal info...")
+      console.log($(this))
+      if($(this).attr('id') === a){
+        console.log("Found one!")
+        $(this).switchClass('hide','show');
+        $('#infoModal').modal('show');
+        return false;
+      } else {
+        console.log("Defaulting to test modal")
+        $('#test').switchClass('hide','show')
+      }
+    })
+  })
 });
 
 //=========================================

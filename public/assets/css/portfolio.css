@@ -1,0 +1,80 @@
+.desc{
+	text-align: center;
+	background-image: url("./../images/br_gold_flipped.jpg");
+	background-size: 100%;
+  position: absolute;
+  color: rgb(5,5,5);
+	width: 75%;
+	border-left: none;
+	margin-left: 4px;
+	border-width: 1.5px 1.5px 1.5px 0px;
+	border-color: #9c501a;
+	border-style: solid;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	bottom: 50px;
+	z-index: 1;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 24px;
+	box-shadow: 2px 2px 2px rgba(107, 107, 107, 0.4);
+}
+
+.gitlink{
+  color: rgb(29, 29, 29);
+  grid-area: thumbnail;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  height: 25px;
+  width: 25px;
+  padding: 2px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 12px;
+  border: solid rgb(50,50,50) 1px;
+
+}
+
+.gitlink > img {
+  position: absolute;
+  top: 2px;
+  right: 1px;
+  height:90%;
+  width: 90%;
+  padding-bottom: 2px;
+}
+
+.gitlink:hover{
+  background-color: rgb(180,180,180);
+  border-color: aliceblue;
+}
+
+.portfolio-thbnail{
+	margin-left: 0px;
+	margin-right: 0px;
+  grid-area: thumbnail;
+  position: relative;
+}
+
+.project-info{
+  cursor: pointer;
+}
+
+.project-info:hover{
+  color: rgb(50,50,50);
+}
+
+.thumbnail{
+	background-image:url("../images/br_gold.jpg");
+	background-size: cover;
+	border: 2px #333333 solid;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto 148px 30px 22px auto;
+	grid-template-areas: 
+		". . ."
+		". thumbnail ."
+		". thumbnail ."
+		". thumbnail ."
+		". . .";
+}

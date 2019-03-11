@@ -2,6 +2,7 @@ var express = require("express");
 const validator = require('email-validator');
 const sgMail = require('@sendgrid/mail');
 let projectList = require("./portfolioController")
+let projectInfo = require("./projectInfoController")
 
 var router = express.Router();
 
@@ -29,7 +30,8 @@ router.get('/', function (req, res) {
     let hbsObject = {
       title: "Portfolio - Michael Kallgren",
       portfolio: 'active',
-      projects: projectList
+      projects: projectList,
+      projectInfo: projectInfo,
     }
     res.render("portfolio.handlebars", hbsObject);
   });

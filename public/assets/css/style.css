@@ -183,28 +183,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 	margin: 1% 10.75% 0% 0%;
 }
 
-.desc{
-
-	text-align: center;
-	background-image: url("./../images/br_gold_flipped.jpg");
-	background-size: 100%;
-	position: absolute;
-	width: 75%;
-	border-left: none;
-	margin-left: 4px;
-	border-width: 1.5px 1.5px 1.5px 0px;
-	border-color: #9c501a;
-	border-style: solid;
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
-	bottom: 50px;
-	z-index: 1;
-	font-size: 20px;
-	font-weight: 700;
-	line-height: 24px;
-	box-shadow: 2px 2px 2px rgba(107, 107, 107, 0.4);
-}
-
 /* .footer.navbar{
 	border: 3px solid #9c501a;
 	background: #ff6f1c;
@@ -223,9 +201,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 	/* background-size: 100%; */
 }
 
-.gitlink{
-	color: rgb(29, 29, 29)
-}
+
 
 .header{
 	padding: 0% 5%;
@@ -473,12 +449,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 	padding-bottom: 10px;
 }
 
-.portfolio-thbnail{
-	margin-left: 0px;
-	margin-right: 0px;
-	grid-area: thumbnail;
-}
-
 /* .row{
 	margin-right: 0px;
 } */
@@ -503,21 +473,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 	display: inline-block;
 }
 
-.thumbnail{
-	background-image:url("../images/br_gold.jpg");
-	background-size: cover;
-	border: 2px #333333 solid;
-	display: grid;
-	grid-template-columns: auto auto auto;
-	grid-template-rows: auto 148px 30px 22px auto;
-	grid-template-areas: 
-		". . ."
-		". thumbnail ."
-		". thumbnail ."
-		". thumbnail ."
-		". . .";
-}
-
 .topfill{
 	height: 50px;
 	width: 98%
@@ -535,7 +490,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 
 
 } */
-@media screen and (max-width: 1090px){
+@media screen and (max-width: 1200px){
 	.contact-submit{
 		margin-top: 2%;
 	}
