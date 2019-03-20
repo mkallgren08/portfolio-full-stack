@@ -8,7 +8,14 @@
           <h4 class="modal-title">{{name}}</h4>
         </div>
         <div class="modal-body">
-          <p>One fine body&hellip;</p>
+          <div><span class="infoSubTitle">Stack used: </span>{{stack}}</div>
+          <hr>
+          <div><span class="infoSubTitle">Other libraries/technologies:</span>{{other}}</div>
+          <hr>
+          {{#each description}} 
+            <p>{{this}}</p>
+            <br>
+          {{/each}}
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal" value="{{value}}">Close</button>

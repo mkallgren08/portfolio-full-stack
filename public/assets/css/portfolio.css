@@ -1,3 +1,8 @@
+b{
+  font-size: 24px;
+  text-decoration: underline;
+}
+
 .desc{
 	text-align: center;
 	background-image: url("./../images/br_gold_flipped.jpg");
@@ -19,6 +24,18 @@
 	line-height: 24px;
 	box-shadow: 2px 2px 2px rgba(107, 107, 107, 0.4);
 }
+
+.infoSubTitle{
+  display: block;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.gitGlyph > img{
+  height: 16px;
+}
+
 
 .gitlink{
   color: rgb(29, 29, 29);
@@ -49,6 +66,11 @@
   border-color: aliceblue;
 }
 
+.modal-title{
+  font-weight: bolder;
+  font-size: 24px;
+}
+
 .portfolio-thbnail{
 	margin-left: 0px;
 	margin-right: 0px;
@@ -62,6 +84,11 @@
 
 .project-info:hover{
   color: rgb(50,50,50);
+}
+
+.subtitle{
+  font-size: 16px;
+  line-height: 17px;
 }
 
 .thumbnail{

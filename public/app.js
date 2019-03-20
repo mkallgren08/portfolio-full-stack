@@ -59,20 +59,22 @@ $(document).ready(function () {
   $('.project-info').on('click',function(){
     let a = $(this).attr('value')
     console.log(a)
+    let found = false;
     $('.info-modal-content').children().each(function(){
       console.log("started looking through modal info...")
-      console.log($(this))
+      //console.log($(this))
       if($(this).attr('id') === a){
         console.log("Found one!")
         $(this).switchClass('hide','show');
         $('#infoModal').modal('show');
-        return false;
-      } else {
-        console.log("Defaulting to test modal")
-        $('#test').switchClass('hide','show');
-        $('#infoModal').modal('show');
-      }
-    })
+        found = true
+      } 
+    });
+    if (!found) {
+      console.log("Defaulting to test modal")
+      $('#test').switchClass('hide','show');
+      $('#infoModal').modal('show');
+    }
   })
 });
 
