@@ -7,6 +7,7 @@ const logger = require("morgan")
 const express = require("express");
 const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
+const hbshelpers = require('./helpers/handlebarsHelpers');
 // const nodemailer = require('nodemailer');
 
 // Require the portfolioController
@@ -21,10 +22,15 @@ const app = express();
 // Set the port to use as a variable.
 const port = process.env.PORT || 3001;
 
-
+// Creates the main handlebars engine, lets you set the default layout as well as register any helper functions
+const hbs = exphbs.create({
+  defaultLayout: 'main',
+  helpers: hbshelpers
+})
+// console.log(hbshelpers)
 // Sets up the main handlebars page (main.hbs) to serve our web apps pages
 // Sets the viewing engine of the app to handlebars
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.engine('handlebars', hbs.engine); // , helpers:{hbshelpers}     exphbs({ defaultLayout: 'main'})
 app.set('view engine', 'handlebars');
 
 // Serve static content for the app from the "public" directory in the application directory.

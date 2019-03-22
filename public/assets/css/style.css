@@ -100,6 +100,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 	display: none;
 }
 
+.centered{
+  display: flex;
+  justify-content: center;
+}
+
 #connect-panel{	
 	grid-area: connect-panel;
 }
