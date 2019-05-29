@@ -1,0 +1,37 @@
+@mixin gradient($color,$colors,$start,$stop){
+  background: $color;
+	background: -moz-linear-gradient$colors;
+	background: -webkit-linear-gradient$colors;
+	background: -o-linear-gradient$colors;
+	background: -ms-linear-gradient$colors;
+	background: linear-gradient$colors;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$start, endColorstr=$stop, GradientType=1 );
+}
+
+.background-darkblue {
+  @include gradient(rgba(32,0,77,1),(45deg, rgba(32,0,77,1) 0%, rgba(29,0,117,1) 32%, rgba(2,0,133,1) 57%, rgba(29,24,161,1) 79%, rgba(9,37,219,1) 96%, rgba(9,37,219,1) 100%),'#20004d','#0925db')
+}
+
+.background-midblue{
+  @include gradient(rgba(33,111,163,1),(45deg, rgba(33,111,163,1) 0%, rgba(36,123,181,1) 31%, rgba(8,135,209,1) 54%, rgba(17,158,240,1) 71%, rgba(101,179,230,1) 100%),'#216fa3','#216fa3')
+}
+
+.background-skyblue{
+  @include gradient(rgba(32,172,214,1),(45deg, rgba(32,172,214,1) 0%, rgba(32,172,214,1) 16%, rgba(0,197,232,1) 32%, rgba(112,222,255,1) 61%, rgba(130,226,255,1) 81%, rgba(178,243,255,1) 95%, rgba(178,243,255,1) 100%),'#20acd6','#b2f3ff')
+}
+
+.headshot{
+  width: 96%;
+	height: auto;
+	margin-bottom: 1%;
+	margin-right: 1%;
+	grid-area: headshot;
+  justify-self: start;
+  &.icon{
+    width: 75px;
+    display: none;
+    height: auto;
+    border-radius: 37px;
+  }
+
+}

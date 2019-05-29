@@ -1,0 +1,46 @@
+.background-darkblue {
+  background: #20004d;
+  background: -moz-linear-gradient 45deg, #20004d 0%, #1d0075 32%, #020085 57%, #1d18a1 79%, #0925db 96%, #0925db 100%;
+  background: -webkit-linear-gradient 45deg, #20004d 0%, #1d0075 32%, #020085 57%, #1d18a1 79%, #0925db 96%, #0925db 100%;
+  background: -o-linear-gradient 45deg, #20004d 0%, #1d0075 32%, #020085 57%, #1d18a1 79%, #0925db 96%, #0925db 100%;
+  background: -ms-linear-gradient 45deg, #20004d 0%, #1d0075 32%, #020085 57%, #1d18a1 79%, #0925db 96%, #0925db 100%;
+  background: linear-gradient 45deg, #20004d 0%, #1d0075 32%, #020085 57%, #1d18a1 79%, #0925db 96%, #0925db 100%;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$start, endColorstr=$stop, GradientType=1 );
+}
+
+.background-midblue {
+  background: #216fa3;
+  background: -moz-linear-gradient 45deg, #216fa3 0%, #247bb5 31%, #0887d1 54%, #119ef0 71%, #65b3e6 100%;
+  background: -webkit-linear-gradient 45deg, #216fa3 0%, #247bb5 31%, #0887d1 54%, #119ef0 71%, #65b3e6 100%;
+  background: -o-linear-gradient 45deg, #216fa3 0%, #247bb5 31%, #0887d1 54%, #119ef0 71%, #65b3e6 100%;
+  background: -ms-linear-gradient 45deg, #216fa3 0%, #247bb5 31%, #0887d1 54%, #119ef0 71%, #65b3e6 100%;
+  background: linear-gradient 45deg, #216fa3 0%, #247bb5 31%, #0887d1 54%, #119ef0 71%, #65b3e6 100%;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$start, endColorstr=$stop, GradientType=1 );
+}
+
+.background-skyblue {
+  background: #20acd6;
+  background: -moz-linear-gradient 45deg, #20acd6 0%, #20acd6 16%, #00c5e8 32%, #70deff 61%, #82e2ff 81%, #b2f3ff 95%, #b2f3ff 100%;
+  background: -webkit-linear-gradient 45deg, #20acd6 0%, #20acd6 16%, #00c5e8 32%, #70deff 61%, #82e2ff 81%, #b2f3ff 95%, #b2f3ff 100%;
+  background: -o-linear-gradient 45deg, #20acd6 0%, #20acd6 16%, #00c5e8 32%, #70deff 61%, #82e2ff 81%, #b2f3ff 95%, #b2f3ff 100%;
+  background: -ms-linear-gradient 45deg, #20acd6 0%, #20acd6 16%, #00c5e8 32%, #70deff 61%, #82e2ff 81%, #b2f3ff 95%, #b2f3ff 100%;
+  background: linear-gradient 45deg, #20acd6 0%, #20acd6 16%, #00c5e8 32%, #70deff 61%, #82e2ff 81%, #b2f3ff 95%, #b2f3ff 100%;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$start, endColorstr=$stop, GradientType=1 );
+}
+
+.headshot {
+  width: 96%;
+  height: auto;
+  margin-bottom: 1%;
+  margin-right: 1%;
+  grid-area: headshot;
+  justify-self: start;
+}
+.headshot.icon {
+  width: 75px;
+  display: none;
+  height: auto;
+  border-radius: 37px;
+}
+
+/*# sourceMappingURL=main.css.map */

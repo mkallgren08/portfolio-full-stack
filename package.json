@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "echo 'hello!' && concurrently \"nodemon server.js\" \"sass --watch public/assets/scss/main.scss:public/assets/css/main.css\""
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,10 @@
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "mongoose": "^4.12.3",
-    "morgan": "^1.9.0",
+    "morgan": "^1.9.1",
     "npm": "^5.7.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0"
   }
 }
