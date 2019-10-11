@@ -2,6 +2,9 @@
 //      Dependencies
 // ====================================
 
+let dotenv = require('dotenv');
+dotenv.config();
+
 const bodyParser = require("body-parser")
 const logger = require("morgan")
 const express = require("express");
@@ -51,10 +54,6 @@ app.use(routes);
 // ====================================
 //      Database Setup with Mongoose
 // ====================================
-
-// Database configuration with mongoose
-//mongoose.connect("mongodb://heroku_086slhkf:t96inaqlc3krouapt7t4uvf6rd@ds139984.mlab.com:39984/heroku_086slhkf")
-//mongoose.connect('mongodb://localhost/scraper');
 let connectionURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/countrycodes'
 
 

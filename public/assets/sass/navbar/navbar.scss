@@ -1,0 +1,6 @@
+@import '../_config/variables.scss';
+@import '../_config/gradients.scss';
+
+.pf__navbar{
+  @include darkblue();
+}

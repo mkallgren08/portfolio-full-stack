@@ -7,13 +7,25 @@
 
 // exports.default = defaultTask
 
-var less = require('gulp-less');
-var path = require('path');
+// var less = require('gulp-less');
+// var path = require('path');
  
-gulp.task('less', function () {
-  return gulp.src('./less/**/*.less')
-    .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
-    .pipe(gulp.dest('./public/css'));
-});
+// gulp.task('less', function () {
+//   return gulp.src('./less/**/*.less')
+//     .pipe(less({
+//       paths: [ path.join(__dirname, 'less', 'includes') ]
+//     }))
+//     .pipe(gulp.dest('./public/css'));
+// });
+
+const
+  // modules
+  gulp = require('gulp'),
+
+  // development mode?
+  devBuild = (process.env.NODE_ENV !== 'production'),
+
+  // folders
+  src = 'src/',
+  build = 'build/'
+  ;

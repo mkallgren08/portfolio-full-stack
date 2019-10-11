@@ -1,0 +1,17 @@
+@import './navbar/navbar.scss';
+@import './portfolio_page/main.scss';
+@import './about_me_page/main.scss';
+
+body, html{
+	/* height: auto;
+	width: auto; */
+	min-width: 370px;
+}
+
+body{
+	/* background: #723511; For browsers that do not support gradients */
+	background-size: cover;
+	padding-bottom: 85px; 
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+}

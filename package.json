@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "concurrently \"nodemon server.js\" \"  sass --watch public/assets/sass/main.scss public/publish/css/styles.css\""
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "dependencies": {
     "@sendgrid/mail": "^6.2.1",
     "body-parser": "^1.18.2",
+    "dotenv": "^8.1.0",
     "email-validator": "^1.1.1",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
@@ -30,6 +31,8 @@
     "npm": "^5.7.1"
   },
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "concurrently": "^5.0.0",
+    "gulp": "^4.0.2",
+    "sass": "^1.23.0"
   }
 }
