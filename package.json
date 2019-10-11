@@ -24,8 +24,12 @@
     "email-validator": "^1.1.1",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
+    "gulp-less": "^4.0.1",
     "mongoose": "^4.12.3",
-    "morgan": "^1.9.0",
+    "morgan": "^1.9.1",
     "npm": "^5.7.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }
