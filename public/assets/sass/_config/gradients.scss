@@ -9,6 +9,7 @@
 	// filter: progid:DXImageTransform.Microsoft.gradient($filter);
 }
 
+// Dark Blue Variables
 $darkblue-base: rgba(32,0,77,1);
 $darkblue-set1: 45deg, rgba(32,0,77,1) 0%, rgba(29,0,117,1) 32%, rgba(2,0,133,1) 57%, rgba(29,24,161,1) 79%, rgba(9,37,219,1) 96%, rgba(9,37,219,1) 100%;
 $darkblue-set2: left bottom, right top, color-stop(0%, rgba(32,0,77,1)), color-stop(32%, rgba(29,0,117,1)), color-stop(57%, rgba(2,0,133,1)), color-stop(79%, rgba(29,24,161,1)), color-stop(96%, rgba(9,37,219,1)), color-stop(100%, rgba(9,37,219,1));
@@ -16,4 +17,49 @@ $darkblue-set2: left bottom, right top, color-stop(0%, rgba(32,0,77,1)), color-s
 
 @mixin darkblue (){
   @include background($darkblue-base,$darkblue-set1,$darkblue-set2)
+}
+
+// Mid-Blue Variables
+$midblue-base: rgba(33,111,163,1);
+$midblue-set1: 45deg, rgba(33,111,163,1) 0%, rgba(36,123,181,1) 31%, rgba(8,135,209,1) 54%, rgba(17,158,240,1) 71%, rgba(101,179,230,1) 100%;
+$midblue-set2: left bottom, right top, color-stop(0%, rgba(33,111,163,1)), color-stop(31%, rgba(36,123,181,1)), color-stop(54%, rgba(8,135,209,1)), color-stop(71%, rgba(17,158,240,1)), color-stop(100%, rgba(101,179,230,1));
+
+@mixin midblue (){
+  @include background($midblue-base,$midblue-set1,$midblue-set2)
+}
+
+// Sky-Blue Variables
+$skyblue-base: rgba(32,172,214,1);
+$skyblue-set1: 45deg, rgba(32,172,214,1) 0%, rgba(32,172,214,1) 16%, rgba(0,197,232,1) 32%, rgba(112,222,255,1) 61%, rgba(130,226,255,1) 81%, rgba(178,243,255,1) 95%, rgba(178,243,255,1) 100%;
+$skyblue-set2: left bottom, right top, color-stop(0%, rgba(32,172,214,1)), color-stop(16%, rgba(32,172,214,1)), color-stop(32%, rgba(0,197,232,1)), color-stop(61%, rgba(112,222,255,1)), color-stop(81%, rgba(130,226,255,1)), color-stop(95%, rgba(178,243,255,1)), color-stop(100%, rgba(178,243,255,1));
+
+@mixin skyblue(){
+  @include background($skyblue-base,$skyblue-set1,$skyblue-set2);
+}
+
+// Sky-Blue2 Variables
+$skyblue2-base: rgba(133,166,209,1);
+$skyblue2-set1: 45deg, rgba(133,166,209,1) 0%, rgba(150,200,235,1) 32%, rgba(127,221,240,1) 57%, rgba(167,229,244,1) 79%, rgba(227,254,255,1) 96%, rgba(227,254,255,1) 100%;
+$skyblue2-set2: left bottom, right top, color-stop(0%, rgba(133,166,209,1)), color-stop(32%, rgba(150,200,235,1)), color-stop(57%, rgba(127,221,240,1)), color-stop(79%, rgba(167,229,244,1)), color-stop(96%, rgba(227,254,255,1)), color-stop(100%, rgba(227,254,255,1));
+
+@mixin skyblue2(){
+  @include background($skyblue2-base,$skyblue2-set1,$skyblue2-set2);
+}
+
+// Gold Background Variables
+$gold-base: rgba(207,163,41,1);
+$gold-set1: 45deg, rgba(207,163,41,1) 0%, rgba(237,188,52,1) 23%, rgba(240,190,40,1) 52%, rgba(247,214,46,1) 71%, rgba(255,236,204,1) 100%;
+$gold-set2: left bottom, right top, color-stop(0%, rgba(207,163,41,1)), color-stop(23%, rgba(237,188,52,1)), color-stop(52%, rgba(240,190,40,1)), color-stop(71%, rgba(247,214,46,1)), color-stop(100%, rgba(255,236,204,1));
+
+@mixin gold(){
+  @include background($gold-base,$gold-set1,$gold-set2);
+}
+
+// Gold2 Background Variables
+$gold2-base: rgb(223,176,108);
+$gold2-set1: 45deg, rgba(223,176,108,1) 0%, rgba(220,173,105,1) 4%, rgba(223,176,108,1) 11%, rgba(230,183,115,1) 12%, rgba(229,182,114,1) 13%, rgba(237,190,122,1) 15%, rgba(241,194,126,1) 19%, rgba(242,195,127,1) 20%, rgba(243,196,128,1) 25%, rgba(239,194,126,1) 27%, rgba(236,193,124,1) 31%, rgba(243,203,133,1) 33%, rgba(244,201,132,1) 33%, rgba(239,196,127,1) 34%, rgba(238,195,126,1) 35%, rgba(245,202,133,1) 37%, rgba(247,204,135,1) 41%, rgba(245,205,136,1) 45%, rgba(254,213,147,1) 46%, rgba(253,212,146,1) 46%, rgba(252,213,148,1) 48%, rgba(248,209,144,1) 49%, rgba(250,213,145,1) 53%, rgba(249,212,144,1) 54%, rgba(255,220,152,1) 58%, rgba(255,219,151,1) 60%, rgba(255,223,154,1) 64%, rgba(251,221,151,1) 66%, rgba(250,220,150,1) 70%, rgba(250,220,148,1) 76%, rgba(251,221,151,1) 78%, rgba(248,217,150,1) 79%, rgba(255,221,158,1) 82%, rgba(254,218,156,1) 83%, rgba(252,216,154,1) 86%, rgba(254,218,156,1) 90%, rgba(253,217,155,1) 95%, rgba(255,220,158,1) 97%, rgba(251,215,153,1) 99%, rgba(249,218,153,1) 100%;
+$gold2-set2: left bottom, right top, color-stop(0%, rgba(223,176,108,1)), color-stop(23%, rgba(220,173,105,1)), color-stop(52%, rgba(223,176,108,1)), color-stop(71%, rgba(230,183,115,1)), color-stop(100%, rgba(229,182,114,1));
+
+@mixin gold2(){
+  @include background($gold2-base,$gold2-set1,$gold2-set2);
 }

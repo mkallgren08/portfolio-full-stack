@@ -16,18 +16,19 @@
   grid-area: bio;
 }
 
-body, html {
-  /* height: auto;
-  width: auto; */
-  min-width: 370px;
-}
-
-body {
-  /* background: #723511; For browsers that do not support gradients */
+.pf__main-wrapper {
   background-size: cover;
   padding-bottom: 85px;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 15px;
+  min-width: 370px;
+  background: #216fa3;
+  background: -moz-linear-gradient(45deg, #216fa3 0%, #247bb5 31%, #0887d1 54%, #119ef0 71%, #65b3e6 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #216fa3), color-stop(31%, #247bb5), color-stop(54%, #0887d1), color-stop(71%, #119ef0), color-stop(100%, #65b3e6));
+  background: -webkit-linear-gradient(45deg, #216fa3 0%, #247bb5 31%, #0887d1 54%, #119ef0 71%, #65b3e6 100%);
+  background: -o-linear-gradient(45deg, #216fa3 0%, #247bb5 31%, #0887d1 54%, #119ef0 71%, #65b3e6 100%);
+  background: -ms-linear-gradient(45deg, #216fa3 0%, #247bb5 31%, #0887d1 54%, #119ef0 71%, #65b3e6 100%);
+  background: linear-gradient(45deg, #216fa3 0%, #247bb5 31%, #0887d1 54%, #119ef0 71%, #65b3e6 100%);
 }
 
 /*# sourceMappingURL=styles.css.map */
