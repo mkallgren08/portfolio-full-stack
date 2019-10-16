@@ -1,9 +1,37 @@
+@import '../_config/config.scss';
+
+// About me grid sections
+.pf__about-me-bio-wrapper{
+  grid-area: bio;
+}
 
 
 .pf__about-me-divider{
   border-top: 1px solid #777;
 }
 
-.pf__about-me-bio-wrapper{
-  grid-area: bio;
+
+// START HEADSHOT AND BIO SECTION
+.pf__about-me-bio-and-headshot-wrapper {
+  display: grid;
+	grid-template-columns: $one-third*1% $two-thirds*1%;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		"headshot bio";
+	justify-items: center;
 }
+
+.pf__about-me-headshot {
+  width: 96%;
+  height: auto;
+  margin-bottom: $xxs*1%;
+  margin-right: $xxs*1%;
+  grid-area: headshot;
+  justify-self: start;
+  @include raised-light();
+} 
+
+.pf__about-me-nameplate{
+  @include font-Philosopher();
+}
+

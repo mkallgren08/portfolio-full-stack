@@ -1,3 +1,41 @@
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.panel {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-color: #000;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.panel.panel-default {
+  border-color: #ddd;
+}
+.panel.panel-warning {
+  border-color: #c00;
+}
+.panel .panel-heading {
+  color: #333;
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel .panel-heading .panel-title {
+  border-bottom: 2px solid #999;
+  font-size: 20px;
+  line-height: 24px;
+  padding-bottom: 10px;
+}
+.panel .panel-body {
+  padding: 15px;
+}
+
 .pf__navbar {
   background: #20004d;
   background: -moz-linear-gradient(45deg, #20004d 0%, #1d0075 32%, #020085 57%, #1d18a1 79%, #0925db 96%, #0925db 100%);
@@ -7,13 +45,123 @@
   background: -ms-linear-gradient(45deg, #20004d 0%, #1d0075 32%, #020085 57%, #1d18a1 79%, #0925db 96%, #0925db 100%);
   background: linear-gradient(45deg, #20004d 0%, #1d0075 32%, #020085 57%, #1d18a1 79%, #0925db 96%, #0925db 100%);
 }
+.pf__navbar .pf__navbar-namelogo {
+  grid-area: namelogo;
+  margin-bottom: 15px;
+  padding: 0.5% 5%;
+  font-weight: bolder;
+  font-family: "Philosopher", sans-serif;
+  /* text-shadow: -1px 1px #504D4D; */
+  border: 2px solid #333333;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  justify-items: center;
+  background: #dfb06c;
+  background: -moz-linear-gradient(45deg, #dfb06c 0%, #dcad69 4%, #dfb06c 11%, #e6b773 12%, #e5b672 13%, #edbe7a 15%, #f1c27e 19%, #f2c37f 20%, #f3c480 25%, #efc27e 27%, #ecc17c 31%, #f3cb85 33%, #f4c984 33%, #efc47f 34%, #eec37e 35%, #f5ca85 37%, #f7cc87 41%, #f5cd88 45%, #fed593 46%, #fdd492 46%, #fcd594 48%, #f8d190 49%, #fad591 53%, #f9d490 54%, #ffdc98 58%, #ffdb97 60%, #ffdf9a 64%, #fbdd97 66%, #fadc96 70%, #fadc94 76%, #fbdd97 78%, #f8d996 79%, #ffdd9e 82%, #feda9c 83%, #fcd89a 86%, #feda9c 90%, #fdd99b 95%, #ffdc9e 97%, #fbd799 99%, #f9da99 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #dfb06c), color-stop(23%, #dcad69), color-stop(52%, #dfb06c), color-stop(71%, #e6b773), color-stop(100%, #e5b672));
+  background: -webkit-linear-gradient(45deg, #dfb06c 0%, #dcad69 4%, #dfb06c 11%, #e6b773 12%, #e5b672 13%, #edbe7a 15%, #f1c27e 19%, #f2c37f 20%, #f3c480 25%, #efc27e 27%, #ecc17c 31%, #f3cb85 33%, #f4c984 33%, #efc47f 34%, #eec37e 35%, #f5ca85 37%, #f7cc87 41%, #f5cd88 45%, #fed593 46%, #fdd492 46%, #fcd594 48%, #f8d190 49%, #fad591 53%, #f9d490 54%, #ffdc98 58%, #ffdb97 60%, #ffdf9a 64%, #fbdd97 66%, #fadc96 70%, #fadc94 76%, #fbdd97 78%, #f8d996 79%, #ffdd9e 82%, #feda9c 83%, #fcd89a 86%, #feda9c 90%, #fdd99b 95%, #ffdc9e 97%, #fbd799 99%, #f9da99 100%);
+  background: -o-linear-gradient(45deg, #dfb06c 0%, #dcad69 4%, #dfb06c 11%, #e6b773 12%, #e5b672 13%, #edbe7a 15%, #f1c27e 19%, #f2c37f 20%, #f3c480 25%, #efc27e 27%, #ecc17c 31%, #f3cb85 33%, #f4c984 33%, #efc47f 34%, #eec37e 35%, #f5ca85 37%, #f7cc87 41%, #f5cd88 45%, #fed593 46%, #fdd492 46%, #fcd594 48%, #f8d190 49%, #fad591 53%, #f9d490 54%, #ffdc98 58%, #ffdb97 60%, #ffdf9a 64%, #fbdd97 66%, #fadc96 70%, #fadc94 76%, #fbdd97 78%, #f8d996 79%, #ffdd9e 82%, #feda9c 83%, #fcd89a 86%, #feda9c 90%, #fdd99b 95%, #ffdc9e 97%, #fbd799 99%, #f9da99 100%);
+  background: -ms-linear-gradient(45deg, #dfb06c 0%, #dcad69 4%, #dfb06c 11%, #e6b773 12%, #e5b672 13%, #edbe7a 15%, #f1c27e 19%, #f2c37f 20%, #f3c480 25%, #efc27e 27%, #ecc17c 31%, #f3cb85 33%, #f4c984 33%, #efc47f 34%, #eec37e 35%, #f5ca85 37%, #f7cc87 41%, #f5cd88 45%, #fed593 46%, #fdd492 46%, #fcd594 48%, #f8d190 49%, #fad591 53%, #f9d490 54%, #ffdc98 58%, #ffdb97 60%, #ffdf9a 64%, #fbdd97 66%, #fadc96 70%, #fadc94 76%, #fbdd97 78%, #f8d996 79%, #ffdd9e 82%, #feda9c 83%, #fcd89a 86%, #feda9c 90%, #fdd99b 95%, #ffdc9e 97%, #fbd799 99%, #f9da99 100%);
+  background: linear-gradient(45deg, #dfb06c 0%, #dcad69 4%, #dfb06c 11%, #e6b773 12%, #e5b672 13%, #edbe7a 15%, #f1c27e 19%, #f2c37f 20%, #f3c480 25%, #efc27e 27%, #ecc17c 31%, #f3cb85 33%, #f4c984 33%, #efc47f 34%, #eec37e 35%, #f5ca85 37%, #f7cc87 41%, #f5cd88 45%, #fed593 46%, #fdd492 46%, #fcd594 48%, #f8d190 49%, #fad591 53%, #f9d490 54%, #ffdc98 58%, #ffdb97 60%, #ffdf9a 64%, #fbdd97 66%, #fadc96 70%, #fadc94 76%, #fbdd97 78%, #f8d996 79%, #ffdd9e 82%, #feda9c 83%, #fcd89a 86%, #feda9c 90%, #fdd99b 95%, #ffdc9e 97%, #fbd799 99%, #f9da99 100%);
+}
+.pf__navbar .pf__navbar-namelogo .pf__navbar-headshot-icon {
+  width: 75px;
+  display: none;
+  height: auto;
+  border-radius: 37px;
+}
+@media screen and (max-width: 550px) {
+  .pf__navbar .pf__navbar-namelogo .pf__navbar-headshot-icon {
+    grid-area: icon-block;
+    display: inline-block;
+  }
+}
+.pf__navbar .pf__navbar-namelogo .pf__navbar-nameplate {
+  text-align: center;
+  font-size: 30px;
+  margin: 0% 10%;
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.panel {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-color: #000;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.panel.panel-default {
+  border-color: #ddd;
+}
+.panel.panel-warning {
+  border-color: #c00;
+}
+.panel .panel-heading {
+  color: #333;
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel .panel-heading .panel-title {
+  border-bottom: 2px solid #999;
+  font-size: 20px;
+  line-height: 24px;
+  padding-bottom: 10px;
+}
+.panel .panel-body {
+  padding: 15px;
+}
+
+.pf__about-me-bio-wrapper {
+  grid-area: bio;
+}
 
 .pf__about-me-divider {
   border-top: 1px solid #777;
 }
 
-.pf__about-me-bio-wrapper {
-  grid-area: bio;
+.pf__about-me-bio-and-headshot-wrapper {
+  display: grid;
+  grid-template-columns: 33% 67%;
+  grid-template-rows: auto;
+  grid-template-areas: "headshot bio";
+  justify-items: center;
+}
+
+.pf__about-me-headshot {
+  width: 96%;
+  height: auto;
+  margin-bottom: 1%;
+  margin-right: 1%;
+  grid-area: headshot;
+  justify-self: start;
+  box-shadow: 0px 4px 4px rgba(156, 156, 156, 0.4), 4px 4px 4px rgba(177, 177, 177, 0.836);
+}
+
+.pf__about-me-nameplate {
+  font-family: "Philosopher", sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.show-inline {
+  display: inline-block;
 }
 
 .pf__main-wrapper {

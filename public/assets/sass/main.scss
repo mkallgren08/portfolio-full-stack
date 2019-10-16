@@ -1,15 +1,22 @@
-@import './_config/variables.scss';
-@import './_config/gradients.scss';
+@import './_config/config';
 @import './navbar/navbar.scss';
 @import './portfolio_page/main.scss';
 @import './about_me_page/main.scss';
 
+// Show/hide toggle classes (can't change the name)
+.hide{display: none;}
 
+.show{display: block;}
+
+.show-inline{display: inline-block;}
+
+// General site settings
 .pf__main-wrapper{
   background-size: cover;
 	padding-bottom: 85px; 
 	font-family: 'Source Sans Pro', sans-serif;
-  font-size: 15px;
-  min-width: 370px;
+  font-size: $fontsize-std*1px;
+  min-width: $breakpoint-min;
   @include midblue();
 }
+

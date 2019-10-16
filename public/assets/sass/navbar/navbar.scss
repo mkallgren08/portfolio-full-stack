@@ -3,4 +3,48 @@
 
 .pf__navbar{
   @include darkblue();
+
+  .pf__navbar-namelogo{
+    grid-area: namelogo;
+    margin-bottom: $md*1px;
+    padding: 0.5% $xs*1%;
+    font-weight: bolder;
+    @include font-Philosopher();
+    /* text-shadow: -1px 1px #504D4D; */
+    border: 2px solid #333333;
+    border-top-left-radius: $xs*1px;
+    border-bottom-right-radius: $xs*1px;
+    border-bottom-left-radius: $md*1px;
+    border-top-right-radius: $md*1px;
+    justify-items: center;
+    @include gold2();
+
+    .pf__navbar-headshot-icon{
+      width: 75px;
+      display: none;
+      height: auto;
+      border-radius: 37px;
+    
+      @media screen and (max-width:$breakpoint-xs){
+        grid-area: icon-block;
+        display: inline-block;
+      }
+    }
+  
+    .pf__navbar-nameplate{
+      text-align: center;
+      font-size: 30px;
+      margin: 0% 10%;
+    }
+  
+    // .pf__navbar-initialplate{
+  
+    // }
+  }
+
 }
+
+
+
+
+
