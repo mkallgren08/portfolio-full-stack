@@ -49,12 +49,13 @@ app.use(logger("dev"));
 // Require the routes
 const routes = require("./controllers/routesController");
 
-app.use(routes);
+app.use(routes); 
 
 // ====================================
 //      Database Setup with Mongoose
 // ====================================
-let connectionURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/countrycodes'
+let connectionURI='';
+process.env.ENV==='dev'?connectionURI='mongodb://localhost:27017/countrycodes':connectionURI = process.env.MONGODB_URI;
 
 
 // sets timers to limit how long the server attempts to establish a connection to a db

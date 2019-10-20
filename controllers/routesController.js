@@ -52,7 +52,7 @@ router.get('/', function (req, res) {
             contact: 'active',
             results: result
           }
-          console.log("hbsObj for rendering: " + JSON.stringify(hbsObject, null, 2));
+          // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject, null, 2));
           res.render("contact.handlebars", hbsObject);
         }
       });

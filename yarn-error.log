@@ -1,0 +1,75 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js dev
+
+PATH: 
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\mkall\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Yarn\bin;C:\Program Files\MongoDB\Server\3.6\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\dotnet;C:\Program Files\Mono\bin;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\nodejs;C:\Program Files\PuTTY;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Users\mkall\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\mkall\AppData\Local\Programs\Python\Python37;C:\Users\mkall\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Users\mkall\AppData\Local\Programs\Python\Python37-32;C:\Users\mkall\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Heroku\bin;C:\Users\mkall\AppData\Local\Yarn\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\Mono\bin;C:\Users\mkall\AppData\Roaming\npm
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  10.15.3
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "michael-kallgren-portfolio",
+    "version": "1.0.0",
+    "description": "Professional portfolio of Michael K. Kallgren",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js",
+      "dev": "concurrently \"nodemon server.js\" \"  sass --watch public/assets/sass/main.scss public/publish/css/styles.css\""
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/mkallgren08/portfolio-full-stack.git"
+    },
+    "author": "Michael Kallgren",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/mkallgren08/portfolio-full-stack/issues"
+    },
+    "homepage": "https://github.com/mkallgren08/portfolio-full-stack#readme",
+    "dependencies": {
+      "@sendgrid/mail": "^6.2.1",
+      "body-parser": "^1.18.2",
+      "dotenv": "^8.1.0",
+      "email-validator": "^1.1.1",
+      "express": "^4.16.2",
+      "express-handlebars": "^3.0.0",
+      "gulp-less": "^4.0.1",
+      "mongoose": "^4.12.3",
+      "morgan": "^1.9.1",
+      "npm": "^5.7.1"
+    },
+    "devDependencies": {
+      "concurrently": "^5.0.0",
+      "gulp": "^4.0.2",
+      "sass": "^1.23.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 3221225786
+  Command: C:\WINDOWS\system32\cmd.exe
+  Arguments: /d /s /c concurrently "nodemon server.js" "  sass --watch public/assets/sass/main.scss public/publish/css/styles.css"
+  Directory: C:\Users\mkall\OneDrive\Desktop\Coding-Local\Personal_Projects\Portfolio_Apps\Deployed\portfolio-full-stack
+  Output:
+  
+      at ProcessTermError.MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
+      at new ProcessTermError (C:\Program Files (x86)\Yarn\lib\cli.js:226:113)
+      at ChildProcess.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:30281:17)
+      at ChildProcess.emit (events.js:189:13)
+      at maybeClose (internal/child_process.js:970:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)

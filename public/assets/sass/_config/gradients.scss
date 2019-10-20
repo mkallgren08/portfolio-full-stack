@@ -63,3 +63,12 @@ $gold2-set2: left bottom, right top, color-stop(0%, rgba(223,176,108,1)), color-
 @mixin gold2(){
   @include background($gold2-base,$gold2-set1,$gold2-set2);
 }
+
+//LightGrey Background Variables
+$lightgrey-base: #e2e2e2;
+$lightgrey-set1: 45deg, #e2e2e2 0%, #c2c2c2 100%;
+$lightgrey-set2: left bottom, right top, color-stop(0%, #e2e2e2),color-stop(100%,#c2c2c2);
+
+@mixin lightgrey(){
+  @include background($lightgrey-base, $lightgrey-set1, $lightgrey-set2);
+}
