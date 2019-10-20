@@ -1,7 +1,6 @@
 @import './_config/config';
-@import './navbar/navbar.scss';
-@import './portfolio_page/main.scss';
-@import './about_me_page/main.scss';
+@import './components/components.scss';
+@import './pages/pages.scss';
 
 // Show/hide toggle classes (can't change the name)
 .hide{display: none;}
@@ -17,6 +16,6 @@
 	font-family: 'Source Sans Pro', sans-serif;
   font-size: $fontsize-std*1px;
   min-width: $breakpoint-min;
-  @include midblue();
+  @include midblue(); 
 }
 

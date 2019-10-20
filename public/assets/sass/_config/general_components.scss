@@ -3,11 +3,11 @@
 // CONTAINERS
 .container-fluid{
   margin-right: auto;
-    margin-left: auto;
+  margin-left: auto;
 }
 
 // PANELS 
-.panel{
+.mk__panel{
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
   box-shadow: 0 1px 2px rgba(0,0,0,.05);
   margin-bottom: 20px;
@@ -17,31 +17,32 @@
   border-radius: 4px;
   box-sizing: border-box;
 
-    &.panel-default{
+    &.mk__panel-default{
       border-color: #ddd;
     }
 
-    &.panel-warning{
+    &.mk__panel-warning{
       border-color: #c00
     }
 
-    .panel-heading {
+    .mk__panel-heading {
       color: $darkgrey;
       padding: 10px 15px;
       border-bottom: 1px solid transparent;
       border-top-left-radius: 3px;
       border-top-right-radius: 3px;
 
-      .panel-title {
+      .mk__panel-title {
         border-bottom: 2px solid #999;
         font-size: $fontsize-lg*1px;
         line-height: $fontsize-lg*1.2px;
         padding-bottom: 10px;
+        margin: 0px auto;
       }
 
     }
 
-    .panel-body{
+    .mk__panel-body{
       padding: 15px;
     }
 }

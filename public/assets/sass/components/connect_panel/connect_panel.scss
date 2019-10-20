@@ -1,0 +1,54 @@
+.pf__connect-panel-wrapper{
+  display: grid;
+	grid-template-columns: 10% auto 10%;
+	grid-template-rows: 10px auto 10px;
+	max-height: 150px;
+	grid-template-areas: 
+		". . ."
+		". connect-panel ."
+		". . .";
+  grid-area: connectcontent;
+
+  .pf__connect-panel{
+    grid-area: connect-panel;
+
+    .pf__connect-panel-body{
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "icon-wrapper"; 
+
+      .pf__connect-icon-wrapper{
+        display: grid;
+        grid-template-columns: auto $skinny-third*1% $skinny-third*1% $skinny-third*1% auto;
+        grid-template-rows: $xs*1px auto $xs*1px;
+        grid-template-areas: 
+          ". . . . ."
+          ". gitLink linkedInLink stackLink ."
+          ". . . . .";
+        grid-area: icon-wrapper;
+        justify-items: center;
+        .pf__connect-icon{
+          height: $xxl*1.5px;
+          width: $xxl*1.5px;
+          border: $ghostgrey $xxs*1px solid;
+          border-radius: $xxs*3px;
+          @include raised()
+    
+        }
+        .pf__connect-icon--gitLink{
+          grid-area: gitLink;
+        }
+        .pf__connect-icon--linkedInLink{
+          grid-area: linkedInLink;
+        }
+        .pf__connect-icon--stackLink{
+          grid-area: stackLink;
+        }
+      }
+    }
+  
+
+  }
+}
+

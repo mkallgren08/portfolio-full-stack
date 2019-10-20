@@ -18,7 +18,7 @@ const Code = require("../models/Code.js");
 router.get('/', function (req, res) {
     let hbsObject = {
       title: "Homepage - Michael Kallgren",
-      homepage: 'active',
+      homepage: 'pf__navbar-tab--active',
       results: res
     }
     // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
@@ -29,7 +29,7 @@ router.get('/', function (req, res) {
   router.get('/portfolio', function (req, res) {
     let hbsObject = {
       title: "Portfolio - Michael Kallgren",
-      portfolio: 'active',
+      portfolio: 'pf__navbar-tab--active',
       projects: projectList,
       projectInfo: projectInfo,
     }
@@ -49,7 +49,7 @@ router.get('/', function (req, res) {
         else {
           let hbsObject = {
             title: "Contact - Michael Kallgren",
-            contact: 'active',
+            contact: 'pf__navbar-tab--active',
             results: result
           }
           // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject, null, 2));

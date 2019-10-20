@@ -3,7 +3,7 @@
   margin-left: auto;
 }
 
-.panel {
+.mk__panel {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   margin-bottom: 20px;
@@ -13,30 +13,71 @@
   border-radius: 4px;
   box-sizing: border-box;
 }
-.panel.panel-default {
+.mk__panel.mk__panel-default {
   border-color: #ddd;
 }
-.panel.panel-warning {
+.mk__panel.mk__panel-warning {
   border-color: #c00;
 }
-.panel .panel-heading {
+.mk__panel .mk__panel-heading {
   color: #333;
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
-.panel .panel-heading .panel-title {
+.mk__panel .mk__panel-heading .mk__panel-title {
   border-bottom: 2px solid #999;
   font-size: 20px;
   line-height: 24px;
   padding-bottom: 10px;
+  margin: 0px auto;
 }
-.panel .panel-body {
+.mk__panel .mk__panel-body {
+  padding: 15px;
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mk__panel {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-color: #000;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.mk__panel.mk__panel-default {
+  border-color: #ddd;
+}
+.mk__panel.mk__panel-warning {
+  border-color: #c00;
+}
+.mk__panel .mk__panel-heading {
+  color: #333;
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.mk__panel .mk__panel-heading .mk__panel-title {
+  border-bottom: 2px solid #999;
+  font-size: 20px;
+  line-height: 24px;
+  padding-bottom: 10px;
+  margin: 0px auto;
+}
+.mk__panel .mk__panel-body {
   padding: 15px;
 }
 
 .pf__navbar {
+  width: 100%;
   background: #20004d;
   background: -moz-linear-gradient(45deg, #20004d 0%, #1d0075 32%, #020085 57%, #1d18a1 79%, #0925db 96%, #0925db 100%);
   background: -webkit-gradient(left bottom, right top, color-stop(0%, #20004d), color-stop(32%, #1d0075), color-stop(57%, #020085), color-stop(79%, #1d18a1), color-stop(96%, #0925db), color-stop(100%, #0925db));
@@ -51,7 +92,6 @@
   padding: 0.5% 5%;
   font-weight: bolder;
   font-family: "Philosopher", sans-serif;
-  /* text-shadow: -1px 1px #504D4D; */
   border: 2px solid #333333;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -91,7 +131,7 @@
   margin-bottom: 0;
   border-bottom: none;
 }
-.pf__navbar .pf__navbar-tab-wrapper .pf_navbar-tab-label {
+.pf__navbar .pf__navbar-tab-wrapper .pf__navbar-tab-label {
   display: inline-block;
   width: 32%;
   height: 35px;
@@ -102,19 +142,75 @@
   background: -o-linear-gradient(45deg, #e2e2e2 0%, #c2c2c2 100%);
   background: -ms-linear-gradient(45deg, #e2e2e2 0%, #c2c2c2 100%);
   background: linear-gradient(45deg, #e2e2e2 0%, #c2c2c2 100%);
-  border: 3px outset #666462;
+  border: 3px outset #666;
   border-bottom: none;
   text-align: center;
   vertical-align: middle;
   padding-top: 5px;
 }
-.pf__navbar .pf__navbar-tab-wrapper .pf_navbar-tab-label a {
+.pf__navbar .pf__navbar-tab-wrapper .pf__navbar-tab-label a {
   color: #080808;
   border-bottom: transparent;
   margin: 3px 1px 2px auto;
   font-weight: bold;
-  font-size: 20;
+  font-size: 20px;
   line-height: 24px;
+}
+.pf__navbar .pf__navbar-tab-wrapper .pf__navbar-tab--active {
+  background: #7a7a7a;
+  background: -moz-linear-gradient(45deg, #7a7a7a 0%, #b9b9b9 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #7a7a7a), color-stop(100%, #b9b9b9));
+  background: -webkit-linear-gradient(45deg, #7a7a7a 0%, #b9b9b9 100%);
+  background: -o-linear-gradient(45deg, #7a7a7a 0%, #b9b9b9 100%);
+  background: -ms-linear-gradient(45deg, #7a7a7a 0%, #b9b9b9 100%);
+  background: linear-gradient(45deg, #7a7a7a 0%, #b9b9b9 100%);
+  border: 3px groove #ddd;
+  text-shadow: -1px -1px 0 #222, 1px -1px 0 #222, -1px 1px 0 #222, 1px 1px 0 #222;
+}
+.pf__navbar .pf__navbar-tab-wrapper .pf__navbar-tab--active a {
+  color: #f0ffff;
+}
+
+.pf__connect-panel-wrapper {
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+  grid-template-rows: 10px auto 10px;
+  max-height: 150px;
+  grid-template-areas: ". . ." ". connect-panel ." ". . .";
+  grid-area: connectcontent;
+}
+.pf__connect-panel-wrapper .pf__connect-panel {
+  grid-area: connect-panel;
+}
+.pf__connect-panel-wrapper .pf__connect-panel .pf__connect-panel-body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "icon-wrapper";
+}
+.pf__connect-panel-wrapper .pf__connect-panel .pf__connect-panel-body .pf__connect-icon-wrapper {
+  display: grid;
+  grid-template-columns: auto 30% 30% 30% auto;
+  grid-template-rows: 5px auto 5px;
+  grid-template-areas: ". . . . ." ". gitLink linkedInLink stackLink ." ". . . . .";
+  grid-area: icon-wrapper;
+  justify-items: center;
+}
+.pf__connect-panel-wrapper .pf__connect-panel .pf__connect-panel-body .pf__connect-icon-wrapper .pf__connect-icon {
+  height: 45px;
+  width: 45px;
+  border: #bbb 1px solid;
+  border-radius: 3px;
+  box-shadow: 0px 4px 4px rgba(110, 110, 110, 0.4), 4px 4px 4px #444444;
+}
+.pf__connect-panel-wrapper .pf__connect-panel .pf__connect-panel-body .pf__connect-icon-wrapper .pf__connect-icon--gitLink {
+  grid-area: gitLink;
+}
+.pf__connect-panel-wrapper .pf__connect-panel .pf__connect-panel-body .pf__connect-icon-wrapper .pf__connect-icon--linkedInLink {
+  grid-area: linkedInLink;
+}
+.pf__connect-panel-wrapper .pf__connect-panel .pf__connect-panel-body .pf__connect-icon-wrapper .pf__connect-icon--stackLink {
+  grid-area: stackLink;
 }
 
 .container-fluid {
@@ -122,7 +218,7 @@
   margin-left: auto;
 }
 
-.panel {
+.mk__panel {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   margin-bottom: 20px;
@@ -132,26 +228,27 @@
   border-radius: 4px;
   box-sizing: border-box;
 }
-.panel.panel-default {
+.mk__panel.mk__panel-default {
   border-color: #ddd;
 }
-.panel.panel-warning {
+.mk__panel.mk__panel-warning {
   border-color: #c00;
 }
-.panel .panel-heading {
+.mk__panel .mk__panel-heading {
   color: #333;
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
-.panel .panel-heading .panel-title {
+.mk__panel .mk__panel-heading .mk__panel-title {
   border-bottom: 2px solid #999;
   font-size: 20px;
   line-height: 24px;
   padding-bottom: 10px;
+  margin: 0px auto;
 }
-.panel .panel-body {
+.mk__panel .mk__panel-body {
   padding: 15px;
 }
 

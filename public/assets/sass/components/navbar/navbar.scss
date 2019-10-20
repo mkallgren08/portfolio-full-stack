@@ -1,7 +1,9 @@
-@import '../_config/variables.scss';
-@import '../_config/gradients.scss';
+@import '../../_config/variables.scss';
+@import '../../_config/gradients.scss';
+@import '../../_config/config.scss';
 
 .pf__navbar{
+  width: $full*1%;
   @include darkblue();
 
   .pf__navbar-namelogo{
@@ -10,7 +12,6 @@
     padding: 0.5% $xs*1%;
     font-weight: bolder;
     @include font-Philosopher();
-    /* text-shadow: -1px 1px #504D4D; */
     border: 2px solid #333333;
     border-top-left-radius: $xs*1px;
     border-bottom-right-radius: $xs*1px;
@@ -52,12 +53,12 @@
     border-bottom: none;
 
     // The actual tab itself
-    .pf_navbar-tab-label{
+    .pf__navbar-tab-label{
       display: inline-block;
       width: 32%;
       height: 35px;
       @include lightgrey();
-      border: 3px outset #666462;
+      border: 3px outset $grey;
       border-bottom: none;
       text-align: center;
       vertical-align: middle;
@@ -69,8 +70,23 @@
         border-bottom: transparent;
         margin: 3px 1px 2px auto;
         font-weight: bold;
-        font-size: $fontsize-lg;
+        font-size: $fontsize-lg*1px;;
         line-height: $fontsize-lg*1.2px;
+      }
+    }
+
+    //Active tab stylings
+    .pf__navbar-tab--active{
+      @include darkgrey();
+      border: 3px groove $mistgrey;
+      text-shadow:
+        -1px -1px 0 $gunmetalgrey,
+        1px -1px 0 $gunmetalgrey,
+        -1px 1px 0 $gunmetalgrey,
+        1px 1px 0 $gunmetalgrey;
+      a{
+        color: $azuremist;
+
       }
     }
   }
