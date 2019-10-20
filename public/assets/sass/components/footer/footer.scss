@@ -1,0 +1,17 @@
+.pf__footer{
+  border: 1px solid #9c501a;
+	background-image: url("./images/br_gold_large.jpg");
+	background-repeat: repeat-x;
+	vertical-align: middle;
+	line-height: 40px;
+	font-size: 18px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  
+  .pf__footer-copyright{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+  }
+}

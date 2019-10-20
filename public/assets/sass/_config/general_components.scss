@@ -47,3 +47,25 @@
     }
 }
 
+// HEADERS AND FOOTERS
+@mixin bottom(){
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+@mixin right(){
+  right:0
+}
+
+@mixin left(){
+  left:0
+}
+
+.mk__footer-fixed{
+  position: fixed;
+  right: 0;
+  left: 0;
+  @include bottom();
+  z-index: 1030;
+}
+

@@ -37,6 +37,15 @@
   padding: 15px;
 }
 
+.mk__footer-fixed {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0;
+  z-index: 1030;
+}
+
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
@@ -74,6 +83,15 @@
 }
 .mk__panel .mk__panel-body {
   padding: 15px;
+}
+
+.mk__footer-fixed {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0;
+  z-index: 1030;
 }
 
 .pf__navbar {
@@ -213,6 +231,23 @@
   grid-area: stackLink;
 }
 
+.pf__footer {
+  border: 1px solid #9c501a;
+  background-image: url("./images/br_gold_large.jpg");
+  background-repeat: repeat-x;
+  vertical-align: middle;
+  line-height: 40px;
+  font-size: 18px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+.pf__footer .pf__footer-copyright {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
@@ -250,6 +285,15 @@
 }
 .mk__panel .mk__panel-body {
   padding: 15px;
+}
+
+.mk__footer-fixed {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0;
+  z-index: 1030;
 }
 
 .pf__about-me-bio-wrapper {
@@ -295,6 +339,7 @@
 }
 
 .pf__main-wrapper {
+  min-width: 370px;
   background-size: cover;
   padding-bottom: 85px;
   font-family: "Source Sans Pro", sans-serif;

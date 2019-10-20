@@ -1,16 +1,16 @@
-body, html{
-	/* height: auto;
-	width: auto; */
+/* body, html{
+	height: auto;
+	width: auto;
 	min-width: 370px;
-}
+} */
 
-body{
-	/* background: #723511; For browsers that do not support gradients */
+/* body{
+	// background: #723511; For browsers that do not support gradients
 	background-size: cover;
 	padding-bottom: 85px; 
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 15px;
-}
+} */
 
 /*div{
 	border: dotted black 1px;
