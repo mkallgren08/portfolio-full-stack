@@ -1,5 +1,29 @@
 @import './variables.scss';
 
+
+// CONTENT/ITEM ALIGNMENT
+@mixin alignment($direction,$align1,$align2){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $align1;
+  align-items: $align2;
+}
+
+.mk__centered-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mk__centered-col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 // CONTAINERS
 .container-fluid{
   margin-right: auto;

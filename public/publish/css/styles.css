@@ -1,3 +1,16 @@
+.mk__centered-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mk__centered-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
@@ -44,6 +57,19 @@
   bottom: 0;
   margin-bottom: 0;
   z-index: 1030;
+}
+
+.mk__centered-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mk__centered-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-fluid {
@@ -246,6 +272,80 @@
   text-align: center;
   vertical-align: middle;
   font-size: 12px;
+}
+
+.mk__centered-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mk__centered-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mk__panel {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-color: #000;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.mk__panel.mk__panel-default {
+  border-color: #ddd;
+}
+.mk__panel.mk__panel-warning {
+  border-color: #c00;
+}
+.mk__panel .mk__panel-heading {
+  color: #333;
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.mk__panel .mk__panel-heading .mk__panel-title {
+  border-bottom: 2px solid #999;
+  font-size: 20px;
+  line-height: 24px;
+  padding-bottom: 10px;
+  margin: 0px auto;
+}
+.mk__panel .mk__panel-body {
+  padding: 15px;
+}
+
+.mk__footer-fixed {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0;
+  z-index: 1030;
+}
+
+.mk__centered-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mk__centered-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-fluid {
