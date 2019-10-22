@@ -1,7 +1,15 @@
 .mk__centered-row {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.mk__centered-row--vertical-justify {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
 }
 
 .mk__centered-col {
@@ -61,8 +69,16 @@
 
 .mk__centered-row {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.mk__centered-row--vertical-justify {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
 }
 
 .mk__centered-col {
@@ -276,8 +292,16 @@
 
 .mk__centered-row {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.mk__centered-row--vertical-justify {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
 }
 
 .mk__centered-col {
@@ -335,10 +359,25 @@
   z-index: 1030;
 }
 
+.pf__info-modal-subtitle {
+  display: block;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
 .mk__centered-row {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.mk__centered-row--vertical-justify {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
 }
 
 .mk__centered-col {
@@ -452,6 +491,27 @@
   background: -o-linear-gradient(45deg, #216fa3 0%, #247bb5 31%, #0887d1 54%, #119ef0 71%, #65b3e6 100%);
   background: -ms-linear-gradient(45deg, #216fa3 0%, #247bb5 31%, #0887d1 54%, #119ef0 71%, #65b3e6 100%);
   background: linear-gradient(45deg, #216fa3 0%, #247bb5 31%, #0887d1 54%, #119ef0 71%, #65b3e6 100%);
+}
+.pf__main-wrapper .pf__main-body-wrapper {
+  background-image: url("./images/oeschinenzee.png");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  border: 8px groove grey;
+  border-top: none;
+  /* border-top: 4px #444444 solid; */
+  height: fit-content;
+  margin: 0px 5%;
+  display: grid;
+  grid-template-columns: 30px 60% auto 30% 30px;
+  grid-template-rows: 5px auto 5px;
+  grid-template-areas: ". . . . ." ". maincontent . connectcontent ." ". . . . .";
+}
+@media screen and (max-width: 1200px) {
+  .pf__main-wrapper .pf__main-body-wrapper {
+    grid-template-columns: auto 95% auto;
+    grid-template-rows: 5px auto auto 30px;
+    grid-template-areas: ". . ." ". maincontent ." ". connectcontent ." ". . .";
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

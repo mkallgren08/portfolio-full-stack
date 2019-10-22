@@ -283,14 +283,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 
 
 
-.mainbody{
+/* .mainbody{
     background-image: url("./../images/oeschinenzee.png");
 	background-size: 100% 100%;
 	background-attachment: fixed;
 	
 	border: 8px groove grey;
 	border-top: none;
-	/* border-top: 4px #444444 solid; */
+	//border-top: 4px #444444 solid;
 	height: fit-content;
 	margin: 0px 5%;
 	display: grid;
@@ -301,7 +301,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 		". maincontent . connectcontent ."
 		". . . . .";
 
-}
+} */
 
 .maincontent{
 	margin: 10px 15px 50px 15px;
@@ -497,7 +497,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 		margin-top: 2%;
 	}
 
-	.mainbody{
+	/* .mainbody{
 		display:grid;
 		grid-template-columns: auto 95% auto;
 		grid-template-rows: 5px auto auto 30px;
@@ -507,7 +507,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 			". connectcontent ."
 			". . .";
 	
-	}
+	} */
 
 	.header{
 		grid-template-columns: 30px auto 30px;

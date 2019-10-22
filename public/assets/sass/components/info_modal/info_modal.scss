@@ -1,1 +1,8 @@
 @import '../../_config/config.scss';
+
+.pf__info-modal-subtitle{
+  display: block;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: $lg*1px;
+}

@@ -8,18 +8,18 @@
           <h4 class="modal-title mk__centered-row">{{name}}</h4>
         </div>
         <div class="modal-body">
-          <div class="mk__centered-row"><span class="infoSubTitle">{{type}}</span></div>
+          <div class="mk__centered-row"><span class="pf__info-modal-subtitle">{{type}}</span></div>
           <hr>
-          <div><span class="infoSubTitle">Timeframe of Project: </span></div>
+          <div><span class="pf__info-modal-subtitle">Timeframe of Project: </span></div>
           <ul>
             {{#each time}}
             <li>{{this}}</li>
             {{/each}}
           </ul>
           <hr>
-          <div><span class="infoSubTitle">Stack used: </span>{{stack}}</div>
+          <div><span class="pf__info-modal-subtitle">Stack used: </span>{{stack}}</div>
           <hr>
-          <div><span class="infoSubTitle">Other libraries/technologies:</span>{{other}}</div>
+          <div><span class="pf__info-modal-subtitle">Other libraries/technologies:</span>{{other}}</div>
           <hr>
           {{#each description}} 
             <p>{{{breaklines this}}}</p>

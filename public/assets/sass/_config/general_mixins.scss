@@ -11,3 +11,8 @@
 @mixin font-Philosopher(){
   font-family: 'Philosopher', sans-serif;
 }
+
+// BACKGROUND MIXINS
+@mixin site-background(){
+  @include skyblue();
+}

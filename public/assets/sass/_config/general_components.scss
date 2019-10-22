@@ -10,16 +10,15 @@
 }
 
 .mk__centered-row{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include alignment(row,center,center)
+}
+
+.mk__centered-row--vertical-justify{
+  @include alignment(row,center,space-between)
 }
 
 .mk__centered-col{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include alignment(column,center,center)
 }
 
 
