@@ -88,9 +88,9 @@ background: linear-gradient(45deg, rgba(223,176,108,1) 0%,rgba(220,173,105,1) 4%
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', endColorstr='#f9da99',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-#bio{
+/* #bio{
 	grid-area: bio;
-}
+} */
 
 #bio-rest{
 	display: none;
@@ -134,23 +134,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 	grid-area: connectcontent;
 } */
 
-#contactForm{
+/* #contactForm{
 	overflow-y: hidden;
 	overflow-x: hidden;
 	max-height: 100%;
-}
+} */
 
 #contactPhone{
 	border-top-left-radius: 0px;
 	border-bottom-left-radius: 0px;
 }
 
-.contact-submit{
+/* .contact-submit{
 	margin-top: 45%;
 	align-self: end;
-}
+} */
 
-.contactee{
+/* .contactee{
 	width: 80%;
 	padding: 6px 12px;
     font-size: 14px;
@@ -161,7 +161,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
     background-color: white;
     border: 1px solid rgb(136, 136, 136);
     border-radius: 4px;
-}
+} */
 
 .container-fluid{
 	padding-right:0px;
@@ -312,13 +312,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 	grid-area: maincontent;
 }
 
-.messagetxt{
+/* .messagetxt{
 	width: 95%;
 	max-width: 100%;
 	min-width: 50%;
 	min-height: 4.5em;
 	height: 125px;
-}
+} */
 
 /* .namelogo{
 	grid-area: namelogo;
@@ -341,7 +341,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 	margin: 0% 10%;
 }
 
-#namplate, .namelogo, #initialplate, .panel-title, .nav-label-txt{
+.namelogo, #initialplate, .panel-title, .nav-label-txt{
 	font-family: 'Philosopher', sans-serif;
 }
 
@@ -533,7 +533,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 	}
 }
 
-@media screen and (max-width: 660px){
+/* @media screen and (max-width: 660px){
 	#bio-p2{
 		display: none;
 	}
@@ -545,7 +545,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 	#readmore2{
 		display: none
 	}
-}
+} */
 
 @media screen and (max-width:550px){
 	#about-me-name{

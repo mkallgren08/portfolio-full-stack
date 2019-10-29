@@ -73,6 +73,13 @@ $lightgrey-set2: left bottom, right top, color-stop(0%, #e2e2e2),color-stop(100%
   @include background($lightgrey-base, $lightgrey-set1, $lightgrey-set2);
 }
 
+$mistgrey-base: #f5f5f5;
+$mistgrey-set1: 45deg, #f5f5f5 0%, #e8e8e8 100%;
+$mistgrey-set2: left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #e8e8e8);
+
+@mixin mistgrey(){
+  @include background($mistgrey-base, $mistgrey-set1, $mistgrey-set2)
+}
 //DarkGrey Background Variables
 $darkgrey-base: #7a7a7a;
 $darkgrey-set1: 45deg, #7a7a7a 0%, #b9b9b9 100%;

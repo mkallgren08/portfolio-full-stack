@@ -1,0 +1,79 @@
+@import '../../_config/config.scss';
+
+$page-id: pf__contact-me-info;
+
+.#{$page-id}-form{
+  //height: 100%;
+  //padding-bottom: 50px;
+  .#{$page-id}-wrapper{
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: 80px 110px 200px;
+    grid-template-areas: 
+      "con_name con_email con_email"
+      "con_callback con_pref con_pref"
+      "con_mess con_mess con_submit"
+      ;
+    .#{$page-id}-name{ 
+      grid-area: con_name;
+    }
+    .#{$page-id}-email{ 
+      grid-area: con_email;
+    }
+    .#{$page-id}-callback{ 
+      grid-area: con_callback;
+    }
+    .#{$page-id}-pref{ 
+      grid-area: con_pref;
+      h4{
+        display: flex;
+      }
+      .#{$page-id}-pref--input-group{
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+
+      }
+    }
+    .#{$page-id}-mess{ 
+      grid-area: con_mess;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      textarea{
+        border: 1px solid $lightgrey;
+        padding: 5px;
+        height: 100%;
+        resize: none;
+        border-radius: 5px;
+        @include raised-light();
+      }
+    }
+    .#{$page-id}-submit{ 
+      grid-area: con_submit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .#{$page-id}-contactee{
+      width: 95%;
+	    padding: 6px 12px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1;
+      color: #555;
+      text-align: left;
+      background-color: white;
+      border: 1px solid rgb(136, 136, 136);
+      border-radius: 4px;
+    }
+
+
+
+  }
+}

@@ -1,65 +1,77 @@
 {{>navPanel}}
 
-<div class="mainbody background-skyblue">
-  <div class="maincontent">
-    <div class="panel panel-default raised">
-      <div class="panel-heading">
-        <h3 class="panel-title"> Contact Me </h3>
+<div class="pf__main-body-wrapper">
+  <div class="pf__main-body-content">
+    <div class="panel panel-default raised mk__panel mk_panel-default pf__main-body-panel">
+      <div class="panel-heading mk__panel-heading">
+        <h3 class="mk__panel-title pf__about-me-panel-title"> Contact Me </h3>
       </div>
-      <div class="panel-body">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-          <form id="contactForm" action="#">
-            <div class="row">
-              <div class="col-sm-12 col-md-6">
-                <h4>Your Name:*</h4>
-                <input class="contactee" id="contactName" type="text" placeholder="Name">
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <h4>Your E-Mail:*</h4>
-                <input class="contactee" id="contactEmail" type="text" placeholder="Example@email.com">
-              </div>
+      <div class="panel-body mk__panel-body">
+        <section id="contactForm" class="pf__contact-me-info-form">
+          <div class="pf__contact-me-info-wrapper">
+            <div class="pf__contact-me-info-name">
+              <h4>Your Name:*</h4>
+              <input class="contactee pf__contact-me-info-contactee" id="contactName" type="text" placeholder="Name">
             </div>
-            <div class="row">
-              <div class="col-sm-12 col-md-6">
-                <h4>Callback Number:</h4>
-                <div class="input-group">
-                  <span class="input-group-addon" id="basic-addon1" value="1">+1</span>
-                  <input class="contactee" id="contactPhone" type="text" placeholder="xxx xxx xxxx">
+            <div class="pf__contact-me-info-email">
+              <h4>Your E-Mail:*</h4>
+              <input class="contactee pf__contact-me-info-contactee" id="contactEmail" type="text"
+                placeholder="Example@email.com">
+            </div>
+            <div class="pf__contact-me-info-callback">
+              <h4>Callback Number:</h4>
+              <div class="input-group mk__input-group">
+
+                <span class=" mk__input-group-addon-info mk__addon--left" id="basic-addon1" value="1">+1</span>
+                <span class="mk__input-group-addon-dropdown">
+                  <select class="dropdown-toggle" id="countryCodes2" onchange="displayedCode()">
+                    <span class="caret"></span>
+                    {{#each results}}
+                    <option value="{{this.code}}">{{this.name}} (+{{this.code}})</option>
+                    {{/each}}
+                  </select>
+                </span>
+                <input class="contactee pf__contact-me-info-contactee" id="contactPhone" type="text"
+                  placeholder="xxx xxx xxxx">
+              </div>
+              <div class="input-group">
+                <div class="input-group-btn">
+                  <select class="btn btn-default dropdown-toggle" id="countryCodes" onchange="displayedCode()">
+                    <span class="caret"></span>
+                    {{#each results}}
+                    <option value="{{this.code}}">{{this.name}} (+{{this.code}})</option>
+                    {{/each}}
+                  </select>
                 </div>
-                <div class="input-group">
-                  <div class="input-group-btn">
-                    <select class="btn btn-default dropdown-toggle" id="countryCodes" onchange="displayedCode()">
-                      <span class="caret"></span>
-                      {{#each results}}
-                      <option value="{{this.code}}">{{this.name}} (+{{this.code}})</option>
-                      {{/each}}
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-12 col-md-6">
-                <h4>Preferred Method of Contact?*</h4>
-                <input type="radio" name="contact-type" value="email"> E-mail
-                <br>
-                <input type="radio" name="contact-type" value="phone"> Phone
-                <br>
-                <input type="radio" name="contact-type" value="either"> Either
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-12 col-md-9">
-                <h4>Your Message:*</h4>
-                <textarea class="messagetxt" id="contactMessage" rows="6" columns="50"></textarea>
-              </div>
-              <div class="col-sm-12 col-md-3">
-                <input class="submit contact-submit btn-lg" type="submit" value="Submit">
+            <div class="pf__contact-me-info-pref">
+              <h4>Preferred Method of Contact?*</h4>
+              <div class="pf__contact-me-info-pref--input-group">
+                <span>
+                  <input type="radio" name="contact-type" value="email"> E-mail
+                </span>
+                <span>
+                  <input type="radio" name="contact-type" value="phone"> Phone
+                </span>
+                <span>
+                  <input type="radio" name="contact-type" value="either"> Either
+                </span>
               </div>
             </div>
-          </form>
-        </div>
+            <div class="pf__contact-me-info-mess">
+              <h4>Your Message:*</h4>
+              <textarea class="messagetxt" id="contactMessage"></textarea>
+            </div>
+            <div class="pf__contact-me-info-submit">
+              <input class="submit contact-submit btn-lg" type="submit" value="Submit">
+            </div>
+          </div>
+        </section>
+
       </div>
     </div>
-    
+
   </div>
 
   {{>connect}}

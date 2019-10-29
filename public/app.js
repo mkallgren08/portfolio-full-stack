@@ -15,13 +15,13 @@ $(document).ready(function () {
     window.location.href = "/"
   });
 
-  $(".read-amount").on('click', function() {
+  $(".pf__about-me-read-amount").on('click', function() {
     event.preventDefault();
-    console.log("I got a click!");
+    //console.log("I got a click!");
     let id = $(this).attr("id");
     console.log("My id is: " + id);
     if (id === "readmore1"){
-      $("#readmore1").hide();
+      $("#readm//ore1").hide();
       $("#bio-rest").show();
       $("#bio-p2").show()
     } else if (id === "readmore2"){

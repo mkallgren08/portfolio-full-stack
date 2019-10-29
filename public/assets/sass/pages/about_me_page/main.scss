@@ -3,12 +3,21 @@
 // About me grid sections
 .pf__about-me-bio-wrapper{
   grid-area: bio;
+  @media screen and (max-width: 660px){
+    #bio-p2{
+      display: none;
+    }
+  
+    #readmore1{
+      display: inline-block;
+    }
+  
+    #readmore2{
+      display: none
+    }
+  }
 }
 
-
-.pf__about-me-divider{
-  border-top: 1px solid #777;
-}
 
 
 // START HEADSHOT AND BIO SECTION
@@ -18,20 +27,32 @@
 	grid-template-rows: auto;
 	grid-template-areas: 
 		"headshot bio";
-	justify-items: center;
+  justify-items: center;
+  
+  .pf__about-me-divider{
+    border-top: 1px solid #777;
+  }
+
+  .pf__about-me-headshot {
+    width: 96%;
+    height: auto;
+    margin-bottom: $xxs*1%;
+    margin-right: $xxs*1%;
+    grid-area: headshot;
+    justify-self: start;
+    @include raised-light();
+  } 
 }
 
-.pf__about-me-headshot {
-  width: 96%;
-  height: auto;
-  margin-bottom: $xxs*1%;
-  margin-right: $xxs*1%;
-  grid-area: headshot;
-  justify-self: start;
-  @include raised-light();
-} 
-
-.pf__about-me-nameplate{
+// Needs to be outside the main wrapper due to nesting 
+// within a generic panel component
+.pf__about-me-nameplate, .pf__about-me-panel-title{
   @include font-Philosopher();
 }
+
+.pf__about-me-read-amount{
+  font-weight: bold;
+}
+
+
 

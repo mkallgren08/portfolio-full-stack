@@ -2,6 +2,9 @@
 @import './components/components.scss';
 @import './pages/pages.scss';
 
+// Site Variables
+$title-font: 'Philospher', sans-serif;
+
 // Show/hide toggle classes (can't change the name)
 .hide{display: none;}
 
@@ -47,6 +50,15 @@
           ". maincontent ."
           ". connectcontent ."
           ". . .";
+      }
+
+      .pf__main-body-content{
+        margin: $sm*1px $md*1px $xl*2px $md*1px;
+        padding: $sm*1px;
+        background-color: $platinum;
+        border-radius: $xs*1px;
+        border: solid $xxs*1px #5c5c5c;
+        grid-area: maincontent;
       }
 
   } 
