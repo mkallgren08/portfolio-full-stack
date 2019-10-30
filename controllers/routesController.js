@@ -61,20 +61,17 @@ router.get('/', function (req, res) {
   
   // POST Message Route
   router.post('/contact', function (req, res) {
-    console.log('req.body: ' + JSON.stringify(req.body, null, 2))
-  
+    // console.log('req.body: ' + JSON.stringify(req.body, null, 2))
+
     let hbsObject = {
       title: "Contact - Michael Kallgren",
       active: 'contact',
-    }
-  
+    };
     let hbsHomeObject = {
       title: "Homepage - Michael Kallgren",
       active: 'homepage',
-    }
-  
+    };
     let email_check = validator.validate(req.body.email);
-  
     let phone_check = true;
   
     if (req.body.phone !== "Not provided") {
@@ -148,41 +145,6 @@ router.get('/', function (req, res) {
   // ====================================
   //      Functions
   // ====================================
-  
-  
-  // Sends the email using nodemailer (old version of portfolio)
-  //+++++++++++++++++++++++++++++++++++++++++++++++++
-    // var sendMessage = (msgObj) => {
-    //   const transporter = nodemailer.createTransport({
-    //     service: 'gmail',
-    //     auth: {
-    //       user: 'contact.mkallgren08@gmail.com',
-    //       pass: process.env.GPASS || process.env.P_PASS
-    //     }
-    //   });
-  
-    //   var mailOptions = {
-    //     from: msgObj.email,
-    //     to: 'contact.mkallgren08@gmail.com',
-    //     subject: 'New Message From ' + msgObj.name,
-    //     text: 'Name: ' + msgObj.name
-    //       + '\nE-mail: ' + msgObj.email
-    //       + '\nPhone: (' + msgObj.countryCode + ')' + msgObj.phone
-    //       + '\nPreferred method of contact: ' + msgObj.prefMethod
-    //       + '\n\nMessage:\n\n ' + msgObj.message
-    //   };
-  
-    //   transporter.sendMail(mailOptions, function (error, info) {
-    //     if (error) {
-    //       console.log("Error: " + error);
-    //     } else {
-    //       console.log('Mail contents: ' + JSON.stringify(mailOptions, null, 2))
-    //       console.log('Email sent: ' + info.response);
-    //     }
-    //   });
-    // }
-  
-  
   // Sends the email using sendgrid
   //+++++++++++++++++++++++++++++++++++++++++++++++++
   var sendMessageTwo = (msgObj) => {

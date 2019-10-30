@@ -6,13 +6,10 @@ $page-id: pf__contact-me-info;
   //height: 100%;
   //padding-bottom: 50px;
   .#{$page-id}-wrapper{
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
     display: grid;
     grid-gap: 5px;
     grid-template-columns: 50% 25% 25%;
-    grid-template-rows: 80px 110px 200px;
+    grid-template-rows: auto auto 200px;
     grid-template-areas: 
       "con_name con_email con_email"
       "con_callback con_pref con_pref"
@@ -26,6 +23,11 @@ $page-id: pf__contact-me-info;
     }
     .#{$page-id}-callback{ 
       grid-area: con_callback;
+      div{
+        input{
+          width: 100%
+        }
+      }
     }
     .#{$page-id}-pref{ 
       grid-area: con_pref;
@@ -38,6 +40,9 @@ $page-id: pf__contact-me-info;
         justify-content: space-between;
 
       }
+    }
+    .#{$page-id}-input-grp{
+      width: 95%;
     }
     .#{$page-id}-mess{ 
       grid-area: con_mess;
@@ -61,15 +66,14 @@ $page-id: pf__contact-me-info;
     }
 
     .#{$page-id}-contactee{
-      width: 95%;
 	    padding: 6px 12px;
       font-size: 14px;
       font-weight: 400;
       line-height: 1;
-      color: #555;
+      color: $grey;
       text-align: left;
-      background-color: white;
-      border: 1px solid rgb(136, 136, 136);
+      background-color: $white;
+      border: 1px solid $ghostgrey;
       border-radius: 4px;
     }
 
