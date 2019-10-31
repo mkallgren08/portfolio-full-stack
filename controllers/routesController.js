@@ -117,6 +117,12 @@ router.get('/', function (req, res) {
     }
   });
   
+  // Route for new site setup
+  // GET Route for main page
+  router.get('/main', (req, res) => {
+    res.send('Route okay')
+  })
+
   // A test GET route to make sure I can get the country codes!
   // A GET request for the saved articles
   router.get('/codes', function (req, res) {

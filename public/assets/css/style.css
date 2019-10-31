@@ -178,11 +178,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfb06c', end
 	font-size: 12px;
 }
 
-#countryCodes{
+/* #countryCodes{
 	max-width: 43%;
 	min-width: 126px;
 	margin: 1% 10.75% 0% 0%;
-}
+} */
 
 /* .footer.navbar{
 	border: 3px solid #9c501a;
