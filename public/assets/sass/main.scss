@@ -61,6 +61,9 @@ $title-font: 'Philospher', sans-serif;
         grid-area: maincontent;
       }
 
+      .pf__title {
+        font-family: $header-font;
+      }
   } 
 }
 

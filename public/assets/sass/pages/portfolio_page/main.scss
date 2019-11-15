@@ -1,0 +1,28 @@
+// Portfolio Page
+$page-id: pf__project;
+
+.#{$page-id}-subtitle{
+  font-size: 16px;
+  line-height: 17px;
+}
+
+.#{$page-id}s-wrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  .#{$page-id}-wrapper{
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    width:25%;
+    @media screen and (max-width: $breakpoint-lg){
+      width: 30%
+    }
+    @media screen and (max-width: $breakpoint-sm){
+      width: 50%
+    }
+    @media screen and (max-width: $breakpoint-xs){
+      width: 100%
+    }
+  }
+}

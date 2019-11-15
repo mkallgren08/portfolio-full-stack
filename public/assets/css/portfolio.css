@@ -87,10 +87,10 @@ b{
   color: rgb(50,50,50);
 }
 
-.subtitle{
+/* .subtitle{
   font-size: 16px;
   line-height: 17px;
-}
+} */
 
 .thumbnail{
 	background-image:url("../images/br_gold.jpg");

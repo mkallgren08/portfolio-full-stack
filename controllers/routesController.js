@@ -22,7 +22,7 @@ router.get('/', function (req, res) {
       results: res
     }
     // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject), null, 2);
-    res.render("homepage.handlebars", hbsObject);
+    res.render("pages/homepage.handlebars", hbsObject);
   });
   
   //Portfolio Route
@@ -33,7 +33,7 @@ router.get('/', function (req, res) {
       projects: projectList,
       projectInfo: projectInfo,
     }
-    res.render("portfolio.handlebars", hbsObject);
+    res.render("pages/portfolio.handlebars", hbsObject);
   });
   
   //Contact-Page Route
@@ -53,7 +53,7 @@ router.get('/', function (req, res) {
             results: result
           }
           // console.log("hbsObj for rendering: " + JSON.stringify(hbsObject, null, 2));
-          res.render("contact.handlebars", hbsObject);
+          res.render("pages/contact.handlebars", hbsObject);
         }
       });
   
