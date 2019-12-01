@@ -7,7 +7,7 @@
 // Media Breakpoints
 $breakpoint-lg: 1200px;
 $breakpoint-md: 846px;
-$breakpoint-sm: 660px;
+$breakpoint-sm: 675px;
 $breakpoint-xs: 550px;
 $breakpoint-min: 370px;
 
@@ -16,16 +16,27 @@ $philospher: 'Philosopher', sans-serif;
 
 // FONT SIZES
 $fontsize-std: 15;
-$fontsize-lg: 20; 
+$fontsize-lg: 20;
+
+//TYPESETS (Line heights)
+$typeset-sm: 1.1;
+$typeset-med: 1.2;
+$typeset-lg: 1.3;
+$typeset-xl: 1.4;
+
+//FONT WEIGHTS
+$weight-light: 100;
+$weight-norm: 400;
+$weight-bold: 700;
 
 // GENERAL SIZES - GUTTERS, RADII, ETC
-$xxs: 1;
-$xs: 5;
-$sm: 10;
-$md: 15;
-$lg: 20;
-$xl: 25;
-$xxl: 30;
+$size-xxs: 1;
+$size-xs: 5;
+$size-sm: 10;
+$size-md: 15;
+$size-lg: 20;
+$size-xl: 25;
+$size-xxl: 30;
 
 // GRID SIZES
 $skinny-third: 30;

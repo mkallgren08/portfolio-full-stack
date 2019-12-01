@@ -36,8 +36,8 @@
   .pf__about-me-headshot {
     width: 96%;
     height: auto;
-    margin-bottom: $xxs*1%;
-    margin-right: $xxs*1%;
+    margin-bottom: $size-xxs*1%;
+    margin-right: $size-xxs*1%;
     grid-area: headshot;
     justify-self: start;
     @include raised-light();

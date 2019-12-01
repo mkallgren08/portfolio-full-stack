@@ -56,7 +56,7 @@ $(document).ready(function () {
     })
   });
 
-  $('.project-info').on('click',function(){
+  $('.pf__project-info').on('click',function(){
     let a = $(this).attr('value')
     console.log(a)
     let found = false;

@@ -8,15 +8,15 @@
 
   .pf__navbar-namelogo{
     grid-area: namelogo;
-    margin-bottom: $md*1px;
-    padding: 0.5% $xs*1%;
+    margin-bottom: $size-md*1px;
+    padding: 0.5% $size-xs*1%;
     font-weight: bolder;
     @include font-Philosopher();
     border: 2px solid #333333;
-    border-top-left-radius: $xs*1px;
-    border-bottom-right-radius: $xs*1px;
-    border-bottom-left-radius: $md*1px;
-    border-top-right-radius: $md*1px;
+    border-top-left-radius: $size-xs*1px;
+    border-bottom-right-radius: $size-xs*1px;
+    border-bottom-left-radius: $size-md*1px;
+    border-top-right-radius: $size-md*1px;
     justify-items: center;
     @include gold2();
 

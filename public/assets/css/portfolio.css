@@ -37,7 +37,7 @@ b{
 }
 
 
-.gitlink{
+/* .gitlink{
   color: rgb(29, 29, 29);
   grid-area: thumbnail;
   position: absolute;
@@ -49,7 +49,6 @@ b{
   background-color: rgb(230, 230, 230);
   border-radius: 12px;
   border: solid rgb(50,50,50) 1px;
-
 }
 
 .gitlink > img {
@@ -64,35 +63,35 @@ b{
 .gitlink:hover{
   background-color: rgb(180,180,180);
   border-color: aliceblue;
-}
+} */
 
-.modal-title{
+/* .modal-title{
   align-content: center;
   font-weight: bolder;
   font-size: 24px;
-}
+} */
 
-.portfolio-thbnail{
+/* .portfolio-thbnail{
 	margin-left: 0px;
 	margin-right: 0px;
   grid-area: thumbnail;
   position: relative;
-}
+} */
 
-.project-info{
+/* .project-info{
   cursor: pointer;
-}
+} */
 
-.project-info:hover{
+/* .project-info:hover{
   color: rgb(50,50,50);
-}
+} */
 
 /* .subtitle{
   font-size: 16px;
   line-height: 17px;
 } */
 
-.thumbnail{
+/* .thumbnail{
 	background-image:url("../images/br_gold.jpg");
 	background-size: cover;
 	border: 2px #333333 solid;
@@ -105,4 +104,4 @@ b{
 		". thumbnail ."
 		". thumbnail ."
 		". . .";
-}
+} */

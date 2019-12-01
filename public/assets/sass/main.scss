@@ -53,11 +53,11 @@ $title-font: 'Philospher', sans-serif;
       }
 
       .pf__main-body-content{
-        margin: $sm*1px $md*1px $xl*2px $md*1px;
-        padding: $sm*1px;
+        margin: $size-sm*1px $size-md*1px $size-xl*2px $size-md*1px;
+        padding: $size-sm*1px;
         background-color: $platinum;
-        border-radius: $xs*1px;
-        border: solid $xxs*1px #5c5c5c;
+        border-radius: $size-xs*1px;
+        border: solid $size-xxs*1px #5c5c5c;
         grid-area: maincontent;
       }
 

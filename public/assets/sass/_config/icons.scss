@@ -1,0 +1,81 @@
+@import "./variables.scss";
+// General Icons
+//10px
+@mixin mk__icon-sm(){
+  display: inline-block;
+  // vertical-align: middle;
+  width: $size-sm*1px;
+  height: $size-sm*1px;
+  // &::before{
+  //   content: "\e086"
+  // }
+}
+
+//15px
+@mixin mk__icon-md(){
+  display: inline-block;
+  // vertical-align: middle;
+  width: $size-md*1px;
+  height: $size-md*1px;
+  // &::before{
+  //   content: "\e086"
+  // }
+}
+
+//20px
+@mixin mk__icon-lg(){
+  display: inline-block;
+  // vertical-align: middle;
+  width: $size-lg*1px;
+  height: $size-lg*1px;
+  // &::before{
+  //   content: "\e086"
+  // }
+}
+
+//30px
+@mixin mk__icon-xxl(){
+  display: inline-block;
+  // vertical-align: middle;
+  width: $size-xxl*1px;
+  height: $size-xxl*1px;
+  // &::before{
+  //   content: "\e086"
+  // }
+}
+
+//60px
+@mixin mk__icon-jumbo(){
+  display: inline-block;
+  // vertical-align: middle;
+  width: $size-xxl*2px;
+  height: $size-xxl*2px;
+  // &::before{
+  //   content: "\e086"
+  // }
+}
+
+@mixin mk__icon-round($icon-size){
+  border-radius: $icon-size/2*1px;
+}
+
+@mixin mk_icon-skewed--left($icon-size){
+  border-top-left-radius: $icon-size/3*1px;
+  border-bottom-right-radius: $icon-size/3*1px;
+  border-bottom-left-radius: $icon-size/5*1px;
+  border-top-right-radius: $icon-size/5*1px;
+}
+
+@mixin mk_icon-skewed--right($icon-size){
+  border-top-right-radius: $icon-size/3 *1px;
+  border-bottom-left-radius: $icon-size/3*1px;
+  border-bottom-right-radius: $icon-size/5*1px;
+  border-top-left-radius: $icon-size/5*1px;
+}
+
+// Info icons
+@mixin mk__icon--info(){
+  background: url(./icons/info-icon.png);
+  background-size: 120%;
+  background-position: center;
+}

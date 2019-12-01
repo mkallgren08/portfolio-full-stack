@@ -30,7 +30,7 @@ $comp-id: pf__connect-panel;
       .#{$comp-id}-icon-wrapper{
         display: grid;
         grid-template-columns: auto $skinny-third*1% $skinny-third*1% $skinny-third*1% auto;
-        grid-template-rows: $xs*1px auto $xs*1px;
+        grid-template-rows: $size-xs*1px auto $size-xs*1px;
         grid-template-areas: 
           ". . . . ."
           ". gitLink linkedInLink stackLink ."
@@ -52,10 +52,10 @@ $comp-id: pf__connect-panel;
 }
 
 .#{$comp-id}-icon{
-  height: $xxl*1.5px;
-  width: $xxl*1.5px;
-  border: $ghostgrey $xxs*1px solid;
-  border-radius: $xxs*3px;
+  height: $size-xxl*1.5px;
+  width: $size-xxl*1.5px;
+  border: $ghostgrey $size-xxs*1px solid;
+  border-radius: $size-xxs*3px;
   @include raised()
 
 }

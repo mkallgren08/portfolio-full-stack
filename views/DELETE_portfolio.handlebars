@@ -4,26 +4,28 @@
   <div class="pf__main-body-content">
     <div class="mk__panel mk_panel-default pf__main-body-panel">
       <div class="mk__panel-heading">
-        <h3 class="mk__panel-title"> <b>Portfolio</b>
-          <p class="pf__project-subtitle">- click the <span class="glyphicon glyphicon-info-sign"
+        <h3 class="panel-title mk__panel-title">
+          <b>Portfolio</b>
+          <p class="mk__panel-title--subtitle">- click the <span class="glyphicon glyphicon-info-sign"
               aria-hidden="true"></span> icon for more information on the project</p>
-          <p class="pf__project-subtitle"> - click the <span class="gitGlyph pf__project-git-glyph"><img
+          <p class="mk__panel-title--subtitle"> - click the <span class="gitGlyph"><img
                 src="./assets/images/Git-Icon.png" alt="link to GitHub Repo"></span> icon to see the code repo for the
             project</p>
         </h3>
       </div>
-      <div class="mk__panel-body">
+      <div class="panel-body">
         <div class="pf__projects-wrapper">
           {{#each projects}}
           <div class="pf__project-wrapper">
-            <a class="pf__project-thumbnail-link " target="_blank" href="{{link}}">
-              <img class="pf__project-thumbnail" src="./assets/images/{{thbnail}}" alt="{{altText}}">
+            <a class="thumbnail portfolio-link raised-light pf__project-thumbnail-link " target="_blank" href="{{link}}">
+              <img class="portfolio-thbnail pf__project-thumbnail" src="./assets/images/{{thbnail}}" alt="{{altText}}"
+                style="width:300px; height:200px;">
             </a>
             <div class="pf__project-name">
               {{name}}
-              <span class="pf__project-info-icon pf__project-info" aria-hidden="true" value="{{value}}"></span>
+              <span class="mk__glyphicon mk__glyphicon--info glyphicon glyphicon-info-sign project-info pf__project-info" aria-hidden="true" value="{{value}}"></span>
             </div>
-            <a class="pf__project-gitlink" target="_blank" href="{{gitLink}}">
+            <a class="gitlink" target="_blank" href="{{gitLink}}">
               <img src="./assets/images/Git-Icon.png" alt="link to GitHub Repo">
             </a>
           </div>
