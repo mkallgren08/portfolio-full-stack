@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js dev
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js start
 
 PATH: 
-  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\mkall\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Yarn\bin;C:\Program Files\MongoDB\Server\3.6\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\dotnet;C:\Program Files\Mono\bin;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\nodejs;C:\Program Files\PuTTY;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Users\mkall\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\mkall\AppData\Local\Programs\Python\Python37;C:\Users\mkall\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Users\mkall\AppData\Local\Programs\Python\Python37-32;C:\Users\mkall\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Heroku\bin;C:\Users\mkall\AppData\Local\Yarn\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\Mono\bin;C:\Users\mkall\AppData\Roaming\npm
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\mkall\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files\Java\jdk-11.0.8\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Yarn\bin;C:\Program Files\MongoDB\Server\3.6\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\dotnet;C:\Program Files\Mono\bin;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\nodejs;C:\Program Files\PuTTY;C:\Program Files\Git\cmd;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\ProgramData\chocolatey\bin;C:\Users\mkall\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\mkall\AppData\Local\Programs\Python\Python37;C:\Users\mkall\AppData\Local\Programs\Python\Python37-32\Scripts;C:\Users\mkall\AppData\Local\Programs\Python\Python37-32;C:\Users\mkall\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Heroku\bin;C:\Users\mkall\AppData\Local\Yarn\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\Mono\bin;C:\Users\mkall\AppData\Roaming\npm
 
 Yarn version: 
   1.5.1
@@ -22,7 +22,7 @@ npm manifest:
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "start": "node server.js",
-      "dev": "concurrently \"nodemon server.js\" \"  sass --watch public/assets/sass/main.scss public/publish/css/styles.css\""
+      "dev": "concurrently \"nodemon server.js\" \"  sass --watch public/assets/sass/main.scss:public/publish/css/styles.css --style compressed\""
     },
     "repository": {
       "type": "git",
@@ -61,9 +61,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 3221225786
+  Exit code: 1
   Command: C:\WINDOWS\system32\cmd.exe
-  Arguments: /d /s /c concurrently "nodemon server.js" "  sass --watch public/assets/sass/main.scss public/publish/css/styles.css"
+  Arguments: /d /s /c node server.js
   Directory: C:\Users\mkall\OneDrive\Desktop\Coding-Local\Personal_Projects\Portfolio_Apps\Deployed\portfolio-full-stack
   Output:
   

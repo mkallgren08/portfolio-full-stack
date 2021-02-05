@@ -4,6 +4,7 @@
 $comp-id: pf__connect-panel;
 
 .#{$comp-id}-wrapper{
+  width: 100%;
   display: grid;
 	grid-template-columns: 10% auto 10%;
 	grid-template-rows: 10px auto 10px;
@@ -13,7 +14,9 @@ $comp-id: pf__connect-panel;
 		". connect-panel ."
 		". . .";
   grid-area: connectcontent;
-
+  @media screen and (max-width: $breakpoint-lg){
+    grid-template-columns: 0% 100% 0%;
+  }
   .#{$comp-id}{
     grid-area: connect-panel;
 
@@ -54,8 +57,7 @@ $comp-id: pf__connect-panel;
 .#{$comp-id}-icon{
   height: $size-xxl*1.5px;
   width: $size-xxl*1.5px;
-  border: $ghostgrey $size-xxs*1px solid;
-  border-radius: $size-xxs*3px;
+  @include border-light($size-xxs*1px,$size-xs*1px);
   @include raised()
 
 }

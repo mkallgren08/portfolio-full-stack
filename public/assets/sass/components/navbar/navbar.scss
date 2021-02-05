@@ -4,7 +4,7 @@
 
 .pf__navbar{
   width: $full*1%;
-  @include darkblue();
+  // @include darkblue();
 
   .pf__navbar-namelogo{
     grid-area: namelogo;
@@ -13,12 +13,9 @@
     font-weight: bolder;
     @include font-Philosopher();
     border: 2px solid #333333;
-    border-top-left-radius: $size-xs*1px;
-    border-bottom-right-radius: $size-xs*1px;
-    border-bottom-left-radius: $size-md*1px;
-    border-top-right-radius: $size-md*1px;
+    @include border-radius-lopsided($size-xs*1px);
     justify-items: center;
-    @include gold2();
+    // @include gold2();
 
     .pf__navbar-headshot-icon{
       width: 75px;

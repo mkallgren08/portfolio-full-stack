@@ -5,6 +5,12 @@
 // Site Variables
 $title-font: 'Philospher', sans-serif;
 
+
+// For wireframe layout only!
+div{
+  border: 2px darkolivegreen
+}
+
 // Show/hide toggle classes (can't change the name)
 .hide{display: none;}
 
@@ -17,19 +23,21 @@ $title-font: 'Philospher', sans-serif;
 .pf__main-wrapper{
   min-width: 370px;
   background-size: cover;
+  background: $antiflashwhite;
 	padding-bottom: 85px; 
 	font-family: 'Source Sans Pro', sans-serif;
   font-size: $fontsize-std*1px;
   min-width: $breakpoint-min;
-  @include midblue();
+  // @include midblue();
 
   // BEGIN PORTFOLIO BODY (Everything between navbar and footer)
   .pf__main-body-wrapper{
-    background-image: url("./images/oeschinenzee.png");
-    background-size: 100% 100%;
-    background-attachment: fixed;
+    // background-image: url("./images/oeschinenzee.png");
+    // background-size: 100% 100%;
+    // background-attachment: fixed;
     
-    border: 8px groove grey;
+    @include border-dark($size-xs*1px,0px);
+    border-style: groove;
     border-top: none;
     /* border-top: 4px #444444 solid; */
     height: fit-content;
@@ -42,7 +50,7 @@ $title-font: 'Philospher', sans-serif;
       ". maincontent . connectcontent ."
       ". . . . .";
 
-      @media screen and (max-width: 1200px){
+      @media screen and (max-width: $breakpoint-lg){
         grid-template-columns: auto 95% auto;
         grid-template-rows: 5px auto auto 30px;
         grid-template-areas: 
@@ -53,12 +61,15 @@ $title-font: 'Philospher', sans-serif;
       }
 
       .pf__main-body-content{
-        margin: $size-sm*1px $size-md*1px $size-xl*2px $size-md*1px;
+        // margin: $size-sm*1px $size-md*1px $size-xl*2px $size-md*1px;
         padding: $size-sm*1px;
         background-color: $platinum;
-        border-radius: $size-xs*1px;
-        border: solid $size-xxs*1px #5c5c5c;
+        @include border-dark($size-xxs*1px,$size-xs*1px);
         grid-area: maincontent;
+        @media screen and (max-width: $breakpoint-lg){
+          padding: 0px;
+          border: none;
+        }
       }
 
       .pf__title {
