@@ -24,7 +24,7 @@
     "email-validator": "^1.1.1",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
-    "mongoose": "^4.12.3",
+    "mongoose": "^4.13.21",
     "morgan": "^1.9.0",
     "npm": "^5.7.1"
   }
